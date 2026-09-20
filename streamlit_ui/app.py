@@ -224,7 +224,7 @@ def _upload(user: User) -> None:
     )
     status = ocr_status()
     if status["available"]:
-        st.success("OCR online · image and scanned-PDF uploads are enabled", icon="✓")
+        st.success("OCR online · image and scanned-PDF uploads are enabled", icon="✅")
     else:
         st.warning(
             "OCR is unavailable. Text-layer PDFs and pasted receipt text still work."
