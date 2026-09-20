@@ -6,6 +6,7 @@ the duplicate guard cannot be bypassed by a view that forgets to call them.
 from __future__ import annotations
 
 import datetime as dt
+import logging
 import os
 import tempfile
 from contextlib import contextmanager
@@ -16,6 +17,7 @@ from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 
+from core import object_storage
 from core.currency import DEFAULT_CURRENCY
 from core.dedup.blocking import phash_of
 from core.dedup.pipeline import cluster, find_duplicates, find_duplicates_for_claim
@@ -35,6 +37,8 @@ from expenses.models import (
     Vendor,
 )
 
+logger = logging.getLogger(__name__)
+
 #: `tax_total` is the generic tax line every non-Indian receipt carries; without
 #: it a reviewer looking at a US or EU claim sees no tax at all.
 PERSISTED_FIELDS = ("vendor", "gstin", "invoice_no", "date", "subtotal",
@@ -43,6 +47,53 @@ PERSISTED_FIELDS = ("vendor", "gstin", "invoice_no", "date", "subtotal",
 
 class TransitionError(Exception):
     """Raised when a workflow transition is not allowed."""
+
+
+def store_receipt_blob(receipt: Receipt, data: bytes, filename: str, content_type: str) -> None:
+    """Persist upload bytes in private object storage or the local DB fallback.
+
+    The fallback keeps local development and existing deployments working while
+    a bucket is being provisioned. Production Streamlit deployments should set
+    ``BRIER_OBJECT_STORAGE_BUCKET`` so new evidence leaves the database row.
+    """
+    if not data:
+        return
+    if object_storage.enabled():
+        key = object_storage.key_for(receipt.receipt_id, filename)
+        try:
+            etag = object_storage.put_bytes(data, key=key, content_type=content_type)
+        except Exception as exc:  # noqa: BLE001 - convert provider errors to a safe UI error
+            raise RuntimeError(
+                "Receipt storage is unavailable. Check the S3 bucket, endpoint, and credentials."
+            ) from exc
+        receipt.image_blob = None
+        receipt.object_storage_bucket = object_storage.config_from_env().bucket
+        receipt.object_storage_key = key
+        receipt.object_storage_etag = etag
+    else:
+        receipt.image_blob = data
+        receipt.object_storage_bucket = ""
+        receipt.object_storage_key = ""
+        receipt.object_storage_etag = ""
+    receipt.image_filename = filename or "receipt.png"
+    receipt.image_content_type = content_type or "application/octet-stream"
+    receipt.save(update_fields=[
+        "image_blob", "image_filename", "image_content_type",
+        "object_storage_bucket", "object_storage_key", "object_storage_etag",
+    ])
+
+
+def delete_receipt_artifact(receipt: Receipt) -> None:
+    """Best-effort cleanup for an upload that is being discarded."""
+    if not receipt.object_storage_key:
+        return
+    try:
+        object_storage.delete(
+            receipt.object_storage_key,
+            bucket=receipt.object_storage_bucket or None,
+        )
+    except Exception:  # noqa: BLE001 - never hide the original workflow failure
+        logger.exception("Could not delete receipt object %s", receipt.object_storage_key)
 
 
 # --------------------------------------------------------------------- core IO
@@ -129,7 +180,7 @@ def extract_into_receipt(receipt: Receipt, *, gazetteer: VendorGazetteer | None 
     for name in ("subtotal", "cgst", "sgst", "igst", "total"):
         setattr(receipt, name, _decimal(result.get(name)))
 
-    if (receipt.image or receipt.image_blob) and not receipt.phash:
+    if _has_receipt_image(receipt) and not receipt.phash:
         try:
             with _receipt_file(receipt) as path:
                 value = phash_of(path)
@@ -158,13 +209,13 @@ def extract_into_receipt(receipt: Receipt, *, gazetteer: VendorGazetteer | None 
 def _receipt_source(receipt: Receipt, gazetteer=None, line_model=None):
     if receipt.text:
         return text_from_string(receipt.text)
-    if (receipt.image or receipt.image_blob) and is_ocr_available():
+    if _has_receipt_image(receipt) and is_ocr_available():
         with _receipt_file(receipt) as path:
             return read_receipt(path, gazetteer=gazetteer, line_model=line_model)
     sidecar = Path(settings.DATA_DIR) / "receipts_text" / f"{receipt.receipt_id}.txt"
     if sidecar.exists():
         return text_from_string(sidecar.read_text(encoding="utf-8"))
-    if receipt.image or receipt.image_blob:
+    if _has_receipt_image(receipt):
         raise RuntimeError(
             "Tesseract is not installed, so an uploaded image cannot be read. "
             "Install Tesseract, or paste the receipt text into the form.")
@@ -173,7 +224,23 @@ def _receipt_source(receipt: Receipt, gazetteer=None, line_model=None):
 
 @contextmanager
 def _receipt_file(receipt: Receipt):
-    """Yield a local image path for local or database-backed receipt storage."""
+    """Yield a local image path for local, database, or object-backed storage."""
+    if receipt.object_storage_key:
+        suffix = Path(receipt.image_filename or ".png").suffix or ".png"
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as handle:
+            handle.write(object_storage.get_bytes(
+                receipt.object_storage_key,
+                bucket=receipt.object_storage_bucket or None,
+            ))
+            temporary_path = Path(handle.name)
+        try:
+            yield temporary_path
+        finally:
+            try:
+                os.unlink(temporary_path)
+            except FileNotFoundError:
+                pass
+        return
     if receipt.image_blob:
         suffix = Path(receipt.image_filename or ".png").suffix or ".png"
         with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as handle:
@@ -191,6 +258,10 @@ def _receipt_file(receipt: Receipt):
         yield Path(receipt.image.path)
         return
     raise FileNotFoundError(f"Receipt {receipt.receipt_id} has no image.")
+
+
+def _has_receipt_image(receipt: Receipt) -> bool:
+    return bool(receipt.image or receipt.image_blob or receipt.object_storage_key)
 
 
 # ------------------------------------------------------------------- workflow
