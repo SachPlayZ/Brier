@@ -150,7 +150,8 @@ class Command(BaseCommand):
 
     def _screen(self, options) -> None:
         """One corpus-wide dedup pass, which is far cheaper than N incremental ones."""
-        claims = list(Claim.objects.select_related("receipt", "employee", "receipt__vendor"))
+        claims = list(Claim.objects.select_related(
+            "receipt", "employee", "receipt__vendor").defer("receipt__image_blob"))
         records = [services.to_claim_record(c) for c in claims]
         by_id = {c.claim_id: c for c in claims}
 

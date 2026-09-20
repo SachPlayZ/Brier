@@ -68,6 +68,12 @@ class Receipt(models.Model):
 
     receipt_id = models.CharField(max_length=32, unique=True)
     image = models.ImageField(upload_to="receipts/", blank=True, null=True)
+    # Streamlit Community Cloud has an ephemeral filesystem. New Streamlit
+    # uploads are therefore kept with the receipt row; the legacy Django UI
+    # continues to use ``image`` and both paths share the same OCR service.
+    image_blob = models.BinaryField(blank=True, null=True)
+    image_filename = models.CharField(max_length=255, blank=True)
+    image_content_type = models.CharField(max_length=80, blank=True)
     image_path = models.CharField(max_length=300, blank=True)
     text = models.TextField(blank=True)
     ocr_source = models.CharField(max_length=20, choices=OCR_SOURCES, default="sidecar")

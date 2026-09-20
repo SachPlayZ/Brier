@@ -1,5 +1,9 @@
 # Lessons
 
+## Chat is not a credential store
+- Mistake: Treating a pasted deployment token as a usable handoff path risks replaying a credential already preserved in chat history.
+- Rule: Never use chat-exposed credentials; prefer existing Keychain auth or have the user enter replacements directly in the platform secret manager.
+
 Patterns worth keeping, recorded as they came up.
 
 ## Measure before tuning a threshold

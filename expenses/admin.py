@@ -41,6 +41,9 @@ class ReceiptAdmin(admin.ModelAdmin):
     search_fields = ("receipt_id", "invoice_no", "gstin", "vendor_raw")
     inlines = [ExtractedFieldInline]
 
+    def get_queryset(self, request):
+        return super().get_queryset(request).defer("image_blob")
+
 
 class DuplicateFlagInline(admin.TabularInline):
     model = DuplicateFlag

@@ -10,6 +10,7 @@ from pathlib import Path
 MAX_PAGES = 3
 RENDER_DPI = 250
 MIN_TEXT_CHARS = 40          # fewer than this and the "text layer" is a scanned page with a stamp
+MAX_RENDER_PIXELS = 60_000_000
 
 
 def is_pdf(path_or_bytes) -> bool:
@@ -36,6 +37,22 @@ def page_count(source) -> int:
         pdf.close()
 
 
+def render_pixel_count(source, *, dpi: int = RENDER_DPI, max_pages: int = MAX_PAGES) -> int:
+    """Projected pixels before rendering, used to reject pathological page sizes."""
+    pdf = _open(source)
+    try:
+        total = 0
+        scale = dpi / 72
+        for index in range(min(len(pdf), max_pages)):
+            page = pdf[index]
+            width, height = page.get_size()
+            page.close()
+            total += round(width * scale) * round(height * scale)
+        return total
+    finally:
+        pdf.close()
+
+
 def text_layer(source, *, max_pages: int = MAX_PAGES) -> str:
     """The text a PDF carries itself, page by page. Empty for a scan."""
     pdf = _open(source)
@@ -56,6 +73,8 @@ def text_layer(source, *, max_pages: int = MAX_PAGES) -> str:
 
 def render_pages(source, *, dpi: int = RENDER_DPI, max_pages: int = MAX_PAGES):
     """Pages as PIL images."""
+    if render_pixel_count(source, dpi=dpi, max_pages=max_pages) > MAX_RENDER_PIXELS:
+        raise ValueError("PDF page dimensions are too large to process safely")
     pdf = _open(source)
     try:
         images = []

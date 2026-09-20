@@ -18,10 +18,12 @@ from django.core.files.base import ContentFile
 from core import pdfio
 
 MAX_BYTES = 15 * 1024 * 1024
+MAX_IMAGE_PIXELS = 40_000_000
 ACCEPT = ".pdf,.jpg,.jpeg,.png,.webp,.gif,.bmp,.tif,.tiff,image/*,application/pdf"
 FRIENDLY = "a PDF, JPG, PNG, WEBP, GIF, BMP or TIFF"
 
 _KEEP_AS_IS = {"jpeg", "png", "webp"}       # browsers show these; everything else is converted to PNG
+_MIME = {"jpeg": "image/jpeg", "png": "image/png", "webp": "image/webp"}
 
 
 def sniff(head: bytes) -> str | None:
@@ -65,10 +67,17 @@ def validate_receipt_upload(upload) -> None:
         if kind == "pdf":
             if pdfio.page_count(data) < 1:
                 raise ValueError("no pages")
+            if pdfio.render_pixel_count(data) > pdfio.MAX_RENDER_PIXELS:
+                raise ValidationError("The PDF pages are too large to process safely.")
         else:
             from PIL import Image
 
-            Image.open(io.BytesIO(data)).verify()
+            with Image.open(io.BytesIO(data)) as image:
+                if image.width * image.height > MAX_IMAGE_PIXELS:
+                    raise ValidationError("The image dimensions are too large to process safely.")
+                image.verify()
+    except ValidationError:
+        raise
     except Exception as exc:                          # noqa: BLE001 - any parser failure means unreadable
         raise ValidationError(f"This {kind.upper()} file could not be opened ({exc.__class__.__name__}). "
                               "It may be damaged or password protected.") from exc
@@ -93,6 +102,24 @@ def prepare_upload(upload):
 
     image = ImageOps.exif_transpose(Image.open(io.BytesIO(data)))    # first frame of a GIF or TIFF
     return _png(image.convert("RGB"), stem), ""
+
+
+def prepare_upload_blob(upload) -> tuple[bytes, str, str, str]:
+    """Return normalised image bytes, name, MIME type, and exact PDF text."""
+    image, exact_text = prepare_upload(upload)
+    image.seek(0)
+    data = image.read()
+    image.seek(0)
+    if len(data) > MAX_BYTES:
+        raise ValidationError(
+            f"The normalised receipt is {len(data) / 1048576:.1f} MB. "
+            f"The limit is {MAX_BYTES // 1048576} MB."
+        )
+    kind = sniff(data[:16])
+    if kind not in _MIME:
+        raise ValidationError("The receipt could not be converted to a supported image.")
+    name = Path(getattr(image, "name", "receipt.png")).name
+    return data, name, _MIME[kind], exact_text
 
 
 def _png(image, stem: str) -> ContentFile:

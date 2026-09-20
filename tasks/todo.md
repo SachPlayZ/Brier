@@ -258,6 +258,61 @@ Native CSS + vanilla JS on the Django template.
 - [x] All 17 text outputs identical to the Sep 16 run (fixed seeds), so no numbers moved
 - [x] Prose fixed to match measurements: "roughly 1.2%" -> ~1.1% (1.08% measured, ~1,400 spurious pairs, 508 claims); summary row "5/5 seeds" now says it was measured against the original hand-set weights and a fresh search wins 0/5
 - Checked, unchanged: 8 hand features, phash floor 0.90 (1 - 6/64), tuned weights image 0.0265 / text 0.2497, ECE 0.055 vs 0.08 target, confidence falls with noise tier (0.893, 0.861, 0.667, 0.487)
+
+---
+
+# Streamlit end-to-end deployment (2026-09-20)
+
+## Plan
+
+- [x] Add a Streamlit runtime adapter that boots Django, applies migrations, and provisions the finance account from secrets.
+- [x] Add authenticated employee flows: sign up, sign in, upload invoice/PDF, OCR/extract, submit, list, and inspect claims.
+- [x] Add finance flows: dashboard, review queue, field correction, duplicate resolution, and guarded approve/reject/request-info actions.
+- [x] Persist uploaded receipt bytes in the database so Streamlit Cloud restarts do not lose evidence.
+- [x] Add Streamlit Cloud config, Tesseract system dependency, Python dependency, secrets template, and deployment documentation.
+- [x] Add tests for Streamlit-specific storage/bootstrap helpers and critical workflows.
+- [x] Run migrations, tests, Django checks, Streamlit headless smoke test, and inspect the final diff.
+- [x] Commit the deployment changes locally.
+- [ ] Push, configure Streamlit Community Cloud secrets, deploy, and smoke-test the public URL.
+
+## Verification
+
+- [x] `pytest -q` — 391 passed, 7 skipped
+- [x] `python manage.py check`
+- [x] `python manage.py makemigrations --check`
+- [x] Streamlit server starts and health endpoint responds
+- [x] Upload -> extraction -> duplicate screen -> dismiss -> approve verified with `AppTest`
+- [x] Git diff contains no credentials or unrelated changes
+
+## Review
+
+### Changed
+
+- Streamlit UI and runtime over the existing Django service layer.
+- Durable private receipt evidence in PostgreSQL rows; blob columns deferred from list/dedup queries.
+- Cloud config, Tesseract package, production secrets template, migration, and deployment docs.
+- Production hardening: fail-closed startup, collision-safe employee/admin provisioning, escaped dynamic HTML, bounded uploads, ordered risk queue, connection cleanup, and operational field corrections.
+
+### Verified
+
+- 391 tests pass; 7 real-OCR cases skipped in the test environment.
+- Ruff checks, Django checks, migration drift check, HTTP health check, and Streamlit end-to-end workflow pass.
+
+### Risks
+
+- PostgreSQL blob storage is appropriate for this first deployment, not high-volume archival storage.
+- Streamlit session auth has no password reset or cross-session rate limiter; deploy private/invite-only.
+- Streamlit Community Cloud data residency and resource limits must suit the invoice data.
+
+### Follow-ups
+
+- Move evidence to private object storage if volume grows.
+- Add an identity provider and rate limiting before broad public access.
+
+## Unresolved questions
+
+- PostgreSQL `DATABASE_URL` for durable hosted data.
+- Streamlit Community Cloud deployment access/session and desired app subdomain.
 - Stale elsewhere, not touched: `tasks/lessons.md` still says d<=4 covers 1.2% of random pairs
 
 ---

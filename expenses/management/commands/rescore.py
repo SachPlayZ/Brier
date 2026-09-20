@@ -19,7 +19,8 @@ class Command(BaseCommand):
                             help="Preserve reviewer decisions on existing flags.")
 
     def handle(self, *args, **options):
-        claims = list(Claim.objects.select_related("receipt", "employee", "receipt__vendor"))
+        claims = list(Claim.objects.select_related(
+            "receipt", "employee", "receipt__vendor").defer("receipt__image_blob"))
         if not claims:
             self.stderr.write(self.style.ERROR("No claims. Run `manage.py ingest` first."))
             return

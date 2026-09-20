@@ -17,7 +17,7 @@ from core.extraction import confidence as C
 from expenses import services
 from expenses.forms import (ClaimSubmitForm, FieldCorrectionForm, ReviewDecisionForm,
                             SignUpForm, create_with_unique_id)
-from expenses.models import Claim, DuplicateFlag, ExtractedField, Receipt
+from expenses.models import Claim, DuplicateFlag, Employee, ExtractedField, Receipt
 from expenses.uploads import prepare_upload
 
 FINANCE_GROUP = "finance"
@@ -127,6 +127,7 @@ def landing(request):
 @login_required
 def claim_list(request):
     claims = (Claim.objects.select_related("receipt", "employee", "receipt__vendor")
+              .defer("receipt__image_blob")
               .annotate(n_flags=Count("flags_as_a", filter=Q(flags_as_a__status=DuplicateFlag.OPEN))))
     finance = is_finance(request.user)
     employee = getattr(request.user, "employee", None)
@@ -158,11 +159,9 @@ def claim_submit(request):
 
     employee = getattr(request.user, "employee", None)
     if employee is None:
-        employee = services.get_or_create_employee(
-            request.user.username.upper()[:16], full_name=request.user.get_full_name())
-        if employee.user_id is None:
-            employee.user = request.user
-            employee.save(update_fields=["user"])
+        employee = create_with_unique_id(
+            Employee, "employee_code", "E", width=5, user=request.user,
+            full_name=request.user.get_full_name())
 
     upload = form.cleaned_data.get("image")
     image, exact_text = prepare_upload(upload) if upload else (None, "")
@@ -206,7 +205,8 @@ def claim_submit(request):
 
 @login_required
 def claim_detail(request, claim_id: str):
-    claims = Claim.objects.select_related("receipt", "employee", "receipt__vendor")
+    claims = (Claim.objects.select_related("receipt", "employee", "receipt__vendor")
+              .defer("receipt__image_blob"))
     if not is_finance(request.user):
         claims = claims.filter(employee__user=request.user)     # 404, not 403: do not confirm ids exist
     claim = get_object_or_404(claims, claim_id=claim_id)
@@ -232,6 +232,7 @@ def review_queue(request):
     """Everything awaiting a decision, worst first."""
     claims = (Claim.objects.filter(status__in=Claim.OPEN_STATUSES)
               .select_related("receipt", "employee", "receipt__vendor")
+              .defer("receipt__image_blob")
               .annotate(n_open=Count("flags_as_a",
                                      filter=Q(flags_as_a__status=DuplicateFlag.OPEN))))
 
@@ -370,11 +371,11 @@ def correct_field(request, field_id: int):
 
     form = FieldCorrectionForm(request.POST)
     if form.is_valid():
-        field.corrected_value = form.cleaned_data["value"]
-        field.corrected_by = request.user
-        field.needs_review = False
-        field.save()
-        messages.success(request, f"{field.name} corrected.")
+        try:
+            services.correct_extracted_field(field, form.cleaned_data["value"], request.user)
+            messages.success(request, f"{field.name} corrected.")
+        except services.TransitionError as exc:
+            messages.error(request, str(exc))
 
     claim = field.receipt.claims.first()
     return redirect("claim_detail", claim_id=claim.claim_id) if claim else redirect("claim_list")

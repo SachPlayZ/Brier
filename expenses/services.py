@@ -6,7 +6,10 @@ the duplicate guard cannot be bypassed by a view that forgets to call them.
 from __future__ import annotations
 
 import datetime as dt
-from decimal import Decimal
+import os
+import tempfile
+from contextlib import contextmanager
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 from django.conf import settings
@@ -15,7 +18,7 @@ from django.utils import timezone
 
 from core.currency import DEFAULT_CURRENCY
 from core.dedup.blocking import phash_of
-from core.dedup.pipeline import cluster, find_duplicates_for_claim
+from core.dedup.pipeline import cluster, find_duplicates, find_duplicates_for_claim
 from core.extraction.linemodel import LineRoleModel
 from core.extraction.pipeline import extract_receipt
 from core.extraction.vendors import VendorGazetteer
@@ -126,9 +129,10 @@ def extract_into_receipt(receipt: Receipt, *, gazetteer: VendorGazetteer | None 
     for name in ("subtotal", "cgst", "sgst", "igst", "total"):
         setattr(receipt, name, _decimal(result.get(name)))
 
-    if receipt.image and not receipt.phash:
+    if (receipt.image or receipt.image_blob) and not receipt.phash:
         try:
-            value = phash_of(receipt.image.path)
+            with _receipt_file(receipt) as path:
+                value = phash_of(path)
             receipt.phash = str(value) if value is not None else ""
         except (ValueError, OSError):
             receipt.phash = ""
@@ -154,16 +158,39 @@ def extract_into_receipt(receipt: Receipt, *, gazetteer: VendorGazetteer | None 
 def _receipt_source(receipt: Receipt, gazetteer=None, line_model=None):
     if receipt.text:
         return text_from_string(receipt.text)
-    if receipt.image and is_ocr_available():
-        return read_receipt(receipt.image.path, gazetteer=gazetteer, line_model=line_model)
+    if (receipt.image or receipt.image_blob) and is_ocr_available():
+        with _receipt_file(receipt) as path:
+            return read_receipt(path, gazetteer=gazetteer, line_model=line_model)
     sidecar = Path(settings.DATA_DIR) / "receipts_text" / f"{receipt.receipt_id}.txt"
     if sidecar.exists():
         return text_from_string(sidecar.read_text(encoding="utf-8"))
-    if receipt.image:
+    if receipt.image or receipt.image_blob:
         raise RuntimeError(
             "Tesseract is not installed, so an uploaded image cannot be read. "
             "Install Tesseract, or paste the receipt text into the form.")
     raise RuntimeError(f"No text available for receipt {receipt.receipt_id}.")
+
+
+@contextmanager
+def _receipt_file(receipt: Receipt):
+    """Yield a local image path for local or database-backed receipt storage."""
+    if receipt.image_blob:
+        suffix = Path(receipt.image_filename or ".png").suffix or ".png"
+        with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as handle:
+            handle.write(bytes(receipt.image_blob))
+            temporary_path = Path(handle.name)
+        try:
+            yield temporary_path
+        finally:
+            try:
+                os.unlink(temporary_path)
+            except FileNotFoundError:
+                pass
+        return
+    if receipt.image:
+        yield Path(receipt.image.path)
+        return
+    raise FileNotFoundError(f"Receipt {receipt.receipt_id} has no image.")
 
 
 # ------------------------------------------------------------------- workflow
@@ -240,7 +267,8 @@ def screen_for_duplicates(claim: Claim) -> list[DuplicatePair]:
     """
     record = to_claim_record(claim)
     others = (Claim.objects.exclude(pk=claim.pk)
-              .select_related("receipt", "employee", "receipt__vendor"))
+              .select_related("receipt", "employee", "receipt__vendor")
+              .defer("receipt__image_blob"))
     existing = [to_claim_record(c) for c in others]
 
     pairs = find_duplicates_for_claim(record, existing, min_band="LOW")
@@ -316,6 +344,91 @@ def resolve_flag(flag: DuplicateFlag, actor, *, confirmed: bool, note: str = "")
     return flag
 
 
+def correct_extracted_field(field: ExtractedField, value: str, actor) -> ExtractedField:
+    """Apply a reviewed value to both the evidence row and operational fields."""
+    value = value.strip()
+    if not value:
+        raise TransitionError("Corrected value cannot be blank.")
+    if len(value) > 200:
+        raise TransitionError("Corrected value is too long.")
+
+    receipt = field.receipt
+    scalar_fields: list[str] = []
+    try:
+        if field.name == "vendor":
+            from core.normalize import norm_vendor
+            receipt.vendor_raw = value
+            receipt.vendor = Vendor.objects.filter(normalized_name=norm_vendor(value)).first()
+            scalar_fields.extend(["vendor_raw", "vendor"])
+        elif field.name == "date":
+            receipt.invoice_date = dt.date.fromisoformat(value)
+            scalar_fields.append("invoice_date")
+        elif field.name == "invoice_no":
+            receipt.invoice_no = value
+            scalar_fields.append("invoice_no")
+        elif field.name == "gstin":
+            receipt.gstin = value
+            scalar_fields.append("gstin")
+        elif field.name in {"subtotal", "cgst", "sgst", "igst", "total"}:
+            setattr(receipt, field.name, Decimal(value.replace(",", "")))
+            scalar_fields.append(field.name)
+    except (ValueError, InvalidOperation) as exc:
+        raise TransitionError(f"{field.name} has an invalid value.") from exc
+
+    with transaction.atomic():
+        field.corrected_value = value
+        field.corrected_by = actor if _is_user(actor) else None
+        field.needs_review = False
+        field.save(update_fields=["corrected_value", "corrected_by", "needs_review"])
+        receipt.needs_review = receipt.extracted.filter(needs_review=True).exists()
+        receipt.save(update_fields=[*scalar_fields, "needs_review"])
+        claims = list(receipt.claims.all())
+        if field.name == "total":
+            receipt.claims.update(claimed_amount=receipt.total)
+        for claim in claims:
+            AuditEvent.objects.create(
+                claim=claim, actor=actor if _is_user(actor) else None,
+                action="CORRECT_FIELD", from_status=claim.status, to_status=claim.status,
+                note=f"{field.name} corrected")
+
+    if field.name in {"vendor", "gstin", "invoice_no", "date", "total"}:
+        rescore_all_flags()
+    return field
+
+
+def rescore_all_flags() -> tuple[int, int]:
+    """Rebuild duplicate evidence while preserving prior human resolutions."""
+    claims = list(Claim.objects.select_related(
+        "receipt", "employee", "receipt__vendor").defer("receipt__image_blob"))
+    if not claims:
+        return 0, 0
+    resolved = {(f.claim_id, f.matched_claim_id): f
+                for f in DuplicateFlag.objects.exclude(status=DuplicateFlag.OPEN)}
+    pairs = find_duplicates(
+        [to_claim_record(c) for c in claims], min_band="LOW",
+        policy_limit=getattr(settings, "POLICY_SPEND_LIMIT", None))
+    by_id = {claim.claim_id: claim for claim in claims}
+    with transaction.atomic():
+        DuplicateFlag.objects.all().delete()
+        created = 0
+        for pair in pairs:
+            a, b = by_id.get(pair.a), by_id.get(pair.b)
+            if a is None or b is None:
+                continue
+            newer, older = ((a, b) if (a.submitted_at or timezone.now()) >=
+                            (b.submitted_at or timezone.now()) else (b, a))
+            previous = resolved.get((newer.pk, older.pk))
+            DuplicateFlag.objects.create(
+                claim=newer, matched_claim=older, score=pair.score, band=pair.band,
+                signals=pair.signals, rules_fired=pair.rules_fired, tags=pair.tags,
+                status=previous.status if previous else DuplicateFlag.OPEN,
+                resolved_by=previous.resolved_by if previous else None,
+                resolved_at=previous.resolved_at if previous else None,
+                resolution_note=previous.resolution_note if previous else "")
+            created += 1
+    return created, recompute_groups()
+
+
 def recompute_groups() -> int:
     """Recluster all claims into duplicate groups. Returns the group count."""
     pairs = [DuplicatePair(a=f.claim.claim_id, b=f.matched_claim.claim_id,
@@ -325,6 +438,7 @@ def recompute_groups() -> int:
              .exclude(status=DuplicateFlag.DISMISSED)]
     groups = cluster(pairs)
     if not groups:
+        Claim.objects.exclude(duplicate_group=None).update(duplicate_group=None)
         return 0
     by_id = {c.claim_id: c for c in Claim.objects.filter(claim_id__in=groups.keys())}
     updated = []
@@ -335,6 +449,8 @@ def recompute_groups() -> int:
             updated.append(claim)
     if updated:
         Claim.objects.bulk_update(updated, ["duplicate_group"])
+    Claim.objects.exclude(claim_id__in=groups.keys()).exclude(
+        duplicate_group=None).update(duplicate_group=None)
     return len(set(groups.values()))
 
 

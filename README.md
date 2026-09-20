@@ -87,10 +87,54 @@ cp .env.example .env
 Sign in at http://127.0.0.1:8000/ as `finance` / `demo12345` (reviewer) or
 `e001` / `demo12345` (employee).
 
-Every step is required except `train_models`. The repository ships no database
-and no receipt images, so `gen_dataset` and `ingest` are what give you something
-to look at, and `seed_users` is what creates those two logins. Skip it and there
-is no account to sign in with.
+The repository includes a synthetic demo database and receipt images. Run
+`gen_dataset`, `ingest`, and `seed_users` only when rebuilding that demo corpus;
+`train_models` remains optional. Never use the tracked demo database for a
+production deployment.
+
+### Streamlit Community Cloud
+
+`streamlit_app.py` exposes the complete workflow through Streamlit: employee
+authentication and invoice upload, OCR/extraction, duplicate screening, claims,
+finance review, corrections, guarded decisions, and the audit trail.
+
+Run it locally from the repository root:
+
+```bash
+.venv/bin/streamlit run streamlit_app.py
+```
+
+For hosting, create an empty managed PostgreSQL database. In
+[Streamlit Community Cloud](https://share.streamlit.io), create an app from this
+repository using branch `main` and entrypoint `streamlit_app.py`. Select Python
+3.12. Copy `.streamlit/secrets.toml.example` into **Advanced settings → Secrets**
+and replace every placeholder:
+
+```toml
+DATABASE_URL = "postgresql://...?...sslmode=require"
+DJANGO_SECRET_KEY = "at-least-50-random-characters"
+DJANGO_DEBUG = "0"
+DJANGO_ALLOWED_HOSTS = ".streamlit.app"
+BRIER_ADMIN_USERNAME = "finance"
+BRIER_ADMIN_PASSWORD = "a-strong-initial-password"
+BRIER_ADMIN_EMAIL = "finance@example.com"
+BRIER_ALLOW_SIGNUP = "0"
+```
+
+The app migrates the empty database on cold start and creates the initial
+finance user once. It never resets that user's password on later restarts.
+Production startup fails closed when the secret key or PostgreSQL URL is
+missing, so it cannot accidentally expose the repository's demo SQLite data.
+
+New Streamlit uploads are stored with their PostgreSQL receipt row. This keeps
+invoice evidence durable across Streamlit's ephemeral filesystem without a
+public media bucket. For high-volume use, move the same private evidence to
+object storage; the OCR service already handles database-backed files through a
+temporary local path.
+
+`packages.txt` installs Tesseract on the Debian host. `requirements.txt` pins
+Streamlit, and `.streamlit/config.toml` applies the 15 MB upload ceiling. Keep
+the deployed app private or access-controlled: invoices are financial records.
 
 ### Database
 
