@@ -393,6 +393,7 @@ def dashboard(request):
     if not is_finance(request.user):
         return redirect("claim_list")
     by_status = dict(Claim.objects.values_list("status").annotate(n=Count("id")))
+    n_claims = Claim.objects.count()
     flags = DuplicateFlag.objects.all()
 
     confirmed = flags.filter(status=DuplicateFlag.CONFIRMED)
@@ -406,11 +407,41 @@ def dashboard(request):
 
     receipts = Receipt.objects.all()
     n_receipts = receipts.count() or 1
-    band_counts = list(flags.values("band").annotate(n=Count("id")).order_by("-n"))
+    raw_band_counts = list(flags.values("band").annotate(n=Count("id")).order_by("-n"))
+    max_band_count = max((row["n"] for row in raw_band_counts), default=1)
+    band_counts = [
+        {**row, "pct": round(row["n"] * 100 / max_band_count)}
+        for row in raw_band_counts
+    ]
+    status_rows = [
+        {
+            "key": key,
+            "label": label,
+            "count": by_status.get(key, 0),
+            "pct": round(by_status.get(key, 0) * 100 / (n_claims or 1)),
+        }
+        for key, label in Claim.STATUSES
+    ]
+    recent_claims = list(
+        Claim.objects.select_related("receipt", "receipt__vendor", "employee")
+        .only(
+            "claim_id", "claimed_amount", "status", "submitted_at",
+            "employee__employee_code", "receipt__currency", "receipt__vendor_raw",
+            "receipt__vendor__name",
+        )
+        .annotate(
+            n_open_flags=Count(
+                "flags_as_a", filter=Q(flags_as_a__status=DuplicateFlag.OPEN)
+            )
+        )
+        .order_by("-submitted_at")[:6]
+    )
+    mean_confidence = round(
+        sum(receipts.values_list("doc_confidence", flat=True)) / n_receipts, 3)
 
     return render(request, "expenses/dashboard.html", {
-        "by_status": [(label, by_status.get(key, 0)) for key, label in Claim.STATUSES],
-        "n_claims": Claim.objects.count(),
+        "status_rows": status_rows,
+        "n_claims": n_claims,
         "n_receipts": receipts.count(),
         "n_flags": flags.count(),
         "n_open_flags": open_flags.count(),
@@ -422,8 +453,10 @@ def dashboard(request):
             receipts.filter(needs_review=True).count() * 100 / n_receipts, 1),
         "arithmetic_pct": round(
             receipts.filter(arithmetic_ok=True).count() * 100 / n_receipts, 1),
-        "mean_confidence": round(
-            sum(receipts.values_list("doc_confidence", flat=True)) / n_receipts, 3),
+        "mean_confidence": mean_confidence,
+        "mean_confidence_pct": round(mean_confidence * 100),
+        "open_claims": Claim.objects.filter(status__in=Claim.OPEN_STATUSES).count(),
+        "recent_claims": recent_claims,
         "is_finance": is_finance(request.user),
         "now": timezone.now(),
     })

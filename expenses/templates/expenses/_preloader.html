@@ -1,10 +1,12 @@
 {% comment %}First page of a session only. Hidden by CSS unless the <head> gate added
 html.has-preloader; loading.js removes it from the DOM otherwise. Decorative, so aria-hidden.{% endcomment %}
 <div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-plane is-left"></div>
+  <div class="preloader-plane is-right"></div>
   <div class="preloader-inner">
     <div class="preloader-brand">
       <span class="brand-mark"><i class="ph ph-receipt"></i></span>
-      <span class="brand-name">Brier</span>
+      <div><span class="brand-name">Brier</span><span class="preloader-note">Receipt intelligence</span></div>
     </div>
     <div class="preloader-bar"><span></span></div>
   </div>

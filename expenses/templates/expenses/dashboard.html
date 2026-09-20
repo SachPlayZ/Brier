@@ -1,84 +1,153 @@
 {% extends "expenses/base.html" %}
 {% load humanize %}
-{% block title %}Dashboard{% endblock %}
-{% block crumbs %}<i class="ph ph-caret-right"></i><span class="current">Dashboard</span>{% endblock %}
+{% block title %}Finance dashboard{% endblock %}
+{% block body_class %}dashboard-page{% endblock %}
+{% block page_theme %}
+<script>
+  try { if (!localStorage.getItem("theme")) document.documentElement.setAttribute("data-bs-theme", "dark"); } catch (e) {}
+</script>
+{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><span class="current">Financial control</span>{% endblock %}
 {% block content %}
-<div class="page-head">
+<div class="finance-head dash-enter" style="--order: 0">
   <div>
-    <h1 class="page-title">Overview</h1>
-    <p class="page-sub">Claim volume, duplicate flags and extraction health.</p>
+    <h1 class="page-title">Financial control</h1>
+    <p class="page-sub">Claims, duplicate exposure and extraction quality in one operational view.</p>
   </div>
-  <div class="page-actions">
-    <a href="{% url 'claim_submit' %}" class="btn btn-primary"><i class="ph ph-plus"></i>Submit claim</a>
+  <div class="finance-actions">
+    <span class="as-of"><i class="ph ph-calendar-blank" aria-hidden="true"></i><time datetime="{{ now|date:'Y-m-d' }}">{{ now|date:"d M Y" }}</time></span>
+    <a href="{% url 'claim_submit' %}" class="btn btn-primary" data-loading-label="Opening claim form"><i class="ph ph-plus" aria-hidden="true"></i>Submit claim</a>
   </div>
 </div>
 
-<div class="row g-3 mb-3">
-  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
-    <div class="stat-top"><span class="stat-label">Claims</span><span class="chip"><i class="ph ph-files"></i></span></div>
-    <div class="stat">{{ n_claims|intcomma }}</div>
-    <div class="stat-note">{{ n_receipts|intcomma }} receipts</div>
-  </div></div>
-  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
-    <div class="stat-top"><span class="stat-label">Duplicate flags</span><span class="chip warn"><i class="ph ph-copy"></i></span></div>
-    <div class="stat">{{ n_flags|intcomma }}</div>
-    <div class="stat-note">{{ n_open_flags }} open, {{ n_confirmed }} confirmed</div>
-  </div></div>
-  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
-    <div class="stat-top"><span class="stat-label">Prevented payout</span><span class="chip ok"><i class="ph ph-shield-check"></i></span></div>
-    <div class="stat ok">
-      {% for row in prevented_by_currency %}<div>{{ row.display }}</div>{% empty %}0{% endfor %}
-    </div>
-    <div class="stat-note">Confirmed duplicates</div>
-  </div></div>
-  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
-    <div class="stat-top"><span class="stat-label">Awaiting decision</span><span class="chip bad"><i class="ph ph-warning"></i></span></div>
-    <div class="stat bad">
-      {% for row in at_risk_by_currency %}<div>{{ row.display }}</div>{% empty %}0{% endfor %}
-    </div>
-    <div class="stat-note">Open EXACT and HIGH flags</div>
-  </div></div>
-</div>
-
-<div class="row g-3">
-  <div class="col-lg-4"><div class="panel h-100">
-    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-list-checks"></i>Claims by status</h2></div>
-    <div class="rows">
-      {% for label, count in by_status %}
-        <div class="row-item">
-          <span class="row-title">{{ label }}</span>
-          <span class="row-value">{{ count }}</span>
+<section class="finance-kpis" aria-label="Finance summary">
+  <article class="dashboard-panel exposure-panel dash-enter" style="--order: 1" data-spotlight>
+    <div class="panel-sheen" aria-hidden="true"></div>
+    <div class="exposure-top">
+      <div>
+        <p class="metric-label">Prevented duplicate payout</p>
+        <div class="hero-value">
+          {% for row in prevented_by_currency %}<span>{{ row.display }}</span>{% empty %}<span>₹0.00</span>{% endfor %}
         </div>
-      {% empty %}
-        <div class="empty"><strong>No claims yet</strong></div>
+      </div>
+      <span class="metric-icon"><i class="ph ph-shield-check" aria-hidden="true"></i></span>
+    </div>
+    <div class="exposure-foot">
+      <span><strong>{{ n_confirmed|intcomma }}</strong> confirmed duplicate{{ n_confirmed|pluralize }}</span>
+      <span class="trend-copy"><i class="ph ph-lock-key" aria-hidden="true"></i>Approval guard active</span>
+    </div>
+  </article>
+
+  <article class="dashboard-panel metric-panel risk-panel dash-enter" style="--order: 2" data-spotlight>
+    <div class="metric-panel-head">
+      <p class="metric-label">Awaiting decision</p>
+      <span class="metric-icon compact"><i class="ph ph-warning" aria-hidden="true"></i></span>
+    </div>
+    <div class="metric-value danger">
+      {% for row in at_risk_by_currency %}<span>{{ row.display }}</span>{% empty %}<span>₹0.00</span>{% endfor %}
+    </div>
+    <div class="metric-meta"><span>{{ n_open_flags|intcomma }} open flags</span><a href="{% url 'review_queue' %}">Review queue<i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div>
+  </article>
+
+  <article class="dashboard-panel metric-panel dash-enter" style="--order: 3" data-spotlight>
+    <div class="metric-panel-head">
+      <p class="metric-label">Open claims</p>
+      <span class="metric-icon compact"><i class="ph ph-hourglass-medium" aria-hidden="true"></i></span>
+    </div>
+    <div class="metric-value">{{ open_claims|intcomma }}</div>
+    <div class="metric-meta"><span>Need finance action</span><span>{{ n_claims|intcomma }} total</span></div>
+  </article>
+
+  <article class="dashboard-panel metric-panel dash-enter" style="--order: 4" data-spotlight>
+    <div class="metric-panel-head">
+      <p class="metric-label">Documents processed</p>
+      <span class="metric-icon compact"><i class="ph ph-receipt" aria-hidden="true"></i></span>
+    </div>
+    <div class="metric-value">{{ n_receipts|intcomma }}</div>
+    <div class="metric-meta"><span>Mean confidence</span><span class="accent-copy">{{ mean_confidence }}</span></div>
+  </article>
+</section>
+
+<section class="finance-workspace" aria-label="Operational analytics">
+  <article class="dashboard-panel status-panel dash-enter" style="--order: 5" data-spotlight>
+    <header class="finance-panel-head">
+      <div><h2>Claims flow</h2><p>Distribution across every decision state.</p></div>
+      <i class="ph ph-chart-bar-horizontal" aria-hidden="true"></i>
+    </header>
+    <div class="status-chart">
+      {% for row in status_rows %}
+      <div class="chart-row status-{{ row.key|lower }}">
+        <div class="chart-copy"><span>{{ row.label }}</span><strong>{{ row.count|intcomma }}</strong></div>
+        <div class="data-bar" role="img" aria-label="{{ row.label }}: {{ row.count }} claims, {{ row.pct }} percent">
+          <span style="--value: {{ row.pct }}%"></span>
+        </div>
+      </div>
       {% endfor %}
     </div>
-  </div></div>
+  </article>
 
-  <div class="col-lg-4"><div class="panel h-100">
-    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-flag"></i>Flags by band</h2></div>
-    <div class="rows">
+  <article class="dashboard-panel health-panel dash-enter" style="--order: 6" data-spotlight>
+    <header class="finance-panel-head">
+      <div><h2>Extraction health</h2><p>Confidence and arithmetic checks.</p></div>
+      <i class="ph ph-pulse" aria-hidden="true"></i>
+    </header>
+    <div class="health-content">
+      <div class="health-ring" style="--target: {{ mean_confidence_pct }}%" role="img" aria-label="Mean document confidence {{ mean_confidence_pct }} percent">
+        <div><strong>{{ mean_confidence_pct }}%</strong><span>confidence</span></div>
+      </div>
+      <div class="health-stats">
+        <div><span>Amounts reconcile</span><strong>{{ arithmetic_pct }}%</strong></div>
+        <div><span>Manual review</span><strong>{{ needs_review_pct }}%</strong></div>
+        <div><span>Receipts checked</span><strong>{{ n_receipts|intcomma }}</strong></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="dashboard-panel flags-panel dash-enter" style="--order: 7" data-spotlight>
+    <header class="finance-panel-head">
+      <div><h2>Duplicate signals</h2><p>Flags grouped by detection strength.</p></div>
+      <i class="ph ph-fingerprint-simple" aria-hidden="true"></i>
+    </header>
+    <div class="flag-chart">
       {% for row in band_counts %}
-        <div class="row-item">
-          <span class="badge band-{{ row.band }}">{{ row.band }}</span>
-          <span class="row-value">{{ row.n }}</span>
-        </div>
+      <div class="flag-band flag-{{ row.band|lower }}">
+        <div><span>{{ row.band|title }}</span><strong>{{ row.n|intcomma }}</strong></div>
+        <span class="flag-line" style="--value: {{ row.pct }}%"></span>
+      </div>
       {% empty %}
-        <div class="empty"><i class="ph ph-check-circle"></i><strong>No flags</strong>Nothing has matched as a duplicate.</div>
+      <div class="compact-empty"><i class="ph ph-check-circle" aria-hidden="true"></i><span>No duplicate signals yet.</span></div>
       {% endfor %}
     </div>
-  </div></div>
+    <a class="panel-link" href="{% url 'review_queue' %}">Inspect evidence<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+  </article>
+</section>
 
-  <div class="col-lg-4"><div class="panel h-100">
-    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-heartbeat"></i>Extraction health</h2></div>
-    <div class="rows">
-      <div class="row-item"><span class="row-title">Mean document confidence</span><span class="row-value">{{ mean_confidence }}</span></div>
-      <div class="row-item"><span class="row-title">Amounts reconcile</span><span class="row-value">{{ arithmetic_pct }}%</span></div>
-      <div class="row-item"><span class="row-title">Routed to manual review</span><span class="row-value">{{ needs_review_pct }}%</span></div>
-    </div>
-    <div class="panel-body pt-0">
-      <p class="panel-note">Measured accuracy and calibration live in <code>data/eval_report.md</code> (<code>manage.py evaluate</code>).</p>
-    </div>
-  </div></div>
-</div>
+<section class="dashboard-panel activity-panel dash-enter" style="--order: 8" data-spotlight aria-labelledby="recent-title">
+  <header class="finance-panel-head activity-head">
+    <div><h2 id="recent-title">Recent claims</h2><p>Latest submissions across the organization.</p></div>
+    <a class="panel-link" href="{% url 'claim_list' %}?scope=all">View all<i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+  </header>
+  {% if recent_claims %}
+  <div class="table-wrap">
+    <table class="table finance-table align-middle">
+      <thead><tr><th>Claim</th><th>Employee</th><th>Vendor</th><th>Submitted</th><th>Status</th><th class="text-end">Amount</th><th><span class="visually-hidden">Open claim</span></th></tr></thead>
+      <tbody>
+      {% for claim in recent_claims %}
+        <tr>
+          <td><a class="cell-link" href="{% url 'claim_detail' claim.claim_id %}">{{ claim.claim_id }}</a></td>
+          <td class="mono dim">{{ claim.employee.employee_code }}</td>
+          <td>{{ claim.receipt.vendor.name|default:claim.receipt.vendor_raw|default:"Unknown vendor"|truncatechars:30 }}</td>
+          <td class="dim"><time datetime="{{ claim.submitted_at|date:'c' }}">{{ claim.submitted_at|date:"d M, H:i"|default:"Not submitted" }}</time></td>
+          <td><span class="finance-status" data-status="{{ claim.status }}">{{ claim.get_status_display }}</span>{% if claim.n_open_flags %}<span class="flag-count">{{ claim.n_open_flags }} flag{{ claim.n_open_flags|pluralize }}</span>{% endif %}</td>
+          <td class="num">{{ claim.amount_display }}</td>
+          <td class="text-end"><a class="row-open" href="{% url 'claim_detail' claim.claim_id %}" aria-label="Open {{ claim.claim_id }}"><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="compact-empty"><i class="ph ph-receipt" aria-hidden="true"></i><span>No claims have been submitted.</span></div>
+  {% endif %}
+</section>
 {% endblock %}

@@ -31,4 +31,16 @@
   });
   if (scrim) scrim.addEventListener("click", function () { setMenu(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+
+  /* Local light follows the pointer to make dense finance panels easier to track.
+     It changes CSS variables only, so React-style render work is never involved. */
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("[data-spotlight]").forEach(function (panel) {
+      panel.addEventListener("pointermove", function (e) {
+        var box = panel.getBoundingClientRect();
+        panel.style.setProperty("--mx", (e.clientX - box.left) + "px");
+        panel.style.setProperty("--my", (e.clientY - box.top) + "px");
+      });
+    });
+  }
 })();

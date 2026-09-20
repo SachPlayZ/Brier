@@ -4,29 +4,32 @@ real layout classes (page-head, panel, stat-card, rows) so shapes line up with t
 that replaces them. Purely visual: the host is aria-hidden.{% endcomment %}
 
 <template data-skeleton="cards">
-  <div class="page-head">
+  <div class="finance-head">
     <div><div class="skeleton sk-title"></div><div class="skeleton sk-line sk-w-40"></div></div>
     <div class="skeleton sk-btn"></div>
   </div>
-  <div class="row g-3 mb-3">
-    {% for i in "1234" %}
-    <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+  <div class="finance-kpis">
+    <div class="dashboard-panel exposure-panel">
       <div class="stat-top"><div class="skeleton sk-line sk-w-40"></div><div class="skeleton sk-chip"></div></div>
       <div class="skeleton sk-stat"></div>
       <div class="skeleton sk-line sk-w-50"></div>
-    </div></div>
-    {% endfor %}
+    </div>
+    {% for i in "123" %}<div class="dashboard-panel metric-panel">
+      <div class="stat-top"><div class="skeleton sk-line sk-w-40"></div><div class="skeleton sk-chip"></div></div>
+      <div class="skeleton sk-stat"></div><div class="skeleton sk-line sk-w-50"></div>
+    </div>{% endfor %}
   </div>
-  <div class="row g-3">
+  <div class="finance-workspace">
     {% for i in "123" %}
-    <div class="col-lg-4"><div class="panel h-100">
-      <div class="panel-head"><div class="skeleton sk-line sk-w-50"></div></div>
+    <div class="dashboard-panel">
+      <div class="finance-panel-head"><div class="skeleton sk-line sk-w-50"></div></div>
       <div class="rows">
         {% for j in "12345" %}<div class="row-item"><div class="skeleton sk-line sk-w-50"></div><div class="skeleton sk-line sk-w-15"></div></div>{% endfor %}
       </div>
-    </div></div>
+    </div>
     {% endfor %}
   </div>
+  <div class="dashboard-panel"><div class="sk-tr is-head">{% for i in "123456" %}<div class="skeleton sk-line sk-w-50"></div>{% endfor %}</div>{% for r in "1234" %}<div class="sk-tr">{% for i in "123456" %}<div class="skeleton sk-line sk-w-50"></div>{% endfor %}</div>{% endfor %}</div>
 </template>
 
 <template data-skeleton="table">
