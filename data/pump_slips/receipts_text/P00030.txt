@@ -1,0 +1,42 @@
+BPCL
+Welcome
+MAA TARA FILLING STATION
+42/1, BARRACKPORE TRUNK RD
+NEW DELHI 110019
+Tel. No.: 9861608281
+
+Invoice No: 4337033573638
+FCC ID: 48634971441561401
+FIP No. : 05
+Nozzle No. : 03
+Product : Petrol
+Density : 810.1Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 100.6
+Volume(L) : 00000.99
+Total Amount : 00100.00
+--------------------------
+Taxable Val  : ₹    84.74
+CGST @9%     : 2 7.63
+SGST @9%     : = 7.63
+Total GST    : B ES 15.26
+Pay Mode     : UPI
+UPI Ref: 131033698606
+--------------------------
+Vech: 79918489420.90
+Vtrd: 9423623372.431
+
+Vehicle No: 8327
+Mobile No : 9044273432
+
+Date : 06/03/2026
+Time : 21:10
+
+GST No: 07JMFDC4180V1ZX
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

@@ -1,0 +1,41 @@
+NAYARA ENERGY
+KUMAR SERVICE STATION
+42/1, BARRACKPORE TRUNK RD
+KOLKATA 700040
+Tel. No.: 9815451427
+
+Bill No.: 73118380066353291
+FCC ID: 81926583837641892
+FIP No. : 07
+Nozzle No. : 06
+Product : Diesel
+Density : 777.6Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 103.59
+Volume(L) : 00005.70
+Total Amount : 00590.00
+--------------------------
+Taxable Val  : ® 500.00
+CGST @9%     : 2 45.00
+SGST @9%     : ₹    45.00
+Total GST    : ₹    90.00
+Pay Mode     : Cash
+UPI Ref: 546034588255
+--------------------------
+Vech: 45602288395.32
+Vtrd: 4747005760.187
+
+Vehicle No: 2161
+Mobile No : Not Entered
+
+Date : 13-06-2026
+Time : 22:38
+
+GST No: 19KETTW7961F1ZZ
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

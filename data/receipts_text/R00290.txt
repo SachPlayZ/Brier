@@ -1,0 +1,20 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+GSTIN: 36AAGCD8899T1Z8
+RETAIL INVOICE
+--------------------------------------------
+Bill No: TI-2024-54755
+Date: 06.07.2025
+--------------------------------------------
+Item                     Qty          Amount
+Printer Ink                3        3,012.99
+File Folder                4          167.20
+Notebook 200pg             4          479.88
+Stapler                    3          499.02
+--------------------------------------------
+Taxable Value:                      4,159.09
+IGST @ 18%:                           748.64
+Rounding:                               0.27
+Total Amount:                      ₹4,908.00
+--------------------------------------------
+Subject to local jurisdiction

@@ -1,0 +1,24 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST Reg No: 24AABCG2244U1ZA
+RETAIL INVOICE
+--------------------------------------------
+Bill No: INV-2025-55125
+Date: 05-08-2025
+--------------------------------------------
+Item                     Qty          Amount
+USB Hub                    4        2,990.52
+USB Hub                    4        2,437.56
+USB Hub                    3        1,683.63
+Extension Board            4        1,767.40
+--------------------------------------------
+Total Qty: 15
+Total Before Tax:                   8,879.11
+CGST @ 9%:                            799.12
+SGST @ 9%:                            799.12
+Round Off Adj:                         -0.35
+Net Payable:                      ₹10,477.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

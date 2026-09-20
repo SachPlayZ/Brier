@@ -1,0 +1,18 @@
+SHELL SELECT FUEL POINT
+Whitefield Main Rd, Bengaluru 560066
+Ph: 9845077889
+GST No.: 29AAACS9911A1ZI
+TAX INVOICE
+--------------------------------------------
+Invoice Number: BILL-2024-75144
+Dated: 07-Aug-2025
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                    12        1,200.00
+Petrol                    14        1,331.26
+--------------------------------------------
+Sub Total:                          2,531.26
+Round Off:                             -0.26
+Bill Total:                        ₹2,531.00
+--------------------------------------------
+*** CUSTOMER COPY ***

@@ -1,0 +1,25 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GSTIN/UIN: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Date: 05-04-2025
+Cash Memo No: RCPT-2025-49169
+Table: 15   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       4          969.36
+Masala Dosa                1           81.67
+Veg Thali                  4        1,191.80
+Veg Thali                  2          517.18
+--------------------------------------------
+Total Qty: 11
+Sub Total:                          2,760.01
+CGST @ 2.5%:                           69.00
+SGST @ 2.5%:                           69.00
+Rounding:                              -0.01
+Amount Payable:                    ₹2,898.00
+--------------------------------------------
+Thank you for your business
+Cash Payment

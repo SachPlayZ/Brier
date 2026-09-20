@@ -1,0 +1,23 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+GST Reg No: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Bill No: RCPT-2024-59589
+Invoice Date: 21.03.2025
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                1          141.40
+Paneer Butter Masala       1          196.60
+Veg Thali                  1          155.65
+Butter Naan                4          229.40
+Masala Dosa                2          268.88
+--------------------------------------------
+Total Qty: 9
+Total Before Tax:                     991.93
+CGST @ 2.5%:                           24.80
+SGST @ 2.5%:                           24.80
+Round Off Adj:                          0.47
+Net Payable:                       ₹1,042.00
+--------------------------------------------
+Subject to local jurisdiction

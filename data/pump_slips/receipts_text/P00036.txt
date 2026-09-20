@@ -1,0 +1,41 @@
+HP
+Welcome
+KUMAR SERVICE STATION
+GT ROAD, OPP BUS STAND
+LUCKNOW 226001
+Tel. No.: 9874396788
+
+Inv.No: 58929096041655785
+FIP No. : 05
+Nozzle No. : 04
+Product : Speed
+Density : 799.7Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 94.28
+Volume(L) : 00015.91
+Sale Amt : 01500.00
+--------------------------
+Taxable Val  : B ES 1271 .19
+CGST @9%     : ₹   114.41
+SGST @9%     : Bs 114.40
+Total GST    : ₹   228.81
+Pay Mode     : Cash
+UPI Ref: 548423309578
+--------------------------
+Vech: 82690278822.26
+Vtrd: 3879180998.368
+
+Vehicle No: 1662
+Mobile No : 9420273469
+
+Date : 25/12/2025
+Time : 16:48
+
+GST No: 09NHKFM2683N1ZT
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

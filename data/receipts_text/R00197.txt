@@ -1,0 +1,23 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST No.: 33AAACA6677D1ZW
+TAX INVOICE
+--------------------------------------------
+Inv No: RCPT-2024-91727
+Date: Jan 09, 2025
+--------------------------------------------
+Item                     Qty          Amount
+Antiseptic Liquid          3          309.36
+Vitamin D3                 1          222.84
+Paracetamol Strip          4          172.52
+Antiseptic Liquid          3          538.89
+--------------------------------------------
+Sub Total:                          1,243.61
+CGST @ 6%:                             74.62
+SGST @ 6%:                             74.61
+Rounding:                               0.16
+Total Amount:                      ₹1,393.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+UPI Payment

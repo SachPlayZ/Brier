@@ -1,0 +1,22 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN: 19AAFCP7890X1ZW
+GST INVOICE
+--------------------------------------------
+Inv No: INV-2025-17651
+Invoice Date: Jan 13, 2025
+Table: 17   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                3          186.81
+Veg Thali                  2          313.34
+--------------------------------------------
+Taxable Amount:                       500.15
+CGST @ 2.5%:                           12.51
+SGST @ 2.5%:                           12.50
+Round Off:                             -0.16
+Amount Payable:                      ₹525.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

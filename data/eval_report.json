@@ -1,0 +1,1233 @@
+{
+  "meta": {
+    "mode": "simulated",
+    "receipts": 480,
+    "ocr_available": true,
+    "elapsed_s": 13.1
+  },
+  "extraction": {
+    "n_receipts": 480,
+    "arithmetic_ok_rate": 0.925,
+    "fields": [
+      {
+        "field": "vendor",
+        "n": 480,
+        "extracted": 480,
+        "extraction_rate": 1.0,
+        "correct": 475,
+        "precision": 0.9896,
+        "recall": 0.9896,
+        "f1": 0.9896,
+        "lenient_recall": 0.9896
+      },
+      {
+        "field": "gstin",
+        "n": 480,
+        "extracted": 447,
+        "extraction_rate": 0.9313,
+        "correct": 446,
+        "precision": 0.9978,
+        "recall": 0.9292,
+        "f1": 0.9623,
+        "lenient_recall": 0.9292
+      },
+      {
+        "field": "invoice_no",
+        "n": 480,
+        "extracted": 465,
+        "extraction_rate": 0.9688,
+        "correct": 429,
+        "precision": 0.9226,
+        "recall": 0.8938,
+        "f1": 0.908,
+        "lenient_recall": 0.8938
+      },
+      {
+        "field": "date",
+        "n": 480,
+        "extracted": 454,
+        "extraction_rate": 0.9458,
+        "correct": 454,
+        "precision": 1.0,
+        "recall": 0.9458,
+        "f1": 0.9721,
+        "lenient_recall": 0.9458
+      },
+      {
+        "field": "subtotal",
+        "n": 480,
+        "extracted": 463,
+        "extraction_rate": 0.9646,
+        "correct": 423,
+        "precision": 0.9136,
+        "recall": 0.8812,
+        "f1": 0.8971,
+        "lenient_recall": 0.8812
+      },
+      {
+        "field": "cgst",
+        "n": 352,
+        "extracted": 331,
+        "extraction_rate": 0.9403,
+        "correct": 324,
+        "precision": 0.9789,
+        "recall": 0.9205,
+        "f1": 0.9488,
+        "lenient_recall": 0.9205
+      },
+      {
+        "field": "sgst",
+        "n": 352,
+        "extracted": 331,
+        "extraction_rate": 0.9403,
+        "correct": 323,
+        "precision": 0.9758,
+        "recall": 0.9176,
+        "f1": 0.9458,
+        "lenient_recall": 0.9176
+      },
+      {
+        "field": "total",
+        "n": 480,
+        "extracted": 479,
+        "extraction_rate": 0.9979,
+        "correct": 471,
+        "precision": 0.9833,
+        "recall": 0.9812,
+        "f1": 0.9822,
+        "lenient_recall": 0.9812
+      },
+      {
+        "field": "igst",
+        "n": 71,
+        "extracted": 67,
+        "extraction_rate": 0.9437,
+        "correct": 64,
+        "precision": 0.9552,
+        "recall": 0.9014,
+        "f1": 0.9275,
+        "lenient_recall": 0.9014
+      }
+    ],
+    "by_noise_tier": {
+      "0": [
+        {
+          "field": "vendor",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "gstin",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "invoice_no",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "date",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "subtotal",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "cgst",
+          "n": 157,
+          "extracted": 157,
+          "extraction_rate": 1.0,
+          "correct": 157,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "sgst",
+          "n": 157,
+          "extracted": 157,
+          "extraction_rate": 1.0,
+          "correct": 157,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "total",
+          "n": 217,
+          "extracted": 217,
+          "extraction_rate": 1.0,
+          "correct": 217,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "igst",
+          "n": 31,
+          "extracted": 31,
+          "extraction_rate": 1.0,
+          "correct": 31,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        }
+      ],
+      "1": [
+        {
+          "field": "vendor",
+          "n": 122,
+          "extracted": 122,
+          "extraction_rate": 1.0,
+          "correct": 122,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "gstin",
+          "n": 122,
+          "extracted": 113,
+          "extraction_rate": 0.9262,
+          "correct": 113,
+          "precision": 1.0,
+          "recall": 0.9262,
+          "f1": 0.9617,
+          "lenient_recall": 0.9262
+        },
+        {
+          "field": "invoice_no",
+          "n": 122,
+          "extracted": 121,
+          "extraction_rate": 0.9918,
+          "correct": 112,
+          "precision": 0.9256,
+          "recall": 0.918,
+          "f1": 0.9218,
+          "lenient_recall": 0.918
+        },
+        {
+          "field": "date",
+          "n": 122,
+          "extracted": 120,
+          "extraction_rate": 0.9836,
+          "correct": 120,
+          "precision": 1.0,
+          "recall": 0.9836,
+          "f1": 0.9917,
+          "lenient_recall": 0.9836
+        },
+        {
+          "field": "subtotal",
+          "n": 122,
+          "extracted": 120,
+          "extraction_rate": 0.9836,
+          "correct": 110,
+          "precision": 0.9167,
+          "recall": 0.9016,
+          "f1": 0.9091,
+          "lenient_recall": 0.9016
+        },
+        {
+          "field": "cgst",
+          "n": 93,
+          "extracted": 92,
+          "extraction_rate": 0.9892,
+          "correct": 90,
+          "precision": 0.9783,
+          "recall": 0.9677,
+          "f1": 0.973,
+          "lenient_recall": 0.9677
+        },
+        {
+          "field": "sgst",
+          "n": 93,
+          "extracted": 90,
+          "extraction_rate": 0.9677,
+          "correct": 90,
+          "precision": 1.0,
+          "recall": 0.9677,
+          "f1": 0.9836,
+          "lenient_recall": 0.9677
+        },
+        {
+          "field": "total",
+          "n": 122,
+          "extracted": 122,
+          "extraction_rate": 1.0,
+          "correct": 122,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "igst",
+          "n": 18,
+          "extracted": 17,
+          "extraction_rate": 0.9444,
+          "correct": 17,
+          "precision": 1.0,
+          "recall": 0.9444,
+          "f1": 0.9714,
+          "lenient_recall": 0.9444
+        }
+      ],
+      "2": [
+        {
+          "field": "vendor",
+          "n": 99,
+          "extracted": 99,
+          "extraction_rate": 1.0,
+          "correct": 97,
+          "precision": 0.9798,
+          "recall": 0.9798,
+          "f1": 0.9798,
+          "lenient_recall": 0.9798
+        },
+        {
+          "field": "gstin",
+          "n": 99,
+          "extracted": 84,
+          "extraction_rate": 0.8485,
+          "correct": 83,
+          "precision": 0.9881,
+          "recall": 0.8384,
+          "f1": 0.9071,
+          "lenient_recall": 0.8384
+        },
+        {
+          "field": "invoice_no",
+          "n": 99,
+          "extracted": 92,
+          "extraction_rate": 0.9293,
+          "correct": 78,
+          "precision": 0.8478,
+          "recall": 0.7879,
+          "f1": 0.8168,
+          "lenient_recall": 0.7879
+        },
+        {
+          "field": "date",
+          "n": 99,
+          "extracted": 87,
+          "extraction_rate": 0.8788,
+          "correct": 87,
+          "precision": 1.0,
+          "recall": 0.8788,
+          "f1": 0.9355,
+          "lenient_recall": 0.8788
+        },
+        {
+          "field": "subtotal",
+          "n": 99,
+          "extracted": 94,
+          "extraction_rate": 0.9495,
+          "correct": 74,
+          "precision": 0.7872,
+          "recall": 0.7475,
+          "f1": 0.7668,
+          "lenient_recall": 0.7475
+        },
+        {
+          "field": "igst",
+          "n": 15,
+          "extracted": 14,
+          "extraction_rate": 0.9333,
+          "correct": 13,
+          "precision": 0.9286,
+          "recall": 0.8667,
+          "f1": 0.8966,
+          "lenient_recall": 0.8667
+        },
+        {
+          "field": "total",
+          "n": 99,
+          "extracted": 99,
+          "extraction_rate": 1.0,
+          "correct": 98,
+          "precision": 0.9899,
+          "recall": 0.9899,
+          "f1": 0.9899,
+          "lenient_recall": 0.9899
+        },
+        {
+          "field": "cgst",
+          "n": 71,
+          "extracted": 62,
+          "extraction_rate": 0.8732,
+          "correct": 60,
+          "precision": 0.9677,
+          "recall": 0.8451,
+          "f1": 0.9023,
+          "lenient_recall": 0.8451
+        },
+        {
+          "field": "sgst",
+          "n": 71,
+          "extracted": 63,
+          "extraction_rate": 0.8873,
+          "correct": 59,
+          "precision": 0.9365,
+          "recall": 0.831,
+          "f1": 0.8806,
+          "lenient_recall": 0.831
+        }
+      ],
+      "3": [
+        {
+          "field": "vendor",
+          "n": 42,
+          "extracted": 42,
+          "extraction_rate": 1.0,
+          "correct": 39,
+          "precision": 0.9286,
+          "recall": 0.9286,
+          "f1": 0.9286,
+          "lenient_recall": 0.9286
+        },
+        {
+          "field": "gstin",
+          "n": 42,
+          "extracted": 33,
+          "extraction_rate": 0.7857,
+          "correct": 33,
+          "precision": 1.0,
+          "recall": 0.7857,
+          "f1": 0.88,
+          "lenient_recall": 0.7857
+        },
+        {
+          "field": "invoice_no",
+          "n": 42,
+          "extracted": 35,
+          "extraction_rate": 0.8333,
+          "correct": 22,
+          "precision": 0.6286,
+          "recall": 0.5238,
+          "f1": 0.5714,
+          "lenient_recall": 0.5238
+        },
+        {
+          "field": "date",
+          "n": 42,
+          "extracted": 30,
+          "extraction_rate": 0.7143,
+          "correct": 30,
+          "precision": 1.0,
+          "recall": 0.7143,
+          "f1": 0.8333,
+          "lenient_recall": 0.7143
+        },
+        {
+          "field": "subtotal",
+          "n": 42,
+          "extracted": 32,
+          "extraction_rate": 0.7619,
+          "correct": 22,
+          "precision": 0.6875,
+          "recall": 0.5238,
+          "f1": 0.5946,
+          "lenient_recall": 0.5238
+        },
+        {
+          "field": "cgst",
+          "n": 31,
+          "extracted": 20,
+          "extraction_rate": 0.6452,
+          "correct": 17,
+          "precision": 0.85,
+          "recall": 0.5484,
+          "f1": 0.6667,
+          "lenient_recall": 0.5484
+        },
+        {
+          "field": "sgst",
+          "n": 31,
+          "extracted": 21,
+          "extraction_rate": 0.6774,
+          "correct": 17,
+          "precision": 0.8095,
+          "recall": 0.5484,
+          "f1": 0.6538,
+          "lenient_recall": 0.5484
+        },
+        {
+          "field": "total",
+          "n": 42,
+          "extracted": 41,
+          "extraction_rate": 0.9762,
+          "correct": 34,
+          "precision": 0.8293,
+          "recall": 0.8095,
+          "f1": 0.8193,
+          "lenient_recall": 0.8095
+        },
+        {
+          "field": "igst",
+          "n": 7,
+          "extracted": 5,
+          "extraction_rate": 0.7143,
+          "correct": 3,
+          "precision": 0.6,
+          "recall": 0.4286,
+          "f1": 0.5,
+          "lenient_recall": 0.4286
+        }
+      ]
+    },
+    "by_template": {
+      "b2b": [
+        {
+          "field": "vendor",
+          "n": 133,
+          "extracted": 133,
+          "extraction_rate": 1.0,
+          "correct": 131,
+          "precision": 0.985,
+          "recall": 0.985,
+          "f1": 0.985,
+          "lenient_recall": 0.985
+        },
+        {
+          "field": "gstin",
+          "n": 133,
+          "extracted": 124,
+          "extraction_rate": 0.9323,
+          "correct": 123,
+          "precision": 0.9919,
+          "recall": 0.9248,
+          "f1": 0.9572,
+          "lenient_recall": 0.9248
+        },
+        {
+          "field": "invoice_no",
+          "n": 133,
+          "extracted": 129,
+          "extraction_rate": 0.9699,
+          "correct": 119,
+          "precision": 0.9225,
+          "recall": 0.8947,
+          "f1": 0.9084,
+          "lenient_recall": 0.8947
+        },
+        {
+          "field": "date",
+          "n": 133,
+          "extracted": 125,
+          "extraction_rate": 0.9398,
+          "correct": 125,
+          "precision": 1.0,
+          "recall": 0.9398,
+          "f1": 0.969,
+          "lenient_recall": 0.9398
+        },
+        {
+          "field": "subtotal",
+          "n": 133,
+          "extracted": 132,
+          "extraction_rate": 0.9925,
+          "correct": 119,
+          "precision": 0.9015,
+          "recall": 0.8947,
+          "f1": 0.8981,
+          "lenient_recall": 0.8947
+        },
+        {
+          "field": "cgst",
+          "n": 110,
+          "extracted": 107,
+          "extraction_rate": 0.9727,
+          "correct": 105,
+          "precision": 0.9813,
+          "recall": 0.9545,
+          "f1": 0.9677,
+          "lenient_recall": 0.9545
+        },
+        {
+          "field": "sgst",
+          "n": 110,
+          "extracted": 101,
+          "extraction_rate": 0.9182,
+          "correct": 99,
+          "precision": 0.9802,
+          "recall": 0.9,
+          "f1": 0.9384,
+          "lenient_recall": 0.9
+        },
+        {
+          "field": "total",
+          "n": 133,
+          "extracted": 133,
+          "extraction_rate": 1.0,
+          "correct": 131,
+          "precision": 0.985,
+          "recall": 0.985,
+          "f1": 0.985,
+          "lenient_recall": 0.985
+        },
+        {
+          "field": "igst",
+          "n": 23,
+          "extracted": 22,
+          "extraction_rate": 0.9565,
+          "correct": 21,
+          "precision": 0.9545,
+          "recall": 0.913,
+          "f1": 0.9333,
+          "lenient_recall": 0.913
+        }
+      ],
+      "fuel": [
+        {
+          "field": "vendor",
+          "n": 57,
+          "extracted": 57,
+          "extraction_rate": 1.0,
+          "correct": 56,
+          "precision": 0.9825,
+          "recall": 0.9825,
+          "f1": 0.9825,
+          "lenient_recall": 0.9825
+        },
+        {
+          "field": "gstin",
+          "n": 57,
+          "extracted": 51,
+          "extraction_rate": 0.8947,
+          "correct": 51,
+          "precision": 1.0,
+          "recall": 0.8947,
+          "f1": 0.9444,
+          "lenient_recall": 0.8947
+        },
+        {
+          "field": "invoice_no",
+          "n": 57,
+          "extracted": 53,
+          "extraction_rate": 0.9298,
+          "correct": 51,
+          "precision": 0.9623,
+          "recall": 0.8947,
+          "f1": 0.9273,
+          "lenient_recall": 0.8947
+        },
+        {
+          "field": "date",
+          "n": 57,
+          "extracted": 55,
+          "extraction_rate": 0.9649,
+          "correct": 55,
+          "precision": 1.0,
+          "recall": 0.9649,
+          "f1": 0.9821,
+          "lenient_recall": 0.9649
+        },
+        {
+          "field": "subtotal",
+          "n": 57,
+          "extracted": 51,
+          "extraction_rate": 0.8947,
+          "correct": 49,
+          "precision": 0.9608,
+          "recall": 0.8596,
+          "f1": 0.9074,
+          "lenient_recall": 0.8596
+        },
+        {
+          "field": "total",
+          "n": 57,
+          "extracted": 57,
+          "extraction_rate": 1.0,
+          "correct": 55,
+          "precision": 0.9649,
+          "recall": 0.9649,
+          "f1": 0.9649,
+          "lenient_recall": 0.9649
+        }
+      ],
+      "restaurant": [
+        {
+          "field": "vendor",
+          "n": 141,
+          "extracted": 141,
+          "extraction_rate": 1.0,
+          "correct": 139,
+          "precision": 0.9858,
+          "recall": 0.9858,
+          "f1": 0.9858,
+          "lenient_recall": 0.9858
+        },
+        {
+          "field": "gstin",
+          "n": 141,
+          "extracted": 127,
+          "extraction_rate": 0.9007,
+          "correct": 127,
+          "precision": 1.0,
+          "recall": 0.9007,
+          "f1": 0.9478,
+          "lenient_recall": 0.9007
+        },
+        {
+          "field": "invoice_no",
+          "n": 141,
+          "extracted": 139,
+          "extraction_rate": 0.9858,
+          "correct": 129,
+          "precision": 0.9281,
+          "recall": 0.9149,
+          "f1": 0.9215,
+          "lenient_recall": 0.9149
+        },
+        {
+          "field": "date",
+          "n": 141,
+          "extracted": 133,
+          "extraction_rate": 0.9433,
+          "correct": 133,
+          "precision": 1.0,
+          "recall": 0.9433,
+          "f1": 0.9708,
+          "lenient_recall": 0.9433
+        },
+        {
+          "field": "subtotal",
+          "n": 141,
+          "extracted": 136,
+          "extraction_rate": 0.9645,
+          "correct": 119,
+          "precision": 0.875,
+          "recall": 0.844,
+          "f1": 0.8592,
+          "lenient_recall": 0.844
+        },
+        {
+          "field": "cgst",
+          "n": 120,
+          "extracted": 107,
+          "extraction_rate": 0.8917,
+          "correct": 105,
+          "precision": 0.9813,
+          "recall": 0.875,
+          "f1": 0.9251,
+          "lenient_recall": 0.875
+        },
+        {
+          "field": "sgst",
+          "n": 120,
+          "extracted": 114,
+          "extraction_rate": 0.95,
+          "correct": 110,
+          "precision": 0.9649,
+          "recall": 0.9167,
+          "f1": 0.9402,
+          "lenient_recall": 0.9167
+        },
+        {
+          "field": "total",
+          "n": 141,
+          "extracted": 140,
+          "extraction_rate": 0.9929,
+          "correct": 138,
+          "precision": 0.9857,
+          "recall": 0.9787,
+          "f1": 0.9822,
+          "lenient_recall": 0.9787
+        },
+        {
+          "field": "igst",
+          "n": 21,
+          "extracted": 19,
+          "extraction_rate": 0.9048,
+          "correct": 18,
+          "precision": 0.9474,
+          "recall": 0.8571,
+          "f1": 0.9,
+          "lenient_recall": 0.8571
+        }
+      ],
+      "retail": [
+        {
+          "field": "vendor",
+          "n": 149,
+          "extracted": 149,
+          "extraction_rate": 1.0,
+          "correct": 149,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "lenient_recall": 1.0
+        },
+        {
+          "field": "gstin",
+          "n": 149,
+          "extracted": 145,
+          "extraction_rate": 0.9732,
+          "correct": 145,
+          "precision": 1.0,
+          "recall": 0.9732,
+          "f1": 0.9864,
+          "lenient_recall": 0.9732
+        },
+        {
+          "field": "invoice_no",
+          "n": 149,
+          "extracted": 144,
+          "extraction_rate": 0.9664,
+          "correct": 130,
+          "precision": 0.9028,
+          "recall": 0.8725,
+          "f1": 0.8874,
+          "lenient_recall": 0.8725
+        },
+        {
+          "field": "date",
+          "n": 149,
+          "extracted": 141,
+          "extraction_rate": 0.9463,
+          "correct": 141,
+          "precision": 1.0,
+          "recall": 0.9463,
+          "f1": 0.9724,
+          "lenient_recall": 0.9463
+        },
+        {
+          "field": "subtotal",
+          "n": 149,
+          "extracted": 144,
+          "extraction_rate": 0.9664,
+          "correct": 136,
+          "precision": 0.9444,
+          "recall": 0.9128,
+          "f1": 0.9283,
+          "lenient_recall": 0.9128
+        },
+        {
+          "field": "cgst",
+          "n": 122,
+          "extracted": 117,
+          "extraction_rate": 0.959,
+          "correct": 114,
+          "precision": 0.9744,
+          "recall": 0.9344,
+          "f1": 0.954,
+          "lenient_recall": 0.9344
+        },
+        {
+          "field": "sgst",
+          "n": 122,
+          "extracted": 116,
+          "extraction_rate": 0.9508,
+          "correct": 114,
+          "precision": 0.9828,
+          "recall": 0.9344,
+          "f1": 0.958,
+          "lenient_recall": 0.9344
+        },
+        {
+          "field": "total",
+          "n": 149,
+          "extracted": 149,
+          "extraction_rate": 1.0,
+          "correct": 147,
+          "precision": 0.9866,
+          "recall": 0.9866,
+          "f1": 0.9866,
+          "lenient_recall": 0.9866
+        },
+        {
+          "field": "igst",
+          "n": 27,
+          "extracted": 26,
+          "extraction_rate": 0.963,
+          "correct": 25,
+          "precision": 0.9615,
+          "recall": 0.9259,
+          "f1": 0.9434,
+          "lenient_recall": 0.9259
+        }
+      ]
+    },
+    "calibration": {
+      "n": 3655,
+      "ece": 0.0581,
+      "brier": 0.0269,
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 138,
+          "mean_conf": 0.0,
+          "accuracy": 0.0,
+          "gap": 0.0
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 0,
+          "mean_conf": null,
+          "accuracy": null,
+          "gap": null
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 3,
+          "mean_conf": 0.2604,
+          "accuracy": 0.0,
+          "gap": -0.2604
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 1,
+          "mean_conf": 0.3093,
+          "accuracy": 0.0,
+          "gap": -0.3093
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 55,
+          "mean_conf": 0.4659,
+          "accuracy": 0.5818,
+          "gap": 0.1159
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 45,
+          "mean_conf": 0.5546,
+          "accuracy": 0.6889,
+          "gap": 0.1343
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 42,
+          "mean_conf": 0.6524,
+          "accuracy": 0.8095,
+          "gap": 0.1571
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 126,
+          "mean_conf": 0.768,
+          "accuracy": 0.8492,
+          "gap": 0.0812
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 667,
+          "mean_conf": 0.8631,
+          "accuracy": 0.9475,
+          "gap": 0.0845
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 2578,
+          "mean_conf": 0.9493,
+          "accuracy": 0.9981,
+          "gap": 0.0488
+        }
+      ],
+      "risk_coverage": [
+        {
+          "coverage": 0.5,
+          "n": 1827,
+          "accuracy": 1.0,
+          "min_confidence": 0.9323
+        },
+        {
+          "coverage": 0.8,
+          "n": 2924,
+          "accuracy": 0.9976,
+          "min_confidence": 0.8685
+        },
+        {
+          "coverage": 0.9,
+          "n": 3289,
+          "accuracy": 0.9869,
+          "min_confidence": 0.7934
+        },
+        {
+          "coverage": 1.0,
+          "n": 3655,
+          "accuracy": 0.9327,
+          "min_confidence": 0.0
+        }
+      ],
+      "auto_accept_at_99": {
+        "threshold": 0.8216,
+        "coverage": 0.8635,
+        "accuracy": 0.9902,
+        "n": 3156
+      },
+      "auto_accept_at_95": {
+        "threshold": 0.0,
+        "coverage": 0.9817,
+        "accuracy": 0.9501,
+        "n": 3588
+      }
+    },
+    "n_errors": 246
+  },
+  "dedup": {
+    "blocking": {
+      "n_claims": 508,
+      "n_candidates": 5881,
+      "all_pairs": 128778.0,
+      "reduction_ratio": 0.954332,
+      "blocking_recall": 0.9895,
+      "missed_pairs": 1,
+      "candidates_per_claim": 23.15
+    },
+    "by_band": [
+      {
+        "band": "EXACT+",
+        "tp": 61,
+        "fp": 0,
+        "fn": 34,
+        "precision": 1.0,
+        "recall": 0.6421,
+        "f1": 0.7821
+      },
+      {
+        "band": "HIGH+",
+        "tp": 94,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9895,
+        "recall": 0.9895,
+        "f1": 0.9895
+      },
+      {
+        "band": "MEDIUM+",
+        "tp": 94,
+        "fp": 23,
+        "fn": 1,
+        "precision": 0.8034,
+        "recall": 0.9895,
+        "f1": 0.8868
+      },
+      {
+        "band": "LOW+",
+        "tp": 94,
+        "fp": 219,
+        "fn": 1,
+        "precision": 0.3003,
+        "recall": 0.9895,
+        "f1": 0.4608
+      }
+    ],
+    "by_dup_type": [
+      {
+        "dup_type": "PHOTO_REUSE",
+        "found": 30,
+        "total": 30,
+        "recall": 1.0
+      },
+      {
+        "dup_type": "RESUBMIT_AFTER_REJECT",
+        "found": 10,
+        "total": 10,
+        "recall": 1.0
+      },
+      {
+        "dup_type": "RETYPED",
+        "found": 19,
+        "total": 20,
+        "recall": 0.95
+      },
+      {
+        "dup_type": "SPLIT",
+        "found": 18,
+        "total": 18,
+        "recall": 1.0
+      },
+      {
+        "dup_type": "TRANSITIVE",
+        "found": 17,
+        "total": 17,
+        "recall": 1.0
+      }
+    ],
+    "signal_ablation": [],
+    "pr_curve": [
+      {
+        "k": 15,
+        "score": 1.0,
+        "precision": 1.0,
+        "recall": 0.1579
+      },
+      {
+        "k": 30,
+        "score": 0.9992,
+        "precision": 1.0,
+        "recall": 0.3158
+      },
+      {
+        "k": 45,
+        "score": 0.9641,
+        "precision": 1.0,
+        "recall": 0.4737
+      },
+      {
+        "k": 60,
+        "score": 0.92,
+        "precision": 1.0,
+        "recall": 0.6316
+      },
+      {
+        "k": 75,
+        "score": 0.8351,
+        "precision": 1.0,
+        "recall": 0.7895
+      },
+      {
+        "k": 90,
+        "score": 0.8313,
+        "precision": 1.0,
+        "recall": 0.9474
+      },
+      {
+        "k": 105,
+        "score": 0.6779,
+        "precision": 0.8952,
+        "recall": 0.9895
+      },
+      {
+        "k": 120,
+        "score": 0.5937,
+        "precision": 0.7833,
+        "recall": 0.9895
+      },
+      {
+        "k": 135,
+        "score": 0.5538,
+        "precision": 0.6963,
+        "recall": 0.9895
+      },
+      {
+        "k": 150,
+        "score": 0.5432,
+        "precision": 0.6267,
+        "recall": 0.9895
+      },
+      {
+        "k": 165,
+        "score": 0.5189,
+        "precision": 0.5697,
+        "recall": 0.9895
+      },
+      {
+        "k": 180,
+        "score": 0.5124,
+        "precision": 0.5222,
+        "recall": 0.9895
+      },
+      {
+        "k": 195,
+        "score": 0.5099,
+        "precision": 0.4821,
+        "recall": 0.9895
+      },
+      {
+        "k": 210,
+        "score": 0.5011,
+        "precision": 0.4476,
+        "recall": 0.9895
+      },
+      {
+        "k": 225,
+        "score": 0.4873,
+        "precision": 0.4178,
+        "recall": 0.9895
+      },
+      {
+        "k": 240,
+        "score": 0.4837,
+        "precision": 0.3917,
+        "recall": 0.9895
+      },
+      {
+        "k": 255,
+        "score": 0.4813,
+        "precision": 0.3686,
+        "recall": 0.9895
+      },
+      {
+        "k": 270,
+        "score": 0.479,
+        "precision": 0.3481,
+        "recall": 0.9895
+      },
+      {
+        "k": 285,
+        "score": 0.4734,
+        "precision": 0.3298,
+        "recall": 0.9895
+      },
+      {
+        "k": 300,
+        "score": 0.458,
+        "precision": 0.3133,
+        "recall": 0.9895
+      },
+      {
+        "k": 313,
+        "score": 0.45,
+        "precision": 0.3003,
+        "recall": 0.9895
+      }
+    ],
+    "workload": {
+      "pairs_per_1000_claims": 230.31,
+      "precision_at_top_50": 1.0,
+      "reviewer_pairs_medium_plus": 117
+    },
+    "average_precision": 0.9895,
+    "n_pairs_flagged": 313
+  },
+  "targets": {
+    "extraction_f1_tier0": 0.95,
+    "extraction_f1_tier2": 0.85,
+    "ece": 0.08,
+    "blocking_recall": 0.98,
+    "reduction_ratio": 0.99,
+    "dedup_precision_high": 0.95
+  }
+}

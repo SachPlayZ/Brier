@@ -1,0 +1,20 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GST No.: 07AAFCK3321L1ZK
+GST INVOICE
+--------------------------------------------
+Invoice Date: 25/01/2025
+Cash Memo No: RCPT-2025-46459
+--------------------------------------------
+Item                     Qty          Amount
+Antiseptic Liquid          2          314.42
+Vitamin D3                 1          222.99
+--------------------------------------------
+Subtotal:                             537.41
+CGST @ 6%:                             32.25
+SGST @ 6%:                             32.24
+Round Off Adj:                          0.10
+Grand Total:                         ₹602.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

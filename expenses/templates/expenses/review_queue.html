@@ -1,0 +1,77 @@
+{% extends "expenses/base.html" %}
+{% load humanize %}
+{% block title %}Review queue{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><span class="current">Review queue</span>{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Review queue</h1>
+    <p class="page-sub">{{ claims|length }} open claim{{ claims|length|pluralize }}, highest risk first by default.</p>
+  </div>
+</div>
+
+<form method="get" class="filters mb-3">
+  <div class="field">
+    <label class="form-label" for="f-band">Duplicate band</label>
+    <select id="f-band" name="band" class="form-select form-select-sm" onchange="this.form.requestSubmit()">
+      <option value="">Any band</option>
+      {% for b in bands %}<option value="{{ b }}" {% if band == b %}selected{% endif %}>{{ b }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label class="form-label" for="f-only">Filter</label>
+    <select id="f-only" name="only" class="form-select form-select-sm" onchange="this.form.requestSubmit()">
+      <option value="">All open claims</option>
+      <option value="flagged" {% if only == 'flagged' %}selected{% endif %}>Flagged only</option>
+      <option value="lowconf" {% if only == 'lowconf' %}selected{% endif %}>Low confidence only</option>
+    </select>
+  </div>
+  <div class="field">
+    <label class="form-label" for="f-sort">Sort</label>
+    <select id="f-sort" name="sort" class="form-select form-select-sm" onchange="this.form.requestSubmit()">
+      <option value="risk" {% if sort == 'risk' %}selected{% endif %}>Risk</option>
+      <option value="amount" {% if sort == 'amount' %}selected{% endif %}>Amount</option>
+      <option value="confidence" {% if sort == 'confidence' %}selected{% endif %}>Lowest confidence</option>
+      <option value="date" {% if sort == 'date' %}selected{% endif %}>Newest</option>
+    </select>
+  </div>
+  <noscript><button class="btn btn-sm btn-outline-secondary">Apply</button></noscript>
+</form>
+
+<div class="panel"><div class="table-wrap">
+<table class="table align-middle">
+  <thead><tr>
+    <th>Claim</th><th>Employee</th><th>Vendor</th><th class="text-end">Amount</th>
+    <th>Confidence</th><th>Duplicate flags</th><th>Status</th><th></th>
+  </tr></thead>
+  <tbody>
+  {% for claim in claims %}
+    <tr>
+      <td><a class="cell-link" href="{% url 'claim_detail' claim.claim_id %}">{{ claim.claim_id }}</a></td>
+      <td class="dim mono">{{ claim.employee.employee_code }}</td>
+      <td>{{ claim.receipt.vendor.name|default:claim.receipt.vendor_raw|default:"-"|truncatechars:24 }}</td>
+      <td class="num">{{ claim.amount_display }}</td>
+      <td class="conf-cell">
+        <div class="conf-bar conf-{{ claim.receipt.confidence_band }}" title="{{ claim.receipt.confidence_pct }}%">
+          <span style="width:{{ claim.receipt.confidence_pct }}%"></span>
+        </div>
+      </td>
+      <td>
+        {% for flag in claim.flags_as_a.all %}
+          {% if flag.status == 'OPEN' %}
+            <a href="{% url 'dup_compare' flag.id %}" class="text-decoration-none"><span class="badge band-{{ flag.band }}">{{ flag.band }}</span></a>
+          {% endif %}
+        {% endfor %}
+      </td>
+      <td><span class="badge">{{ claim.get_status_display }}</span></td>
+      <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="{% url 'claim_detail' claim.claim_id %}">Open</a></td>
+    </tr>
+  {% empty %}
+    <tr><td colspan="8">
+      <div class="empty"><i class="ph ph-check-circle"></i><strong>Nothing awaiting review</strong>Try clearing the filters if you expected results.</div>
+    </td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div></div>
+{% endblock %}

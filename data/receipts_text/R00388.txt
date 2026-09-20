@@ -1,0 +1,25 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GSTIN: 27AAACR5055K1Z7
+CASH MEMO
+--------------------------------------------
+Bill Date: 2025-08-31
+Cash Memo No: RCPT-2024-43566
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           2          935.06
+Basmati Rice 5kg           4        2,105.72
+Sugar 1kg                  1           42.06
+Atta 5kg                   2          490.86
+Sunflower Oil 1L           4          611.68
+--------------------------------------------
+Total Qty: 13
+Total Before Tax:                   4,185.38
+CGST @ 2.5%:                          104.64
+SGST @ 2.5%:                          104.63
+Round Off:                              0.35
+Total Amount:                      ₹4,395.00
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

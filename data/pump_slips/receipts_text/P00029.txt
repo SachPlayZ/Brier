@@ -1,0 +1,34 @@
+ee
+BPCL
+Happy Motoring
+MAA TARA FILLING STATION
+SURVEY NO 88, HIGHWAY
+MUMBAI 400051
+Tel. No.: 9801690492
+
+Inv. No: 83571985217687
+FCC ID: 58571709642276899
+FIP No. : 03
+Nozzle No. : 03
+Product : Diesel
+Density : 751.2Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 94.04
+Volume(L) : 00015.95
+Amt(Rs) : 01500.00
+--------------------------
+Vech: 92743089737.99
+Vtrd: 5833874225.576
+
+Vehicle No: 9420
+Mobile No : 9667494488
+
+Date : 26/10/25
+Time : 21:31
+
+GST No: 27LAERS5884L1ZH
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

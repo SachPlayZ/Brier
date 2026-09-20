@@ -1,0 +1,42 @@
+Seer
+Nayara Energy
+Welcomes You
+START NELL
+17, STATION ROAD
+AHMEDABAD 380009
+Tel. No.: 9848041416
+
+Inv. No: 2096570613019008
+FIP No. : 06
+Nozzle No. : 06
+Product : XP95
+Density : 821.9Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 93.6
+Volume(L) : 00026.71
+Amount (₹) : 02500.00
+--------------------------
+Taxable Val  : ₹  2118.64
+CGST @9%     : Z 190.68
+SGST @9%     : ₹   190.68
+Total GST    : ₹   381.36
+Pay Mode     : UPI
+UPI Ref: 544063388226
+--------------------------
+Vech: 85160114724.17
+Vtrd: 6045057625.337
+
+Vehicle No: 7234
+Mobile No : 9898887694
+
+Date : 05/02/2025
+Time : 15:04
+
+GST No: 24RASPG0491J1Z2
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

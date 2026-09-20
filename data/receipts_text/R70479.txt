@@ -1,0 +1,21 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN: 29AAECC2233B1Z7
+TAX INVOICE
+--------------------------------------------
+Bill Date: 19/01/2025
+Invoice No: BILL-2025-54099-2
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                2          132.14
+Biryani                    4        1,595.60
+--------------------------------------------
+Total Qty: 6
+Total Before Tax:                   1,727.74
+CGST @ 2.5%:                           43.19
+SGST @ 2.5%:                           43.19
+Total Amount:                       1,814.12
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

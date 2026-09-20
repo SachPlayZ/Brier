@@ -1,0 +1,24 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN/UIN: 24AABCG2244U1ZA
+GST INVOICE
+--------------------------------------------
+Invoice No: BILL-2025-22954
+Date: 12-Mar-2025
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   2        2,590.76
+Extension Board            3          895.68
+Extension Board            2        1,072.38
+HDMI Cable 2m              4        1,767.68
+Extension Board            4        1,980.00
+--------------------------------------------
+Taxable Value:                      8,306.50
+CGST @ 9%:                            747.59
+SGST @ 9%:                            747.58
+Round Off Adj:                          0.33
+Amount Payable:                    ₹9,802.00
+--------------------------------------------
+Thank you for your business
+Card Payment

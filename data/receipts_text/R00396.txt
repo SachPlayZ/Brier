@@ -1,0 +1,25 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST No.: 29AAECC2233B1Z7
+CASH MEMO
+--------------------------------------------
+Inv No: TI-2025-52826
+Date: 19-Jun-2025
+Table: 17   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                4          410.40
+Paneer Butter Masala       2          427.94
+Paneer Butter Masala       1          326.00
+Filter Coffee              1           42.82
+Masala Dosa                1           91.61
+--------------------------------------------
+Total Qty: 9
+Taxable Value:                      1,298.77
+CGST @ 2.5%:                           32.47
+SGST @ 2.5%:                           32.47
+Rounding:                               0.29
+Bill Total:                        ₹1,364.00
+--------------------------------------------
+Goods once sold will not be taken back

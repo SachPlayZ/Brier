@@ -1,0 +1,34 @@
+ee
+GANGA PETROCHEM
+Welcome
+ANNAPURNA FUEL CENTRE
+GT ROAD, OPP BUS STAND
+AHMEDABAD 380009
+Tel. No.: 9824531754
+
+Inv. No: 29864811933586059
+FCC ID: 76244772098812164
+FIP No. : 03
+Nozzle No. : 01
+Product : Power
+Density : 794.5Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 89.93
+Volume(L) : 00006.56
+Amt(Rs) : 00590.00
+--------------------------
+Vech: 68952134758.04
+Vtrd: 3016941040.141
+
+Vehicle No: 3572
+Mobile No : 9607042189
+
+Date : 09/06/25
+Time : 07:42
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

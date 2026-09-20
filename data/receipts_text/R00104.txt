@@ -1,0 +1,21 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GSTIN/UIN: 29AABCA1234M1ZQ
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: TI-2024-89785
+Date: 10-Jan-2025
+Table: 23   Covers: 3
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              4          218.76
+Filter Coffee              2          110.76
+--------------------------------------------
+Taxable Amount:                       329.52
+CGST @ 2.5%:                            8.24
+SGST @ 2.5%:                            8.24
+Total Amount:                        ₹346.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

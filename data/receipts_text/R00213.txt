@@ -1,0 +1,25 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GST Reg No: 29AAGCB7383J1Z4
+CASH MEMO
+--------------------------------------------
+Invoice No: TI-2024-01234
+Invoice Date: 2025-05-04
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             1           56.29
+A4 Paper Ream              4        1,249.36
+Marker Pen                 2           97.94
+Notebook 200pg             4          325.92
+Stapler                    1          155.87
+Stapler                    1          244.02
+--------------------------------------------
+Total Qty: 13
+Total Before Tax:                   2,129.40
+CGST @ 9%:                            191.65
+SGST @ 9%:                            191.64
+Round Off Adj:                          0.31
+Total:                             ₹2,513.00
+--------------------------------------------
+Subject to local jurisdiction

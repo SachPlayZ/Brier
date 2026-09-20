@@ -1,0 +1,22 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST Reg No: 33AAACA6677D1ZW
+RETAIL INVOICE
+--------------------------------------------
+Date: 30-03-2025
+Bill No: INV-2025-38040
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 3          533.94
+Vitamin D3                 3          924.30
+Digital Thermometer        4        1,056.44
+--------------------------------------------
+Total Qty: 10
+Subtotal:                           2,514.68
+CGST @ 6%:                            150.88
+SGST @ 6%:                            150.88
+Round Off:                             -0.44
+Grand Total:                        2,816.00
+--------------------------------------------
+Subject to local jurisdiction

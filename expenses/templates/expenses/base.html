@@ -1,0 +1,104 @@
+{% load humanize static %}<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Home{% endblock %} | Brier</title>
+  {% include "expenses/_boot.html" %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+  <link href="{% static 'expenses/app.css' %}" rel="stylesheet">
+  <link href="{% static 'expenses/loading.css' %}" rel="stylesheet">
+  <noscript><style>.img-frame img { opacity: 1; }</style></noscript>
+</head>
+<body>
+{% include "expenses/_preloader.html" %}
+<div class="nav-bar" id="nav-bar" aria-hidden="true"><span></span></div>
+<div class="visually-hidden" id="sr-status" role="status" aria-live="polite"></div>
+{% with page=request.resolver_match.url_name %}
+{% if user.is_authenticated %}
+<div class="scrim" id="scrim"></div>
+<nav class="sidebar" id="sidebar" aria-label="Main">
+  <a class="brand" href="{% if is_finance %}{% url 'dashboard' %}{% else %}{% url 'claim_list' %}{% endif %}">
+    <span class="brand-mark"><i class="ph ph-receipt"></i></span>
+    <span class="brand-name">Brier</span>
+  </a>
+
+  <div class="sidebar-scroll">
+    <div class="nav-group">
+      <div class="nav-label">Overview</div>
+      {% if is_finance %}<a class="nav-item {% if page == 'dashboard' %}is-active{% endif %}" href="{% url 'dashboard' %}"
+         {% if page == 'dashboard' %}aria-current="page"{% endif %}><i class="ph ph-squares-four"></i>Dashboard</a>{% endif %}
+      <a class="nav-item {% if page == 'claim_list' or page == 'claim_detail' %}is-active{% endif %}" href="{% url 'claim_list' %}"
+         {% if page == 'claim_list' %}aria-current="page"{% endif %}><i class="ph ph-files"></i>My claims</a>
+      <a class="nav-item {% if page == 'claim_submit' %}is-active{% endif %}" href="{% url 'claim_submit' %}"
+         {% if page == 'claim_submit' %}aria-current="page"{% endif %}><i class="ph ph-upload-simple"></i>Submit claim</a>
+    </div>
+    {% if is_finance %}
+    <div class="nav-group">
+      <div class="nav-label">Review</div>
+      <a class="nav-item {% if page == 'review_queue' or page == 'dup_compare' %}is-active{% endif %}" href="{% url 'review_queue' %}"
+         {% if page == 'review_queue' %}aria-current="page"{% endif %}><i class="ph ph-shield-check"></i>Review queue</a>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="sidebar-foot">
+    <div class="user-block">
+      <span class="avatar" aria-hidden="true">{{ user.username|slice:":2" }}</span>
+      <div>
+        <div class="user-name">{{ user.username }}</div>
+        <div class="user-role">{% if is_finance %}Reviewer{% else %}Employee{% endif %}</div>
+      </div>
+    </div>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button class="nav-item as-button" type="submit" data-loading-label="Logging out"><i class="ph ph-sign-out"></i>Log out</button>
+    </form>
+  </div>
+</nav>
+
+<div class="app-main">
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="Open menu"
+            aria-controls="sidebar" aria-expanded="false"><i class="ph ph-list"></i></button>
+    <div class="crumbs">
+      <a class="crumb-root" href="{% if is_finance %}{% url 'dashboard' %}{% else %}{% url 'claim_list' %}{% endif %}">Brier</a>
+      {% block crumbs %}{% endblock %}
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+        <i class="ph ph-moon"></i><i class="ph ph-sun"></i>
+      </button>
+      <span class="avatar" aria-hidden="true">{{ user.username|slice:":2" }}</span>
+    </div>
+  </header>
+
+  <main class="page">
+    {% include "expenses/_messages.html" %}
+{% else %}
+<div class="auth-wrap">
+  <button class="icon-btn theme-toggle auth-theme" type="button" data-theme-toggle aria-label="Toggle theme">
+    <i class="ph ph-moon"></i><i class="ph ph-sun"></i>
+  </button>
+  <div class="auth-card">
+    {% include "expenses/_messages.html" %}
+{% endif %}
+{% block content %}{% endblock %}
+{% if user.is_authenticated %}
+  </main>
+</div>
+{% else %}
+  </div>
+</div>
+{% endif %}
+{% endwith %}
+
+{% include "expenses/_skeleton.html" %}
+<script src="{% static 'expenses/app.js' %}"></script>
+<script src="{% static 'expenses/loading.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>

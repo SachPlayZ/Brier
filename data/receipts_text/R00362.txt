@@ -1,0 +1,22 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN/UIN: 36AAGCD8899T1Z8
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2024-39104
+Date of Supply: 26/05/2025
+--------------------------------------------
+Item                     Qty          Amount
+Stapler                    3          695.34
+Notebook 200pg             2          244.30
+Notebook 200pg             2          186.40
+--------------------------------------------
+Total Qty: 7
+Taxable Value:                      1,126.04
+IGST @ 18%:                           202.69
+Round Off Adj:                          0.27
+Amount Payable:                     1,329.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

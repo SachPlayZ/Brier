@@ -1,0 +1,33 @@
+SAHYADRI ENERGY
+Welcome
+PARK CIRCUS FILLING STATION
+42/1, BARRACKPORE TRUNK RD
+CHENNAI 600096
+Tel. No.: 9833830792
+
+Inv No.: 03200326339877
+FCC ID: 39467215134157665
+FIP No. : 03
+Nozzle No. : 07
+Product : Petrol
+Density : 781.4Kg/Cu.mtr
+Preset Type: Volume
+Rate(2/L) : 102.73
+Volume(L) : 00007.51
+Amount (INR) : 00771.50
+--------------------------
+Vech: 05481877201.99
+Vtrd: 1040359125.273
+
+Vehicle No: 2865
+Mobile No : 9223400505
+
+Date : 23/05/26
+Time : 22:11
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

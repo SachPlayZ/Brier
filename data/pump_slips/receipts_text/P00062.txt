@@ -1,0 +1,40 @@
+Hindustan Petroleum
+Happy Motoring
+SAI KRUPA PETROLEUM
+24, RING ROAD
+MUMBAI 400051
+Tel. No.: 9820806409
+
+Bill No.: 912670049937
+FCC ID: 11803777593378582
+FIP No. : 01
+Nozzle No. : 07
+Product : Diesel
+Density : 751.2Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 105.35
+Volume(L) : 00004.75
+Amount (₹) : 00500.00
+--------------------------
+Taxable Val : ₹   427.35
+VAT @17%(Incl) : ₹    72.65
+Pay Mode     : Card
+UPI Ref: 263338247475
+--------------------------
+Vech: 42137578206.61
+Vtrd: 7246072002.533
+
+Vehicle No: 1960
+Mobile No : Not Entered
+
+Date : 13/02/25
+Time : 16:55
+
+GST No: 
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

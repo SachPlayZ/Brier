@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN/UIN: 24AAHCP6677V1Z8
+CASH MEMO
+--------------------------------------------
+Date of Supply: Jan 20, 2025
+Receipt No: RCPT-2025-37219
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   4        1,082.24
+Sunflower Oil 1L           2          289.64
+Toor Dal 1kg               2          306.72
+Milk 1L                    4          268.88
+--------------------------------------------
+Total Qty: 12
+Taxable Value:                      1,947.48
+IGST @ 5%:                             97.37
+Rounding:                               0.15
+Net Payable:                        2,045.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

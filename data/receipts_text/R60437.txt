@@ -1,0 +1,25 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GST No.: 29AAGCB7383J1Z4
+TAX INVOICE
+--------------------------------------------
+Invoice No: RCPT-2024-84027
+Bill Date: 08-May-2025
+--------------------------------------------
+Item                     Qty          Amount
+A4 Paper Ream              4        1,113.08
+A4 Paper Ream              4        1,144.88
+File Folder                3          157.32
+Stapler                    2          517.50
+Marker Pen                 2          110.10
+--------------------------------------------
+Total Qty: 15
+Total Before Tax:                   3,042.88
+CGST @ 9%:                            273.86
+SGST @ 9%:                            273.86
+Rounding:                               0.40
+Total:                             ₹3,591.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

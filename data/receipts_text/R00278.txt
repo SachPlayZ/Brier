@@ -1,0 +1,25 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN: 19AAFCP7890X1ZW
+TAX INVOICE
+--------------------------------------------
+Bill No: RCPT-2024-82132
+Date of Supply: 19/01/2025
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    4          769.68
+Biryani                    1          367.28
+Biryani                    2          521.44
+Paneer Butter Masala       4          831.64
+Veg Thali                  3          862.77
+--------------------------------------------
+Total Qty: 14
+Taxable Value:                      3,352.81
+CGST @ 2.5%:                           83.82
+SGST @ 2.5%:                           83.82
+Round Off:                             -0.45
+Total:                             ₹3,520.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

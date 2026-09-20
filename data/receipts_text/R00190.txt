@@ -1,0 +1,18 @@
+SHELL SELECT FUEL POINT
+Whitefield Main Rd, Bengaluru 560066
+Ph: 9845077889
+GSTIN/UIN: 29AAACS9911A1ZI
+RETAIL INVOICE
+--------------------------------------------
+Dated: Feb 25, 2025
+Cash Memo No: TI-2024-71914
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                    29        2,807.20
+--------------------------------------------
+Taxable Amount:                     2,807.20
+Round Off Adj:                         -0.20
+Amount Payable:                    ₹2,807.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

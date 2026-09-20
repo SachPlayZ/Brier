@@ -1,0 +1,26 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GST No.: 33AAECS7788N1ZJ
+TAX INVOICE
+--------------------------------------------
+Date of Supply: 10/03/2025
+Bill No: TI-2025-18573
+Table: 2   Covers: 6
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              4          161.76
+Filter Coffee              4          132.56
+Paneer Butter Masala       4        1,122.76
+Paneer Butter Masala       2          551.04
+Masala Dosa                4          429.40
+Butter Naan                1           50.31
+--------------------------------------------
+Total Qty: 19
+Subtotal:                           2,447.83
+CGST @ 2.5%:                           61.20
+SGST @ 2.5%:                           61.19
+Rounding:                              -0.22
+Total:                             ₹2,570.00
+--------------------------------------------
+Goods once sold will not be taken back

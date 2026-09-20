@@ -1,0 +1,123 @@
+{% extends "expenses/base.html" %}
+{% load humanize %}
+{% block title %}Compare {{ flag.claim.claim_id }} and {{ flag.matched_claim.claim_id }}{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><a href="{% url 'review_queue' %}">Review queue</a><i class="ph ph-caret-right"></i><span class="current">Compare</span>{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1 class="page-title">
+      Duplicate comparison
+      <span class="badge band-{{ flag.band }} align-middle ms-1">{{ flag.band }}</span>
+    </h1>
+    <p class="page-sub">Score {{ flag.score|floatformat:3 }}</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'claim_detail' flag.claim.claim_id %}" class="btn btn-outline-secondary btn-sm"><i class="ph ph-arrow-left"></i>Back to claim</a>
+  </div>
+</div>
+
+<!-- why this was flagged -->
+<div class="panel mb-3">
+  <div class="panel-head"><h2 class="panel-title"><i class="ph ph-magnifying-glass"></i>Why these were matched</h2></div>
+  <div class="panel-body">
+    {% if flag.rules_fired %}
+      <div class="mb-3">
+        {% for rule in flag.rules_fired %}<span class="badge bg-danger">{{ rule }}</span> {% endfor %}
+        <span class="meta ms-1">Deterministic rules. These fire on evidence strong enough to bypass scoring.</span>
+      </div>
+    {% endif %}
+    <div class="table-wrap mw-table">
+    <table class="table table-sm table-plain align-middle">
+      <thead><tr><th>Signal</th><th class="col-half">Strength</th><th class="text-end">Value</th></tr></thead>
+      <tbody>
+      {% for signal in signals %}
+        <tr>
+          <td>{{ signal.label }}</td>
+          <td><div class="conf-bar conf-{{ signal.band }}"><span style="width: {{ signal.pct }}%"></span></div></td>
+          <td class="num"><code>{{ signal.value }}</code></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="3" class="dim">Flagged by rule only. No weighted signals recorded.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- side by side -->
+<div class="row g-3">
+  <div class="col-md-6">
+    <div class="panel h-100">
+      <div class="panel-head"><h2 class="panel-title"><span class="mono">{{ flag.claim.claim_id }}</span> <span class="badge">{{ flag.claim.get_status_display }}</span></h2></div>
+      <div class="panel-body">
+        <p class="meta">{{ flag.claim.employee }}, submitted {{ flag.claim.submitted_at|date:"d M Y H:i" }}<br>Receipt {{ flag.claim.receipt.receipt_id }}</p>
+        {% include "expenses/_receipt_image.html" with receipt=flag.claim.receipt %}
+        <div class="receipt-text">{{ flag.claim.receipt.text }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel h-100">
+      <div class="panel-head"><h2 class="panel-title"><span class="mono">{{ flag.matched_claim.claim_id }}</span> <span class="badge">{{ flag.matched_claim.get_status_display }}</span></h2></div>
+      <div class="panel-body">
+        <p class="meta">{{ flag.matched_claim.employee }}, submitted {{ flag.matched_claim.submitted_at|date:"d M Y H:i" }}<br>Receipt {{ flag.matched_claim.receipt.receipt_id }}</p>
+        {% include "expenses/_receipt_image.html" with receipt=flag.matched_claim.receipt %}
+        <div class="receipt-text">{{ flag.matched_claim.receipt.text }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- field by field -->
+<div class="panel mt-3">
+  <div class="panel-head"><h2 class="panel-title"><i class="ph ph-columns"></i>Field by field</h2></div>
+  <div class="table-wrap mt-3">
+  <table class="table align-middle">
+    <thead><tr><th>Field</th><th>{{ flag.claim.claim_id }}</th><th>{{ flag.matched_claim.claim_id }}</th><th>Result</th></tr></thead>
+    <tbody>
+    {% for row in rows %}
+      <tr class="{% if row.verdict == 'identical' %}match{% elif row.verdict == 'differs' %}differ{% endif %}">
+        <td class="dim">{{ row.name }}</td>
+        <td>{{ row.left.display_value|default:"-" }}
+          {% if row.left %}<span class="meta">({{ row.left.confidence_pct }}%)</span>{% endif %}</td>
+        <td>{{ row.right.display_value|default:"-" }}
+          {% if row.right %}<span class="meta">({{ row.right.confidence_pct }}%)</span>{% endif %}</td>
+        <td>{% if row.verdict == 'identical' %}<span class="verdict ok">Identical</span>
+            {% elif row.verdict == 'differs' %}<span class="verdict bad">Differs</span>
+            {% else %}<span class="dim">Not present</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- verdict -->
+{% if flag.status == 'OPEN' %}
+<div class="panel is-accent mt-3">
+  <div class="panel-head"><h2 class="panel-title"><i class="ph ph-gavel"></i>Reviewer verdict</h2></div>
+  <div class="panel-body">
+    <p class="panel-note mb-3">
+      Confirming marks {{ flag.claim.claim_id }} a duplicate and rejects it.
+      Dismissing clears the flag so the claim can be approved.
+    </p>
+    <form method="post" class="d-flex flex-wrap gap-2 align-items-center">
+      {% csrf_token %}
+      <input type="text" name="note" class="form-control form-control-sm mw-md"
+             placeholder="Note (optional)" aria-label="Note">
+      <button name="action" value="confirm" class="btn btn-sm btn-danger" data-loading-label="Saving verdict">Confirm duplicate</button>
+      <button name="action" value="dismiss" class="btn btn-sm btn-outline-secondary" data-loading-label="Saving verdict">Dismiss, not a duplicate</button>
+    </form>
+  </div>
+</div>
+{% else %}
+<div class="alert alert-secondary mt-3">
+  Resolved as <strong>{{ flag.get_status_display }}</strong>
+  {% if flag.resolved_by %}by {{ flag.resolved_by.username }}{% endif %}
+  {% if flag.resolved_at %}on {{ flag.resolved_at|date:"d M Y H:i" }}{% endif %}.
+  {% if flag.resolution_note %}<div class="meta">{{ flag.resolution_note }}</div>{% endif %}
+</div>
+{% endif %}
+{% endblock %}

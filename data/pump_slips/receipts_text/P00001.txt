@@ -1,0 +1,34 @@
+Seer
+Bharat Petroleum
+Welcomes You
+RAJDHANI SERVICE CENTRE
+PLOT 12, SECTOR 5
+AHMEDABAD 380009
+Tel. No.: 9844189190
+
+Invoice No: 6959866201162128
+FCC ID: 97558722150945291
+FIP No. : 02
+Nozzle No. : 05
+Product : XP95
+Density : 837.9Kg/Cu.mtr
+Preset Type: Volume
+Rate(2/L) : 100.78
+Volume(L) : 00021.49
+Amount (INR) : 02165.76
+--------------------------
+Vech: 69152129418.67
+Vtrd: 9020112051.874
+
+Vehicle No: 8474
+Mobile No : 9561013639
+
+Date : 31/05/26
+Time : 13:38
+
+GST No: 24NWTJV2610V1ZG
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

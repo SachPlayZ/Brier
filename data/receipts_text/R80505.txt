@@ -1,0 +1,23 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+GSTIN/UIN: 29AABCA1234M1ZQ
+CASH MEMO
+--------------------------------------------
+Date: 31.08.2025
+Cash Memo No: BILL-2024-01840
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    4        1,359.92
+Paneer Butter Masala       4        1,118.96
+Veg Thali                  3          584.46
+Butter Naan                2          103.92
+Butter Naan                4          229.84
+--------------------------------------------
+Total Qty: 17
+Total Before Tax:                   3,397.10
+CGST @ 2.5%:                           84.93
+SGST @ 2.5%:                           84.93
+Rounding:                               0.04
+Grand Total:                        3,567.00
+--------------------------------------------
+Thank you for your business

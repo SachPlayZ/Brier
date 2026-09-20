@@ -1,0 +1,39 @@
+IndianOil
+Welcomes You
+ANNAPURNA FUEL CENTRE
+NH-48 NEAR TOLL PLAZA
+LUCKNOW 226001
+Tel. No.: 9887284124
+
+Inv.No: 82938918559037
+FIP No. : 01
+Nozzle No. : 04
+Product : Diesel
+Density : 749.9Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 95.16
+Volume(L) : 00001.05
+Amount Rs : 00100.00
+--------------------------
+Taxable Val  : ₹ 84 .74
+CGST @9%     : ₹     7.63
+SGST @9%     : = 7.63
+Total GST    : ₹ 15 .26
+Pay Mode     : UPI
+UPI Ref: 121446725619
+--------------------------
+
+Vehicle No: 7749
+Mobile No : 9017146569
+
+Date : 07/06/2025
+Time : 19:00
+
+GST No: 09MDLUR4284E1ZJ
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

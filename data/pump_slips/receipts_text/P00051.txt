@@ -1,0 +1,33 @@
+BPCL
+Welcome
+NATIONAL AUTO SERVICE
+17, STATION ROAD
+AHMEDABAD 380009
+Tel. No.: 9849523923
+
+Invoice No: 8825257795729667
+FCC ID: 78149278987312577
+FIP No. : 07
+Nozzle No. : 07
+Product : Power
+Density : 824.7Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 94.86
+Volume(L) : 00021.08
+Amount(Rs) : 02000.00
+--------------------------
+Vech: 89080018170.49
+Vtrd: 0444613832.226
+
+Vehicle No: 6059
+Mobile No : 9650430643
+
+Date : 09/01/26
+Time : 10:43
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

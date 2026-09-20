@@ -1,0 +1,23 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GST Reg No: 07AAFCK3321L1ZK
+GST INVOICE
+--------------------------------------------
+Dated: 2025-03-30
+Inv No: RCPT-2024-17179
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 1          173.19
+Vitamin D3                 2          397.18
+Digital Thermometer        1          255.47
+Antiseptic Liquid          3          557.07
+Paracetamol Strip          2           67.52
+--------------------------------------------
+Taxable Amount:                     1,450.43
+IGST @ 12%:                           174.05
+Rounding:                              -0.48
+Amount Payable:                    ₹1,624.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

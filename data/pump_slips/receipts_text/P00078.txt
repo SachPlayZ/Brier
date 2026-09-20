@@ -1,0 +1,33 @@
+VAYU FUELS
+Welcome
+KUMAR SERVICE STATION
+24, RING ROAD
+LUCKNOW 226001
+Tel. No.: 9899571100
+
+Inv. No: 3063785657698200
+FCC ID: 55027942234054740
+FIP No. : 07
+Nozzle No. : 02
+Product : XP95
+Density : 810.2Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 103.96
+Volume(L) : 00028.86
+Amount (Rs.) : 03000.00
+--------------------------
+Vech: 25764827313.70
+Vtrd: 2736720596.580
+
+Vehicle No: 5867
+Mobile No : Not Entered
+
+Date : 03/04/26
+Time : 06:27
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

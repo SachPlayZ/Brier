@@ -1,0 +1,24 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GST No.: 09AABCG5566Z1ZD
+RETAIL INVOICE
+--------------------------------------------
+Dated: 17-Jun-2025
+Receipt No: RCPT-2024-71207
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           4        2,866.28
+Milk 1L                    3          184.14
+Milk 1L                    2          121.60
+Atta 5kg                   2          563.96
+Basmati Rice 5kg           3        1,664.04
+--------------------------------------------
+Sub Total:                          5,400.02
+CGST @ 2.5%:                          135.00
+SGST @ 2.5%:                          135.00
+Round Off Adj:                         -0.02
+Total:                              5,670.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

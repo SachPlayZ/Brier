@@ -1,0 +1,25 @@
+{% extends "expenses/base.html" %}
+{% block title %}Sign up{% endblock %}
+{% block content %}
+<div class="auth-brand">
+  <span class="brand-mark"><i class="ph ph-receipt"></i></span>
+  <span class="brand-name">Brier</span>
+</div>
+<div class="panel"><div class="panel-body p-4">
+  <h1 class="page-title fs-5 mb-1">Create your account</h1>
+  <p class="page-sub mb-4">For employees who submit receipts. Reviewer access is granted by an admin.</p>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="mb-3">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text and field.name != "password1" %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+        {% for error in field.errors %}<div class="field-error" role="alert">{{ error }}</div>{% endfor %}
+      </div>
+    {% endfor %}
+    <button class="btn btn-primary w-100 mt-4" data-loading-label="Creating account">Sign up</button>
+  </form>
+  <p class="meta text-center mt-3 mb-0">Have an account? <a href="{% url 'login' %}">Log in</a></p>
+</div></div>
+{% endblock %}

@@ -1,0 +1,24 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GST Reg No: 36AADCH4567S1ZS
+GST INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2024-72667
+Bill Date: 07-Apr-2025
+Table: 15   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  4          746.56
+Biryani                    1          335.92
+Butter Naan                1           46.55
+Masala Dosa                3          479.28
+Paneer Butter Masala       4          953.60
+--------------------------------------------
+Taxable Value:                      2,561.91
+CGST @ 2.5%:                           64.05
+SGST @ 2.5%:                           64.05
+Round Off:                             -0.01
+Bill Total:                         2,690.00
+--------------------------------------------
+Thank you for your business

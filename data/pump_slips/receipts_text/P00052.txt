@@ -1,0 +1,42 @@
+ee
+VAYU FUELS
+Welcome
+PARK CIRCUS FILLING STATION
+SURVEY NO 88, HIGHWAY
+HYDERABAD 500081
+Tel. No.: 9856958421
+
+Inv.No: 06542219288535005
+FIP No. : 06
+Nozzle No. : 02
+Product : Diesel
+Density : 758.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 104.35
+Volume(L) : 00002.87
+Total Rs. : 00300.00
+--------------------------
+Taxable Val  : ₹ 254 .24
+CGST @9%     : B ES 22 .88
+SGST @9%     : ₹    22.88
+Total GST    : ₹    45.76
+Pay Mode     : UPI
+UPI Ref: 645932580666
+--------------------------
+Vech: 13830741780.87
+Vtrd: 8970335743.178
+
+Vehicle No: 7388
+Mobile No : Not Entered
+
+Date : 05.04.25
+Time : 15:17
+
+GST No: 36NJKEM0769D1ZF
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

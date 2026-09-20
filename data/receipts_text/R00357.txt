@@ -1,0 +1,20 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+GST No.: 33AAACA6677D1ZW
+CASH MEMO
+--------------------------------------------
+Receipt No: TI-2025-23206
+Date of Supply: 04-07-2025
+--------------------------------------------
+Item                     Qty          Amount
+Paracetamol Strip          2           75.76
+Paracetamol Strip          3           60.48
+Paracetamol Strip          4           86.64
+--------------------------------------------
+Taxable Value:                        222.88
+CGST @ 6%:                             13.38
+SGST @ 6%:                             13.37
+Round Off:                              0.37
+Total Amount:                         250.00
+--------------------------------------------
+Goods once sold will not be taken back

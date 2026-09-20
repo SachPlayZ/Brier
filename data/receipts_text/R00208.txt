@@ -1,0 +1,25 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GSTIN/UIN: 09AABCG5566Z1ZD
+GST INVOICE
+--------------------------------------------
+Date: 2025-03-24
+Invoice No: INV-2025-44035
+--------------------------------------------
+Item                     Qty          Amount
+Milk 1L                    2          104.66
+Toor Dal 1kg               1          172.61
+Sugar 1kg                  3          160.65
+Sugar 1kg                  1           43.38
+Sunflower Oil 1L           4          720.40
+Milk 1L                    3          185.94
+--------------------------------------------
+Subtotal:                           1,387.64
+CGST @ 2.5%:                           34.69
+SGST @ 2.5%:                           34.69
+Round Off:                             -0.02
+Total:                              1,457.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

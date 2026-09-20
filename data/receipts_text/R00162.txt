@@ -1,0 +1,20 @@
+PATEL STORES
+31 Adajan, Surat 395007
+GST No.: 24AAHCP6677V1Z8
+CASH MEMO
+--------------------------------------------
+Date: 2025-04-20
+Cash Memo No: RCPT-2024-50813
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           3        1,396.29
+Sugar 1kg                  2          111.84
+--------------------------------------------
+Sub Total:                          1,508.13
+CGST @ 2.5%:                           37.71
+SGST @ 2.5%:                           37.70
+Rounding:                               0.46
+Grand Total:                        1,584.00
+--------------------------------------------
+Goods once sold will not be taken back
+Card Payment

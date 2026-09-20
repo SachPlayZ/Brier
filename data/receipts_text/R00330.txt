@@ -1,0 +1,22 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+GST No.: 36AAGCD8899T1Z8
+CASH MEMO
+--------------------------------------------
+Date of Supply: 23-07-2025
+Bill No: RCPT-2024-69187
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             3          355.32
+Printer Ink                3        2,024.55
+Notebook 200pg             4          411.16
+--------------------------------------------
+Total Qty: 10
+Subtotal:                           2,791.03
+CGST @ 9%:                            251.20
+SGST @ 9%:                            251.19
+Rounding:                              -0.42
+Total Amount:                      ₹3,293.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

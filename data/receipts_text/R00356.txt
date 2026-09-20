@@ -1,0 +1,21 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN: 36AADCH4567S1ZS
+GST INVOICE
+--------------------------------------------
+Date of Supply: 12.02.2025
+Inv No: TI-2025-40174
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                2          278.98
+Biryani                    2          647.70
+--------------------------------------------
+Total Before Tax:                     926.68
+CGST @ 2.5%:                           23.17
+SGST @ 2.5%:                           23.16
+Round Off Adj:                         -0.01
+Net Payable:                         ₹973.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

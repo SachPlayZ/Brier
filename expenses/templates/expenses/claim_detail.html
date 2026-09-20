@@ -1,0 +1,183 @@
+{% extends "expenses/base.html" %}
+{% load humanize %}
+{% block title %}{{ claim.claim_id }}{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><a href="{% url 'claim_list' %}">Claims</a><i class="ph ph-caret-right"></i><span class="current">{{ claim.claim_id }}</span>{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1 class="page-title">
+      <span class="mono">{{ claim.claim_id }}</span>
+      <span class="badge align-middle ms-1">{{ claim.get_status_display }}</span>
+      {% if claim.duplicate_group %}<span class="badge bg-dark align-middle">Dup group {{ claim.duplicate_group }}</span>{% endif %}
+    </h1>
+    <p class="page-sub">
+      {{ claim.employee }}, submitted {{ claim.submitted_at|date:"d M Y H:i" }}{% if claim.description %}. {{ claim.description }}{% endif %}
+    </p>
+  </div>
+  <div class="text-lg-end">
+    <div class="stat m-0">{{ claim.amount_display }}</div>
+    <div class="meta">{{ claim.currency }}, document confidence {{ claim.receipt.doc_confidence|floatformat:2 }}</div>
+  </div>
+</div>
+
+{% if blocking %}
+<div class="alert alert-danger alert-flex mb-3" role="alert">
+  <i class="ph ph-warning-octagon"></i>
+  <div><strong>Approval blocked.</strong>
+  This claim has {{ blocking|length }} unresolved duplicate flag{{ blocking|pluralize }}
+  at EXACT or HIGH. Resolve {{ blocking|length|pluralize:"it,them" }} before approving.</div>
+</div>
+{% endif %}
+
+<div class="row g-3">
+  <!-- extracted fields with confidence -->
+  <div class="col-lg-7"><div class="stack">
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 class="panel-title"><i class="ph ph-scan"></i>Extracted fields</h2>
+          <p class="panel-note">Each score is a weighted sum of named components, shown on expand. Amber and red fields are worth a human glance.</p>
+        </div>
+      </div>
+      <div class="table-wrap mt-3">
+      <table class="table align-middle">
+        <thead><tr><th>Field</th><th>Value</th><th class="col-conf">Confidence</th><th></th></tr></thead>
+        <tbody>
+        {% for row in fields %}
+          <tr>
+            <td class="dim">{{ row.label }}{% if row.hint %}<span class="field-hint">{{ row.hint }}</span>{% endif %}</td>
+            <td>
+              <span class="fw-medium">{{ row.display|default:"-" }}</span>
+              {% if row.field.corrected_value %}<span class="badge bg-primary">corrected</span>{% endif %}
+              {% for note in row.notes %}<div class="field-note"><i class="ph ph-info"></i>{{ note }}</div>{% endfor %}
+            </td>
+            <td>{% include "expenses/_confidence.html" with field=row.field %}</td>
+            <td class="text-end">
+              {% if row.field.found %}<button class="btn btn-link p-0" data-bs-toggle="collapse"
+                      data-bs-target="#c{{ row.field.id }}">Why?</button>{% endif %}
+            </td>
+          </tr>
+          <tr class="collapse detail-row" id="c{{ row.field.id }}">
+            <td colspan="4">
+              <table class="table table-sm comp-table table-plain mb-2">
+                <thead><tr><th>Component</th><th>Value</th><th>Weighted</th></tr></thead>
+                <tbody>
+                {% for comp in row.components %}
+                  <tr><td>{{ comp.label }}</td><td class="mono">{{ comp.value }}</td>
+                      <td class="mono">{{ comp.contribution }}</td></tr>
+                {% empty %}
+                  <tr><td colspan="3" class="dim">No components recorded.</td></tr>
+                {% endfor %}
+                </tbody>
+              </table>
+              {% if is_finance %}
+              <form method="post" action="{% url 'correct_field' row.field.id %}" class="d-flex gap-2">
+                {% csrf_token %}
+                <input type="text" name="value" class="form-control form-control-sm mw-sm"
+                       value="{{ row.field.display_value }}" aria-label="Corrected value for {{ row.field.name }}">
+                <button class="btn btn-sm btn-outline-primary" data-loading-label="Saving correction">Correct</button>
+              </form>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      </div>
+      <div class="panel-body meta amounts-check">
+        {% if amounts %}
+          <div class="eq" aria-label="Amounts check">
+            {% for term in amounts.terms %}<span class="eq-term"><span class="eq-label">{{ term.label }}</span><span class="mono">{{ term.amount }}</span></span>{% if not forloop.last %}<span class="eq-op">+</span>{% endif %}{% endfor %}
+            <span class="eq-op">=</span>
+            <span class="eq-term is-total"><span class="eq-label">Total amount</span><span class="mono">{{ amounts.total }}</span></span>
+          </div>
+          {% if amounts.ok %}
+            <span class="verdict ok"><i class="ph ph-check-circle"></i> The amounts add up</span>
+          {% elif amounts.rounded %}
+            <span class="verdict ok"><i class="ph ph-check-circle"></i> The parts add up to {{ amounts.sum }}, {{ amounts.gap }} {% if amounts.over %}more{% else %}less{% endif %} than the total (rounding)</span>
+          {% else %}
+            <span class="verdict bad"><i class="ph ph-x-circle"></i> The parts add up to {{ amounts.sum }}, {{ amounts.gap }} {% if amounts.over %}more{% else %}less{% endif %} than the total. Check the figures above.</span>
+          {% endif %}
+        {% else %}
+          <span>Amounts check: not enough amounts on this receipt to add up.</span>
+        {% endif %}
+        <br>Text source: {{ claim.receipt.get_ocr_source_display }}
+      </div>
+    </div>
+
+    <!-- duplicate flags -->
+    <div class="panel">
+      <div class="panel-head"><h2 class="panel-title"><i class="ph ph-copy"></i>Duplicate flags</h2></div>
+      <div class="panel-body">
+      {% for flag in flags %}
+        <div class="flag-row">
+          <div>
+            <span class="badge band-{{ flag.band }}">{{ flag.band }}</span>
+            {% if is_finance %}<a class="cell-link ms-1" href="{% url 'claim_detail' flag.matched_claim.claim_id %}">{{ flag.matched_claim.claim_id }}</a>{% else %}<span class="cell-link ms-1">{{ flag.matched_claim.claim_id }}</span>{% endif %}
+            <span class="meta ms-1">score {{ flag.score|floatformat:3 }}</span>
+            <div class="reasons">
+              {% for reason in flag.reasons %}<span class="badge tag">{{ reason }}</span>{% endfor %}
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-{% if flag.status == 'OPEN' %}warning{% elif flag.status == 'CONFIRMED' %}danger{% else %}secondary{% endif %}">{{ flag.get_status_display }}</span>
+            {% if is_finance %}<a class="btn btn-sm btn-outline-primary" href="{% url 'dup_compare' flag.id %}">Compare</a>{% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <div class="empty py-4"><i class="ph ph-check-circle"></i><strong>No duplicates found</strong>Nothing else matched this claim.</div>
+      {% endfor %}
+      </div>
+    </div>
+  </div></div>
+
+  <!-- receipt + workflow -->
+  <div class="col-lg-5"><div class="stack">
+    <div class="panel">
+      <div class="panel-head"><h2 class="panel-title"><i class="ph ph-receipt"></i>Receipt <span class="mono">{{ claim.receipt.receipt_id }}</span></h2></div>
+      <div class="panel-body">
+        {% include "expenses/_receipt_image.html" with receipt=claim.receipt eager=True %}
+        <div class="receipt-text">{{ claim.receipt.text }}</div>
+      </div>
+    </div>
+
+    {% if is_finance %}
+    <div class="panel">
+      <div class="panel-head"><h2 class="panel-title"><i class="ph ph-gavel"></i>Decision</h2></div>
+      <div class="panel-body">
+        <form method="post" action="{% url 'decide' claim.claim_id %}">
+          {% csrf_token %}
+          <label class="form-label" for="{{ decision_form.note.id_for_label }}">Note</label>
+          {{ decision_form.note }}
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <button name="action" value="review" class="btn btn-sm btn-outline-secondary" data-loading-label="Saving decision">Start review</button>
+            <button name="action" value="approve" class="btn btn-sm btn-success" data-loading-label="Saving decision"
+                    {% if blocking %}disabled title="Resolve duplicate flags first"{% endif %}>Approve</button>
+            <button name="action" value="reject" class="btn btn-sm btn-danger" data-loading-label="Saving decision">Reject</button>
+            <button name="action" value="info" class="btn btn-sm btn-outline-warning" data-loading-label="Saving decision">Request info</button>
+          </div>
+          {% if blocking %}<p class="meta mt-2 mb-0">Approve is disabled until the duplicate flags are resolved.</p>{% endif %}
+        </form>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="panel">
+      <div class="panel-head"><h2 class="panel-title"><i class="ph ph-clock-counter-clockwise"></i>Audit trail</h2></div>
+      <div class="panel-body">
+        <ul class="timeline">
+          {% for event in events %}
+            <li>
+              <span class="fw-medium">{{ event.action }}</span>
+              {% if event.from_status %}<span class="dim">{{ event.from_status }} to {{ event.to_status }}</span>{% endif %}
+              <div class="meta">{{ event.at|date:"d M H:i" }}{% if event.actor %}, {{ event.actor.username }}{% endif %}</div>
+              {% if event.note %}<div class="dim">{{ event.note }}</div>{% endif %}
+            </li>
+          {% empty %}<li class="dim">No events.</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

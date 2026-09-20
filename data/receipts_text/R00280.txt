@@ -1,0 +1,23 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Invoice Number: TI-2025-65741
+Date: 26-06-2025
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            2          511.22
+Keyboard                   3        2,530.74
+USB Hub                    4        3,435.80
+--------------------------------------------
+Total Qty: 9
+Subtotal:                           6,477.76
+CGST @ 9%:                            583.00
+SGST @ 9%:                            583.00
+Rounding:                               0.24
+Grand Total:                       ₹7,644.00
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

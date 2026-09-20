@@ -1,0 +1,33 @@
+ee
+IndianOil
+Happy Motoring
+NATIONAL AUTO SERVICE
+M G ROAD
+LUCKNOW 226001
+Tel. No.: 9845440986
+
+Inv No.: 17549968650213136
+FIP No. : 03
+Nozzle No. : 03
+Product : Power
+Density : 776.9Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 91.79
+Volume(L) : 00002.18
+Amount(₹) : 00200.00
+--------------------------
+Vech: 75486207484.75
+Vtrd: 6301178775.734
+
+Vehicle No: 8510
+Mobile No : 9947570541
+
+Date : 25/02/2025
+Time : 13:44
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

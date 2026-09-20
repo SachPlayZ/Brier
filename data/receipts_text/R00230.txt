@@ -1,0 +1,25 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN: 36AADCH4567S1ZS
+CASH MEMO
+--------------------------------------------
+Dated: 2025-01-28
+Bill No: BILL-2025-53093
+Table: 24   Covers: 7
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              3          114.21
+Veg Thali                  1          243.88
+Paneer Butter Masala       1          225.56
+Masala Dosa                1          153.00
+Butter Naan                4          262.08
+Masala Dosa                2          193.82
+--------------------------------------------
+Sub Total:                          1,192.55
+IGST @ 5%:                             59.63
+Rounding:                              -0.18
+Grand Total:                       ₹1,252.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Card Payment

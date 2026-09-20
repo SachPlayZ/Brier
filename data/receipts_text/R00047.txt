@@ -1,0 +1,23 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+GSTIN: 29AABCA1234M1ZQ
+CASH MEMO
+--------------------------------------------
+Dated: 24.03.2025
+Inv No: BILL-2025-71676
+Table: 12   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                2           81.36
+Biryani                    3          700.44
+Veg Thali                  2          460.96
+Filter Coffee              1           41.47
+--------------------------------------------
+Total Qty: 8
+Taxable Value:                      1,284.23
+CGST @ 2.5%:                           32.11
+SGST @ 2.5%:                           32.10
+Round Off:                             -0.44
+Bill Total:                        ₹1,348.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

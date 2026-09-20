@@ -1,0 +1,42 @@
+KAVERI PETRO
+Welcome
+SHYAMBAZAR FUEL POINT
+42/1, BARRACKPORE TRUNK RD
+MUMBAI 400051
+Tel. No.: 9832296152
+
+Inv No.: 7824342520465623
+FCC ID: 92379652915583528
+FIP No. : 06
+Nozzle No. : 03
+Product : Petrol
+Density : 777.0Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 103.05
+Volume(L) : 00000.97
+Amount(Rs) : 00100.00
+--------------------------
+Taxable Val  : ₹    84.75
+CGST @9%     : ₹     7.63
+SGST @9%     : ₹     7.62
+Total GST    : ₹    15.25
+Pay Mode     : UPI
+UPI Ref: 429498491935
+--------------------------
+Vech: 35419092653.84
+Vtrd: 8173141278.997
+
+Vehicle No: 2445
+Mobile No : 9545080919
+
+Date : 13/05/26
+Time : 22:39
+
+GST No: 27GTTPA0719V1ZQ
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

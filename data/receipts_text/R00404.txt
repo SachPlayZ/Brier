@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GSTIN: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: BILL-2025-05165
+Bill Date: May 02, 2025
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            2          670.26
+USB Hub                    2        1,216.20
+Extension Board            4        1,537.16
+Keyboard                   3        4,750.59
+USB Hub                    4        2,556.28
+--------------------------------------------
+Taxable Amount:                    10,730.49
+IGST @ 18%:                         1,931.49
+Rounding:                               0.02
+Amount Payable:                   ₹12,662.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN/UIN: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Invoice Date: 15.01.2025
+Cash Memo No: TI-2024-72255
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           2        1,362.66
+Toor Dal 1kg               2          250.50
+Toor Dal 1kg               1          162.80
+Basmati Rice 5kg           4        1,682.28
+--------------------------------------------
+Subtotal:                           3,458.24
+CGST @ 2.5%:                           86.46
+SGST @ 2.5%:                           86.45
+Round Off:                             -0.15
+Net Payable:                        3,631.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

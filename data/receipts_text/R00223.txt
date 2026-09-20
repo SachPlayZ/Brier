@@ -1,0 +1,22 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GST No.: 27AAACR5055K1Z7
+CASH MEMO
+--------------------------------------------
+Inv No: INV-2024-77513
+Date of Supply: Mar 11, 2025
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  4          234.60
+Sugar 1kg                  1           54.99
+--------------------------------------------
+Total Qty: 5
+Taxable Value:                        289.59
+CGST @ 2.5%:                            7.24
+SGST @ 2.5%:                            7.24
+Rounding:                              -0.07
+Grand Total:                          304.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

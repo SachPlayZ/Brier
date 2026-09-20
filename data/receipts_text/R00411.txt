@@ -1,0 +1,25 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST Reg No: 19AACCB3456W1ZT
+CASH MEMO
+--------------------------------------------
+Bill Date: 2025-01-15
+Invoice Number: INV-2024-82891
+--------------------------------------------
+Item                     Qty          Amount
+Marker Pen                 2          111.56
+A4 Paper Ream              3          858.81
+File Folder                2          121.30
+A4 Paper Ream              1          227.92
+Notebook 200pg             3          316.74
+--------------------------------------------
+Total Qty: 11
+Taxable Amount:                     1,636.33
+CGST @ 9%:                            147.27
+SGST @ 9%:                            147.27
+Round Off Adj:                          0.13
+Amount Payable:                    ₹1,931.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+UPI Payment

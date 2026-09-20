@@ -1,0 +1,21 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN/UIN: 19AAFCP7890X1ZW
+TAX INVOICE
+--------------------------------------------
+Invoice No: BILL-2024-25952
+Bill Date: 10/02/2025
+Table: 11   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                1           44.46
+Paneer Butter Masala       2          622.98
+--------------------------------------------
+Sub Total:                            667.44
+CGST @ 2.5%:                           16.69
+SGST @ 2.5%:                           16.68
+Round Off:                              0.19
+Total Amount:                        ₹701.00
+--------------------------------------------
+Goods once sold will not be taken back

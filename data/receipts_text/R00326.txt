@@ -1,0 +1,24 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GST Reg No: 09AABCG5566Z1ZD
+RETAIL INVOICE
+--------------------------------------------
+Invoice Number: RCPT-2025-30462
+Invoice Date: 21/04/2025
+--------------------------------------------
+Item                     Qty          Amount
+Toor Dal 1kg               2          278.62
+Toor Dal 1kg               4          614.84
+Sunflower Oil 1L           2          375.46
+Toor Dal 1kg               4          519.20
+Atta 5kg                   3          914.76
+--------------------------------------------
+Total Qty: 15
+Taxable Amount:                     2,702.88
+IGST @ 5%:                            135.14
+Rounding:                              -0.02
+Net Payable:                       ₹2,838.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

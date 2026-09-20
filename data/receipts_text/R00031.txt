@@ -1,0 +1,22 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GSTIN: 29AAGCB7383J1Z4
+TAX INVOICE
+--------------------------------------------
+Bill Date: 24/06/2025
+Receipt No: TI-2024-15539
+--------------------------------------------
+Item                     Qty          Amount
+A4 Paper Ream              4        1,054.20
+Printer Ink                4        4,658.80
+File Folder                4          333.32
+--------------------------------------------
+Taxable Value:                      6,046.32
+CGST @ 9%:                            544.17
+SGST @ 9%:                            544.17
+Rounding:                               0.34
+Amount Payable:                     7,135.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Card Payment

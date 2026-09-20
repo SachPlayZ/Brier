@@ -1,0 +1,23 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+GSTIN: 29AABCA1234M1ZQ
+CASH MEMO
+--------------------------------------------
+Cash Memo No: INV-2024-99442
+Invoice Date: 2025-08-31
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       1          284.76
+Biryani                    1          247.49
+Filter Coffee              1           57.74
+Veg Thali                  3          802.35
+Filter Coffee              1           69.84
+Paneer Butter Masala       1          221.24
+--------------------------------------------
+Total Before Tax:                   1,683.42
+IGST @ 5%:                             84.17
+Rounding:                               0.41
+Total:                             ₹1,768.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

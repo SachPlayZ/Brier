@@ -1,0 +1,25 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN: 19AAFCP7890X1ZW
+RETAIL INVOICE
+--------------------------------------------
+Dated: 01-07-2025
+Invoice No: RCPT-2025-41230
+Table: 21   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  2          550.04
+Veg Thali                  1          161.79
+Veg Thali                  3          643.29
+Biryani                    2          502.84
+Filter Coffee              3          207.90
+--------------------------------------------
+Total Qty: 11
+Taxable Value:                      2,065.86
+CGST @ 2.5%:                           51.65
+SGST @ 2.5%:                           51.64
+Rounding:                              -0.15
+Amount Payable:                    ₹2,169.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

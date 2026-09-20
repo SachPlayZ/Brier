@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GST Reg No: 24AABCG2244U1ZA
+GST INVOICE
+--------------------------------------------
+Invoice No: BILL-2024-14092
+Invoice Date: 29-01-2025
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        1,485.20
+Extension Board            1          432.46
+HDMI Cable 2m              4        1,803.36
+--------------------------------------------
+Total Qty: 9
+Sub Total:                          3,721.02
+CGST @ 9%:                            334.89
+SGST @ 9%:                            334.89
+Round Off:                              0.20
+Grand Total:                       ₹4,391.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+UPI Payment

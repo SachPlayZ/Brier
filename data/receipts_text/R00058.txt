@@ -1,0 +1,23 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GST Reg No: 36AAGCD8899T1Z8
+GST INVOICE
+--------------------------------------------
+Invoice Number: BILL-2025-83349
+Date of Supply: Mar 05, 2025
+--------------------------------------------
+Item                     Qty          Amount
+File Folder                3          165.48
+Stapler                    3          557.67
+Printer Ink                1        1,137.95
+Notebook 200pg             1           91.41
+Stapler                    1          167.58
+--------------------------------------------
+Total Before Tax:                   2,120.09
+CGST @ 9%:                            190.81
+SGST @ 9%:                            190.81
+Rounding:                               0.29
+Grand Total:                       ₹2,502.00
+--------------------------------------------
+Goods once sold will not be taken back

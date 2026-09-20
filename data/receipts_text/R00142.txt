@@ -1,0 +1,22 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GST Reg No: 07AAFCK3321L1ZK
+RETAIL INVOICE
+--------------------------------------------
+Inv No: RCPT-2024-75090
+Date of Supply: 04.07.2025
+--------------------------------------------
+Item                     Qty          Amount
+Digital Thermometer        4        1,037.96
+Vitamin D3                 3          492.21
+Digital Thermometer        1          237.03
+Digital Thermometer        1          295.52
+--------------------------------------------
+Total Qty: 9
+Total Before Tax:                   2,062.72
+IGST @ 12%:                           247.53
+Round Off Adj:                         -0.25
+Grand Total:                       ₹2,310.00
+--------------------------------------------
+Subject to local jurisdiction

@@ -1,0 +1,290 @@
+{% load static %}<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brier | Receipt extraction and duplicate detection</title>
+  <link rel="icon" href="data:,">
+  <meta name="description" content="Extract receipt fields with a confidence score, flag duplicate expense claims with the evidence, and approve with a full audit trail.">
+  {% include "expenses/_boot.html" %}
+  <script>
+    /* The hero preview exists in both themes and both <img>s are lazy, so preload only the one
+       that matches the theme _boot.html just applied. */
+    (function () {
+      var hero = { dark: "{% static 'expenses/landing/hero-dashboard-dark.webp' %}", light: "{% static 'expenses/landing/hero-dashboard-light.webp' %}" };
+      var link = document.createElement("link");
+      link.rel = "preload"; link.as = "image"; link.setAttribute("fetchpriority", "high");
+      link.href = hero[document.documentElement.getAttribute("data-bs-theme")] || hero.dark;
+      document.head.appendChild(link);
+    })();
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5/index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
+  <link href="{% static 'expenses/landing.css' %}" rel="stylesheet">
+  <link href="{% static 'expenses/loading.css' %}" rel="stylesheet">
+  <noscript><style>.img-frame img { opacity: 1; }</style></noscript>
+</head>
+<body>
+{% include "expenses/_preloader.html" %}
+<div class="nav-bar" id="nav-bar" aria-hidden="true"><span></span></div>
+<div class="sr-only" id="sr-status" role="status" aria-live="polite"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav-sentinel" id="nav-sentinel" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Brier, top of page">
+      <span class="brand-mark"><i class="ph ph-receipt" aria-hidden="true"></i></span>
+      <span class="brand-name">Brier</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#product">Product</a>
+      <a href="#how">How it works</a>
+      {% if metrics %}<a href="#accuracy">Accuracy</a>{% endif %}
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+        <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+      </button>
+      <div class="nav-cta">{% include "expenses/_cta.html" with size="sm" %}</div>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <i class="ph ph-list" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div class="nav-menu" id="nav-menu">
+    <a href="#product">Product</a>
+    <a href="#how">How it works</a>
+    {% if metrics %}<a href="#accuracy">Accuracy</a>{% endif %}
+    {% include "expenses/_cta.html" %}
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <canvas class="ascii" data-ascii aria-hidden="true"></canvas>
+    <div class="wrap hero-layout">
+      <div>
+        <h1 class="hero-in" style="--i:0"><span class="h1-line">Read every receipt.</span><span class="h1-line accent">Catch every duplicate.</span></h1>
+        <p class="lead hero-in" style="--i:1">Extract fields with a confidence score, flag duplicate claims with the evidence, and approve with a full audit trail.</p>
+        <div class="hero-in" style="--i:2">{% include "expenses/_cta.html" %}</div>
+      </div>
+      <div class="window hero-in" style="--i:3">
+        {% include "expenses/_shot.html" with name="hero-dashboard" w=1920 h=1200 alt="The dashboard: claim counts, duplicate flags by band, and extraction health" eager=True %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section class="section" id="product">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">// Product</p>
+        <h2>One screen for every claim decision.</h2>
+        <p>Extraction, duplicate evidence and the approval rule sit together, so a reviewer never has to open a spreadsheet.</p>
+      </div>
+      <div class="bento">
+        <article class="cell cell-a reveal" style="--i:0">
+          <div>
+            <h3>Fields with a confidence score</h3>
+            <p>Vendor, date, totals, tax and GSTIN come out with a score per field. Amber and red fields are the ones worth a glance.</p>
+          </div>
+          {% include "expenses/_shot.html" with name="shot-extraction" w=845 h=998 alt="Extracted fields with a confidence bar and the pattern that matched each one" crop="24rem" %}
+        </article>
+        <article class="cell cell-b reveal" style="--i:1">
+          <div>
+            <h3>Duplicates come with evidence</h3>
+            <p>Invoice, amount, vendor, date and image similarity are scored separately, so a flag shows why it fired.</p>
+          </div>
+          <pre class="glyph" data-glyph role="img" aria-label="Two receipts with matching fields being compared"></pre>
+        </article>
+        <article class="cell cell-c reveal" style="--i:0">
+          <div>
+            <h3>Made for Indian tax receipts</h3>
+            <p>GSTIN, CGST, SGST and IGST are read and checked against the total.</p>
+          </div>
+          <div class="tax-codes" aria-hidden="true"><span>GSTIN</span><span>CGST</span><span>SGST</span><span>IGST</span></div>
+        </article>
+        <article class="cell cell-d reveal" style="--i:1">
+          <div>
+            <h3>Compare the two receipts side by side</h3>
+            <p>Read the matched claims field by field, then confirm the duplicate or dismiss it with a note.</p>
+          </div>
+          {% include "expenses/_shot.html" with name="shot-evidence" w=1464 h=588 alt="The signals behind a duplicate flag, each scored from 0 to 1" %}
+        </article>
+        <article class="cell cell-e reveal">
+          <span class="rule-icon" aria-hidden="true"><i class="ph ph-shield-check"></i></span>
+          <div>
+            <h3>Approval stays blocked while a duplicate flag is open</h3>
+            <p>An EXACT or HIGH flag has to be confirmed or dismissed first. The rule lives in the service layer, so no screen can skip it.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>From upload to decision in three moves.</h2>
+      </div>
+      <div class="how-layout reveal">
+        <div class="tabs" role="tablist" aria-label="How a claim moves" data-tabs>
+          <button class="tab" role="tab" id="tab-login" aria-controls="pane-login" aria-selected="true" type="button">
+            <span class="tab-title">Log in</span>
+            <span class="tab-desc">Everyone uses their own account, and new employees can sign up in a few fields.</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button>
+          <button class="tab" role="tab" id="tab-submit" aria-controls="pane-submit" aria-selected="false" tabindex="-1" type="button">
+            <span class="tab-title">Submit</span>
+            <span class="tab-desc">Upload a receipt image or paste its text. Nothing else is required.</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button>
+          <button class="tab" role="tab" id="tab-extract" aria-controls="pane-extract" aria-selected="false" tabindex="-1" type="button">
+            <span class="tab-title">Extract</span>
+            <span class="tab-desc">Fields are read, checked against the arithmetic, and scored.</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button>
+          <button class="tab" role="tab" id="tab-review" aria-controls="pane-review" aria-selected="false" tabindex="-1" type="button">
+            <span class="tab-title">Review</span>
+            <span class="tab-desc">Finance sees the evidence, then confirms or dismisses each flag.</span>
+            <span class="tab-progress" aria-hidden="true"><span></span></span>
+          </button>
+        </div>
+        <div class="stage">
+          <div class="pane is-active" role="tabpanel" id="pane-login" aria-labelledby="tab-login">
+            {% include "expenses/_shot.html" with name="step-login" w=1920 h=1200 alt="The log in page, with a link to sign up for new employees" %}
+          </div>
+          <div class="pane" role="tabpanel" id="pane-submit" aria-labelledby="tab-submit">
+            {% include "expenses/_shot.html" with name="step-submit" w=1920 h=1200 alt="The claim form with an image upload, a text box and a description" %}
+          </div>
+          <div class="pane" role="tabpanel" id="pane-extract" aria-labelledby="tab-extract">
+            {% include "expenses/_shot.html" with name="step-extract" w=1920 h=1200 alt="A claim with its extracted fields, confidence bars and receipt text" %}
+          </div>
+          <div class="pane" role="tabpanel" id="pane-review" aria-labelledby="tab-review">
+            {% include "expenses/_shot.html" with name="step-review" w=1920 h=1200 alt="The duplicate comparison a reviewer uses to confirm or dismiss a flag" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% if metrics %}
+  <!-- Accuracy -->
+  <section class="section" id="accuracy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Measured, not promised.</h2>
+        <p>These numbers come from the project's evaluation report: {{ metrics.receipts }} synthetic receipts with simulated OCR damage.</p>
+      </div>
+      <div class="stats reveal">
+        {% if metrics.vendor_f1 is not None %}
+        <div class="stat">
+          <div class="stat-num" data-count="{{ metrics.vendor_f1|stringformat:'.3f' }}" data-decimals="3">{{ metrics.vendor_f1|stringformat:".3f" }}</div>
+          <div><div class="stat-label">Vendor F1</div><div class="stat-sub">Name read correctly</div></div>
+        </div>
+        {% endif %}
+        {% if metrics.total_f1 is not None %}
+        <div class="stat">
+          <div class="stat-num" data-count="{{ metrics.total_f1|stringformat:'.3f' }}" data-decimals="3">{{ metrics.total_f1|stringformat:".3f" }}</div>
+          <div><div class="stat-label">Total F1</div><div class="stat-sub">Grand total read correctly</div></div>
+        </div>
+        {% endif %}
+        {% if metrics.arithmetic_pct is not None %}
+        <div class="stat">
+          <div class="stat-num" data-count="{{ metrics.arithmetic_pct|stringformat:'.1f' }}" data-decimals="1" data-suffix="%">{{ metrics.arithmetic_pct|stringformat:".1f" }}%</div>
+          <div><div class="stat-label">Amounts reconcile</div><div class="stat-sub">Subtotal plus tax equals total</div></div>
+        </div>
+        {% endif %}
+        {% if metrics.ece is not None %}
+        <div class="stat">
+          <div class="stat-num" data-count="{{ metrics.ece|stringformat:'.3f' }}" data-decimals="3">{{ metrics.ece|stringformat:".3f" }}</div>
+          <div><div class="stat-label">Calibration error</div><div class="stat-sub">Lower means scores can be trusted</div></div>
+        </div>
+        {% endif %}
+      </div>
+      <div class="acc-layout">
+        <div class="table-wrap reveal">
+          <table class="acc-table">
+            <caption class="sr-only">F1 score per field, for all receipts, clean scans and phone photos</caption>
+            <thead><tr><th scope="col">Field</th><th scope="col">All receipts</th><th scope="col">Clean scan</th><th scope="col">Phone photo</th></tr></thead>
+            <tbody>
+              {% for row in metrics.rows %}
+              <tr>
+                <th scope="row">{{ row.label }}</th>
+                <td>{{ row.overall|stringformat:".3f" }}</td>
+                <td>{% if row.clean is not None %}{{ row.clean|stringformat:".3f" }}{% else %}-{% endif %}</td>
+                <td>{% if row.photo is not None %}{{ row.photo|stringformat:".3f" }}{% else %}-{% endif %}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="note reveal" style="--i:1"><strong>Read this as a ceiling.</strong> The damage is simulated, not a field trial, and real OCR output scores lower on some fields. Values below the confidence cutoff go to manual review instead of being trusted.</p>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Review rules -->
+  <section class="section" id="rules">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">// Review rules</p>
+        <h2>Rules a reviewer can trust.</h2>
+      </div>
+      <div class="rules reveal">
+        <div class="rule">
+          <span class="rule-icon" aria-hidden="true"><i class="ph ph-shield-check"></i></span>
+          <div><h3>No approval with an open duplicate flag</h3><p>The check runs in the service layer, so a UI change or a direct request cannot skip it.</p></div>
+        </div>
+        <div class="rule">
+          <span class="rule-icon" aria-hidden="true"><i class="ph ph-clock-counter-clockwise"></i></span>
+          <div><h3>Every decision is logged</h3><p>Status changes, corrections and notes are recorded with who made them and when.</p></div>
+        </div>
+        <div class="rule">
+          <span class="rule-icon" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></span>
+          <div><h3>Low confidence goes to a person</h3><p>Fields below the auto-accept cutoff are routed to manual review instead of being trusted.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final call to action -->
+  <section class="section section-flush">
+    <div class="wrap">
+      <div class="cta reveal">
+        <canvas class="ascii" data-ascii aria-hidden="true"></canvas>
+        <h2>Start reviewing claims with evidence.</h2>
+        <p>Employees submit receipts. Finance reviews the evidence and decides.</p>
+        {% include "expenses/_cta.html" %}
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top" aria-label="Brier, top of page">
+      <span class="brand-mark"><i class="ph ph-receipt" aria-hidden="true"></i></span>
+      <span class="brand-name">Brier</span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="#product">Product</a>
+      <a href="#how">How it works</a>
+      {% if metrics %}<a href="#accuracy">Accuracy</a>{% endif %}
+      <a href="#rules">Review rules</a>
+    </nav>
+    <p class="copyright">&copy; 2026 Brier</p>
+  </div>
+</footer>
+
+<script src="{% static 'expenses/app.js' %}"></script>
+<script src="{% static 'expenses/landing.js' %}"></script>
+<script src="{% static 'expenses/loading.js' %}"></script>
+</body>
+</html>

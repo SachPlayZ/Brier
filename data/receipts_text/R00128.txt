@@ -1,0 +1,21 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST No.: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Invoice No: INV-2025-01027
+Dated: 01.05.2025
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        2,058.00
+USB Hub                    3        1,107.84
+HDMI Cable 2m              4        1,658.36
+Extension Board            4        1,245.04
+--------------------------------------------
+Taxable Value:                      6,069.24
+IGST @ 18%:                         1,092.46
+Round Off Adj:                          0.30
+Amount Payable:                    ₹7,162.00
+--------------------------------------------
+*** CUSTOMER COPY ***

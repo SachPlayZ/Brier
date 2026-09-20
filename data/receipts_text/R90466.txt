@@ -1,0 +1,25 @@
+SARAVANA
+18 T Nagar, Chennai 600017
+GSTIN/UIN: 33AAECS7788N1ZJ
+TAX INVOICE
+--------------------------------------------
+Date: 09-Jul-2025
+Receipt No: TI-2025-18978
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              2          135.64
+Paneer Butter Masala       1          336.48
+Paneer Butter Masala       4        1,191.32
+Paneer Butter Masala       1          282.30
+Biryani                    4          947.36
+Filter Coffee              2           65.26
+--------------------------------------------
+Total Qty: 14
+Subtotal:                           2,958.36
+CGST @ 2.5%:                           73.96
+SGST @ 2.5%:                           73.96
+Round Off:                              1.72
+Amount Payable:                     3,108.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Card Payment

@@ -1,0 +1,24 @@
+Sharma Traders Private Limited
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GST Reg No: 29AAGCB7383J1Z4
+GST INVOICE
+--------------------------------------------
+Date: 09.06.2025
+Inv No: TI-2025-36922
+--------------------------------------------
+Item                     Qty          Amount
+Stapler                    1          203.98
+File Folder                3          191.73
+Notebook 200pg             1          100.29
+Notebook 200pg             4          462.20
+Notebook 200pg             1          104.83
+A4 Paper Ream              1          289.60
+--------------------------------------------
+Taxable Value:                      1,352.63
+CGST @ 9%:                            121.74
+SGST @ 9%:                            121.73
+Round Off Adj:                         -0.60
+Total:                              1,595.50
+--------------------------------------------
+Thank you for your business

@@ -1,0 +1,22 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN: 24AAHCP6677V1Z8
+GST INVOICE
+--------------------------------------------
+Invoice No: INV-2024-23376
+Date of Supply: 04-Apr-2025
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   2          655.98
+Sunflower Oil 1L           2          241.48
+Sugar 1kg                  4          194.24
+--------------------------------------------
+Taxable Value:                      1,091.70
+CGST @ 2.5%:                           27.30
+SGST @ 2.5%:                           27.29
+Round Off:                             -0.29
+Total:                             ₹1,146.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

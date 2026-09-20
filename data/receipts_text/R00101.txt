@@ -1,0 +1,22 @@
+Mumbai Print Solutions LLP
+21 Lower Parel, Mumbai 400013
+Ph: 9820077331
+GSTIN: 27AAFCM4455C1ZM
+TAX INVOICE
+--------------------------------------------
+Dated: 14-06-2025
+Bill No: INV-2025-38042
+--------------------------------------------
+Item                     Qty          Amount
+Poster A2                  3          777.33
+Brochure Print 100         3        9,485.37
+Brochure Print 100         4        7,765.28
+--------------------------------------------
+Subtotal:                          18,027.98
+CGST @ 9%:                          1,622.52
+SGST @ 9%:                          1,622.52
+Round Off:                             -0.02
+Amount Payable:                    21,273.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

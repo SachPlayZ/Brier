@@ -1,0 +1,21 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+GST Reg No: 19AACCB3456W1ZT
+GST INVOICE
+--------------------------------------------
+Date: 30/01/2025
+Bill No: INV-2025-04168
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             2          224.00
+Printer Ink                2        2,212.18
+Stapler                    2          463.96
+Stapler                    4          583.48
+--------------------------------------------
+Total Before Tax:                   3,483.62
+CGST @ 9%:                            313.53
+SGST @ 9%:                            313.52
+Rounding:                               0.33
+Bill Total:                        ₹4,111.00
+--------------------------------------------
+Subject to local jurisdiction

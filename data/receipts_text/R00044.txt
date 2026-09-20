@@ -1,0 +1,23 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST No.: 33AAACA6677D1ZW
+GST INVOICE
+--------------------------------------------
+Dated: Aug 03, 2025
+Cash Memo No: BILL-2024-76178
+--------------------------------------------
+Item                     Qty          Amount
+Paracetamol Strip          1           36.35
+Antiseptic Liquid          2          316.30
+Antiseptic Liquid          4          481.12
+Digital Thermometer        1          221.08
+Paracetamol Strip          4          152.08
+--------------------------------------------
+Subtotal:                           1,206.93
+CGST @ 6%:                             72.42
+SGST @ 6%:                             72.41
+Round Off:                              0.24
+Bill Total:                        ₹1,352.00
+--------------------------------------------
+Subject to local jurisdiction

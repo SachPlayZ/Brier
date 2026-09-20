@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST No.: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Inv No: BILL-2025-25816
+Bill Date: 13.03.2025
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   3        1,904.34
+Extension Board            3          896.13
+Keyboard                   2        1,915.18
+USB Hub                    4        2,070.64
+--------------------------------------------
+Total Before Tax:                   6,786.29
+CGST @ 9%:                            610.77
+SGST @ 9%:                            610.76
+Round Off:                              0.18
+Amount Payable:                     8,008.00
+--------------------------------------------
+Subject to local jurisdiction

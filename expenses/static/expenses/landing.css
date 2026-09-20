@@ -1,0 +1,306 @@
+/* Landing page. Visual language adapted from the Nexus reference (dark tech, teal accent,
+   pixel display type, mono labels, ASCII texture, bento tiles). Native CSS, no framework.
+   Token names match app.css/loading.css (--page, --ink, --track ...) so loading.css works
+   here unchanged. Theme = [data-bs-theme] on <html>, set pre-paint by _boot.html. */
+
+@font-face {
+  font-family: "Geist Pixel Square";
+  src: url("https://cdn.jsdelivr.net/npm/geist@1.7.0/dist/fonts/geist-pixel/GeistPixel-Square.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Geist Pixel Line";
+  src: url("https://cdn.jsdelivr.net/npm/geist@1.7.0/dist/fonts/geist-pixel/GeistPixel-Line.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+/* ------------------------------------------------------------------ tokens */
+:root {
+  --font-sans: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono Variable", "Geist Mono", ui-monospace, Consolas, monospace;
+  --font-pixel: "Geist Pixel Line", "Geist Variable", "Geist", system-ui, sans-serif;
+  --r-card: 16px;   /* cards, panels, screenshots */
+  --r-ctl: 10px;    /* buttons, nav links, chips */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --z-nav: 40;
+  --wrap: 1200px;
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+  --page: #07080c;
+  --surface: #0d0f15;
+  --surface-2: #131622;
+  --line: #232734;
+  --line-soft: #171a24;
+  --line-strong: #5a6278;
+  --ink: #eef0f5;
+  --ink-2: #c5cad6;
+  --muted: #8e96a8;
+  --track: #252a38;
+  --accent: #2dd4bf;         /* text and marks */
+  --accent-fill: #2dd4bf;    /* fills and progress */
+  --accent-soft: rgba(45, 212, 191, 0.10);
+  --accent-line: rgba(45, 212, 191, 0.32);
+  --btn-bg: #eef0f5;
+  --btn-ink: #0a0b10;
+  --btn-hover: #d9dde6;
+  --grid-line: rgba(45, 212, 191, 0.10);
+  --shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 28px 56px -28px rgba(0, 0, 0, 0.7);
+}
+
+[data-bs-theme="light"] {
+  color-scheme: light;
+  /* Darker than the first pass on purpose: hairline text, borders and the green were too faint
+     on the pale page. Values are chosen by measured contrast, not by eye:
+     on #fff9f2: ink 18.7:1, ink-2 15.6:1, muted 9.4:1, accent text 6.2:1, ghost border 7.5:1, progress fill 3.4:1 (on the track). */
+  --page: #fff9f2;           /* warm paper, set by the product owner; every neutral is tinted to it */
+  --surface: #ffffff;        /* cards and frames: true white on the cream page */
+  --surface-2: #f3eadc;
+  --line: #d3c7b4;
+  --line-soft: #e6dccb;
+  --line-strong: #5a5045;
+  --ink: #0e0c09;
+  --ink-2: #241f18;
+  --muted: #4a4238;
+  --track: #ddd1be;
+  --accent: #006c51;         /* text and marks: a vivid deep green, not near-black (3.1:1 from the ink, 5:1 on every surface) */
+  --accent-fill: #057e60;    /* fills, progress: brighter than the text green (3:1 on the track) */
+  --accent-soft: rgba(0, 108, 81, 0.12);
+  --accent-line: rgba(0, 108, 81, 0.55);
+  --grid-line: rgba(5, 126, 96, 0.16);
+  --btn-bg: #0e0c09;
+  --btn-ink: #fff9f2;
+  --btn-hover: #241f18;
+  --shadow: 0 1px 2px rgba(60, 40, 10, 0.10), 0 28px 56px -28px rgba(60, 40, 10, 0.34);
+  /* the hairline pixel font reads pale on a light page; the solid variant keeps the pixel look */
+  --font-pixel: "Geist Pixel Square", "Geist Variable", "Geist", system-ui, sans-serif;
+}
+
+/* -------------------------------------------------------------------- base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0; background: var(--page); color: var(--ink); font-family: var(--font-sans);
+  font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+h1, h2 { font-family: var(--font-pixel); font-weight: 400; margin: 0; }
+h3 { margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -56px; z-index: 100; padding: 10px 16px; border-radius: var(--r-ctl); background: var(--btn-bg); color: var(--btn-ink); text-decoration: none; }
+.skip:focus { top: 12px; }
+.accent { color: var(--accent); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* brand mark, also used by the preloader */
+/* Sized to be seen first: a 46px accent mark and a display-font wordmark (the same face as the headings). */
+.brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand-mark { width: 46px; height: 46px; border-radius: var(--r-ctl); display: grid; place-items: center; background: var(--accent-fill); color: var(--btn-ink); font-size: 1.55rem; flex: none; }
+.brand-name { font-family: "Geist Pixel Square", "Geist Variable", "Geist", system-ui, sans-serif; font-size: 1.75rem; font-weight: 400; line-height: 1; letter-spacing: -0.01em; color: var(--ink); }
+@media (max-width: 480px) {
+  .brand { gap: 10px; }
+  .brand-mark { width: 40px; height: 40px; font-size: 1.35rem; }
+  .brand-name { font-size: 1.5rem; }
+}
+
+/* ----------------------------------------------------------------- buttons */
+.btn-cta, .btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 46px; padding: 0 22px;
+  border-radius: var(--r-ctl); border: 1px solid transparent; font: 500 0.9375rem var(--font-sans);
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: transform 0.2s var(--ease), background-color 0.2s, border-color 0.2s;
+}
+.btn-cta { background: var(--btn-bg); color: var(--btn-ink); }
+.btn-cta:hover { background: var(--btn-hover); transform: translateY(-1px); }
+.btn-cta i { transition: transform 0.2s var(--ease); }
+.btn-cta:hover i { transform: translateX(3px); }
+.btn-ghost { background: color-mix(in srgb, var(--page) 88%, transparent); color: var(--ink); border-color: var(--line-strong); }   /* backed, so texture never shows through the label */
+.btn-ghost:hover { background: var(--surface-2); transform: translateY(-1px); }
+.btn-cta:active, .btn-ghost:active { transform: scale(0.98); }
+.btn-sm { height: 38px; padding: 0 16px; font-size: 0.875rem; }
+.icon-btn { width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: var(--r-ctl); background: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; transition: background-color 0.2s, color 0.2s; }
+.icon-btn:hover { background: var(--surface-2); color: var(--ink); }
+[data-bs-theme="light"] .theme-toggle .ph-sun { display: none; }
+[data-bs-theme="dark"] .theme-toggle .ph-moon { display: none; }
+
+/* --------------------------------------------------------------------- nav */
+.nav { position: fixed; inset: 0 0 auto 0; z-index: var(--z-nav); height: 72px; display: flex; align-items: center; border-bottom: 1px solid transparent; transition: background-color 0.3s, border-color 0.3s; }
+.nav.is-solid { background: color-mix(in srgb, var(--page) 82%, transparent); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border-color: var(--line); }
+@media (prefers-reduced-transparency: reduce) { .nav.is-solid { background: var(--page); backdrop-filter: none; -webkit-backdrop-filter: none; } }
+.nav-inner { display: flex; align-items: center; gap: 8px; }
+.nav-links { display: none; gap: 2px; margin-left: 20px; }
+.nav-links a { padding: 8px 14px; border-radius: var(--r-ctl); color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s, background-color 0.2s; }
+.nav-links a:hover { color: var(--ink); background: var(--surface-2); }
+.nav-actions { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav-cta { display: none; margin-left: 8px; }
+.nav-cta .cta-group { flex-wrap: nowrap; gap: 8px; }
+.nav-cta .btn-ghost { order: -1; }   /* Log in, then the primary Sign up */
+.nav-menu { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; gap: 4px; padding: 12px 24px 20px; background: var(--page); border-bottom: 1px solid var(--line); }
+.nav.is-open .nav-menu { display: flex; }
+.nav.is-open { background: var(--page); border-color: var(--line); }
+.nav-menu a:not(.btn-cta) { padding: 12px 8px; color: var(--ink-2); text-decoration: none; border-radius: var(--r-ctl); }
+.nav-menu .cta-group { margin-top: 8px; }
+@media (min-width: 900px) {
+  .nav-links, .nav-cta { display: flex; }
+  .nav-toggle, .nav-menu { display: none !important; }
+}
+
+/* -------------------------------------------------------------------- hero */
+.hero { position: relative; isolation: isolate; overflow: hidden; min-height: min(100dvh, 780px); padding: 96px 0 48px; display: flex; align-items: center; }
+.hero-grid-bg {
+  position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 78%);
+}
+.ascii { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none;
+  /* read by landing.js: block colour and its strongest opacity */
+  --block-rgb: 45, 212, 191; --block-a: 0.40; --block-lift: 0; }
+[data-bs-theme="light"] .ascii { --block-rgb: 0, 92, 68; --block-a: 0.86; --block-lift: 0.40; }   /* deep green: densest block ~28% lightness, still clearly green; the copy column is masked so text stays readable */
+/* Fade out under the nav and at the bottom, and keep it calm behind the copy column (left) so text
+   never sits on dense blocks; it strengthens toward the preview on the right. */
+.hero .ascii {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%, #000 42%, transparent 96%), linear-gradient(to right, rgba(0, 0, 0, 0.16) 0, rgba(0, 0, 0, 0.16) 47%, #000 66%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16%, #000 42%, transparent 96%), linear-gradient(to right, rgba(0, 0, 0, 0.16) 0, rgba(0, 0, 0, 0.16) 47%, #000 66%);
+  mask-composite: intersect;
+}
+.hero-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; align-items: center; }
+@media (min-width: 960px) { .hero-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 56px; } }
+.hero h1 { font-size: clamp(1.6rem, 3.1vw, 2.7rem); line-height: 1.14; margin-bottom: 20px; }
+.h1-line { display: block; }
+.lead { color: var(--muted); font-size: 1.0625rem; max-width: 44ch; margin-bottom: 30px; }
+.cta-group { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.window { border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+.window .shot { margin: 0; border: 0; border-radius: 0; }
+
+/* -------------------------------------------------------- section chrome */
+.section { padding: 96px 0; }
+.section-flush { padding-top: 0; }
+.section-head { max-width: 660px; margin-bottom: 48px; }
+.section-head h2, .section-head-h2 { font-size: clamp(1.55rem, 3vw, 2.4rem); line-height: 1.18; margin-bottom: 16px; }
+.section-head p { color: var(--muted); max-width: 56ch; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--accent); margin-bottom: 14px; }
+
+/* ------------------------------------------------------------------- bento */
+.bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.cell { position: relative; grid-column: span 12; overflow: hidden; display: flex; flex-direction: column; gap: 22px; padding: 28px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.cell h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 8px; }
+.cell p { color: var(--muted); font-size: 0.9375rem; max-width: 52ch; }
+@media (min-width: 900px) {
+  .cell-a, .cell-d { grid-column: span 7; }
+  .cell-b, .cell-c { grid-column: span 5; }
+}
+/* screenshots bleed off the tile edge */
+.cell .shot { margin: auto -28px -28px; border: 0; border-top: 1px solid var(--line); border-radius: 0; }
+.shot-crop { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.cell-b { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 32px 32px; background-color: var(--surface); }
+.glyph { margin: auto 0; font-family: var(--font-mono); font-size: clamp(0.75rem, 2.6vw, 1rem); line-height: 1.3; color: var(--accent); white-space: pre; overflow-x: auto; }
+.cell-c { background-image: linear-gradient(135deg, var(--accent-soft), transparent 65%); background-color: var(--surface); }
+.tax-codes { margin: auto 0; display: flex; flex-wrap: wrap; gap: 8px 10px; font-family: var(--font-mono); font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--accent); line-height: 1.2; }
+.tax-codes span { padding: 6px 12px; border: 1px solid var(--accent-line); border-radius: 10px; background: var(--accent-soft); }
+.cell-e { background: var(--accent-soft); border-color: var(--accent-line); flex-direction: row; align-items: center; gap: 24px; }
+.cell-e .rule-icon { flex: none; }
+
+/* ------------------------------------------------------------ how it works */
+.how-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+@media (min-width: 960px) { .how-layout { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; } }
+.tabs { display: grid; gap: 8px; }
+.tab { display: block; width: 100%; text-align: left; padding: 20px 22px; border: 1px solid transparent; border-radius: var(--r-card); background: transparent; color: inherit; font: inherit; cursor: pointer; transition: background-color 0.25s, border-color 0.25s; }
+.tab:hover { background: color-mix(in srgb, var(--surface) 60%, transparent); }
+.tab-title { display: block; font-size: 1.0625rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; transition: color 0.25s; }
+.tab-desc { display: block; color: var(--muted); font-size: 0.9rem; }
+.tab[aria-selected="true"] { background: var(--surface); border-color: var(--accent-line); }
+.tab[aria-selected="true"] .tab-title { color: var(--ink); }
+.tab-progress { display: none; height: 2px; margin-top: 14px; border-radius: 1px; background: var(--track); overflow: hidden; }
+.tab-progress > span { display: block; height: 100%; background: var(--accent-fill); transform-origin: left; transform: scaleX(0); }
+.tabs[data-auto] .tab[aria-selected="true"] .tab-progress { display: block; }
+.tabs[data-auto] .tab[aria-selected="true"] .tab-progress > span { animation: tab-fill 4s linear forwards; }
+/* must out-rank the `animation` shorthand above, which would otherwise reset play-state to running */
+.tabs[data-auto].is-paused .tab[aria-selected="true"] .tab-progress > span { animation-play-state: paused; }
+@keyframes tab-fill { to { transform: scaleX(1); } }
+.stage { display: grid; position: relative; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
+@media (min-width: 960px) { .stage { position: sticky; top: 96px; } }
+.pane { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0s 0.4s; }
+.pane.is-active { opacity: 1; visibility: visible; transition: opacity 0.4s ease; }
+.stage .shot { margin: 0; border: 0; border-radius: 0; }
+
+/* ---------------------------------------------------------------- accuracy */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; }
+@media (min-width: 900px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.stat { display: flex; flex-direction: column; gap: 12px; padding: 28px 24px; background: var(--surface); }
+.stat-num { font-family: var(--font-mono); font-size: clamp(1.9rem, 3.4vw, 2.75rem); font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat-label { font-weight: 500; }
+.stat-sub { color: var(--muted); font-size: 0.875rem; }
+.acc-layout { display: grid; gap: 32px; margin-top: 32px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .acc-layout { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; align-items: start; } }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.acc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.acc-table th { text-align: right; padding: 14px 20px; font-weight: 500; font-size: 0.8125rem; color: var(--muted); background: var(--surface-2); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.acc-table th:first-child, .acc-table td:first-child { text-align: left; }
+.acc-table td { padding: 12px 20px; text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.acc-table td:first-child { font-family: var(--font-sans); color: var(--ink-2); }
+.acc-table tbody th { text-align: left; font-weight: 400; font-size: 0.9rem; color: var(--ink-2); background: none; border-bottom: 0; padding: 12px 20px; white-space: normal; }
+.acc-table tbody tr + tr > * { border-top: 1px solid var(--line-soft); }
+.note { color: var(--muted); font-size: 0.9rem; max-width: 46ch; }
+.note strong { color: var(--ink-2); font-weight: 500; }
+
+/* ------------------------------------------------------------------- rules */
+.rules { border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); overflow: hidden; }
+.rule { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding: 26px 28px; }
+.rule + .rule { border-top: 1px solid var(--line-soft); }
+.rule h3 { font-size: 1.0625rem; font-weight: 600; margin-bottom: 4px; }
+.rule p { color: var(--muted); font-size: 0.9375rem; max-width: 62ch; }
+.rule-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 1.3rem; }
+
+/* --------------------------------------------------------------------- cta */
+.cta { position: relative; isolation: isolate; overflow: hidden; padding: 72px 40px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface-2); }
+.cta .ascii { z-index: -1; -webkit-mask-image: linear-gradient(to right, transparent 25%, #000 90%); mask-image: linear-gradient(to right, transparent 25%, #000 90%); }
+.cta h2 { font-size: clamp(1.55rem, 3vw, 2.4rem); line-height: 1.18; max-width: 20ch; margin-bottom: 16px; }
+.cta p { color: var(--muted); max-width: 46ch; margin-bottom: 28px; }
+@media (max-width: 640px) { .cta { padding: 48px 24px; } }
+
+/* ------------------------------------------------------------------ footer */
+.footer { border-top: 1px solid var(--line); padding: 40px 0; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; }
+.footer nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.footer nav a { color: var(--muted); text-decoration: none; font-size: 0.875rem; }
+.footer nav a:hover { color: var(--ink); }
+.copyright { width: 100%; color: var(--muted); font-size: 0.8125rem; }
+
+/* ------------------------------------------------------------------ motion */
+.hero-in { animation: rise 0.8s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
+html.has-preloader .hero-in { animation-play-state: paused; }   /* start once the preloader leaves */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-in { animation: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .btn-cta, .btn-ghost, .btn-cta i { transition: none; }
+  .btn-cta:hover, .btn-ghost:hover, .btn-cta:hover i { transform: none; }
+  .pane, .pane.is-active { transition: none; }
+}
+
+.nav-sentinel { position: absolute; top: 0; left: 0; width: 1px; height: 24px; pointer-events: none; }
+
+/* Phones: the layout stacks and the copy spans the full width, so a left-side mask cannot calm it.
+   Softer blocks, and calm at the top (behind the copy), stronger further down (behind the preview). */
+@media (max-width: 719px) {
+  [data-bs-theme="dark"] .ascii { --block-a: 0.22; }     /* same specificity as the theme rules, and later */
+  [data-bs-theme="light"] .ascii { --block-a: 0.52; }
+  [data-bs-theme="light"] { --grid-line: rgba(5, 126, 96, 0.11); }   /* crossings of the grid also sit behind the copy here */
+  .hero .ascii {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.12) 10%, rgba(0, 0, 0, 0.12) 50%, #000 74%, transparent 100%);
+    -webkit-mask-composite: source-over;
+    mask-image: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, 0.12) 10%, rgba(0, 0, 0, 0.12) 50%, #000 74%, transparent 100%);
+    mask-composite: add;
+  }
+}

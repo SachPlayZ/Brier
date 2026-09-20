@@ -1,0 +1,22 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST No.: 19AACCB3456W1ZT
+TAX INVOICE
+--------------------------------------------
+Invoice Number: TI-2025-49681
+Date: 2025-01-15
+--------------------------------------------
+Item                     Qty          Amount
+Stapler                    3          529.62
+Stapler                    2          514.16
+File Folder                3          218.49
+Stapler                    2          470.60
+--------------------------------------------
+Taxable Amount:                     1,732.87
+IGST @ 18%:                           311.92
+Round Off:                              0.21
+Total:                             ₹2,045.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

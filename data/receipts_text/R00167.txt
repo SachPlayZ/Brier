@@ -1,0 +1,23 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN: 24AABCG2244U1ZA
+GST INVOICE
+--------------------------------------------
+Inv No: TI-2024-71730
+Invoice Date: 07-07-2025
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   3        3,127.80
+HDMI Cable 2m              3          627.09
+HDMI Cable 2m              2          838.46
+--------------------------------------------
+Total Qty: 8
+Subtotal:                           4,593.35
+CGST @ 9%:                            413.40
+SGST @ 9%:                            413.40
+Round Off:                             -0.15
+Grand Total:                        5,420.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

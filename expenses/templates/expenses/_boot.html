@@ -1,0 +1,25 @@
+{% comment %}Runs in <head> before any CSS so there is no flash: theme (saved choice, else the OS
+preference), the preloader gate, and a `js` class for no-JS fallbacks. Shared by base.html and
+landing.html.{% endcomment %}
+<script>
+    /* Set the theme before first paint: saved choice, else the OS preference. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-bs-theme", t);
+      document.documentElement.classList.add("js");
+
+      /* Preloader gate: first page of a session, and only if motion is allowed. The flag
+         is set now, so a reload in the same session skips it. */
+      try {
+        var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!sessionStorage.getItem("preloaded") && !calm) {
+          document.documentElement.classList.add("has-preloader");
+          sessionStorage.setItem("preloaded", "1");
+        }
+      } catch (e) {}
+    })();
+</script>

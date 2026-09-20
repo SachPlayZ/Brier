@@ -1,0 +1,41 @@
+Sees
+SHELL
+Happy Motoring
+GREEN VALLEY FUEL POINT
+PLOT 12, SECTOR 5
+BENGALURU 560066
+Tel. No.: 9834924304
+
+Inv No.: 98070398836111281
+FCC ID: 45471692981427033
+FIP No. : 04
+Nozzle No. : 02
+Product : Diesel
+Density : 743.4Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 95.92
+Volume(L) : 00006.15
+Amount(₹) 00590.00
+--------------------------
+Taxable Val : ₹   504.27
+VAT @17%(Incl) : = 85 .73
+Pay Mode     : Cash
+UPI Ref: 367622797368
+--------------------------
+Vech: 17325435018.47
+Vtrd: 5488237606.273
+
+Vehicle No: 2147
+Mobile No : 9395326833
+
+Date : 15.05.26
+Time : 13:17
+
+GST No: 
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

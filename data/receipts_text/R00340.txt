@@ -1,0 +1,21 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST Reg No: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Dated: 06-Jun-2025
+Invoice Number: TI-2025-23643
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   3        3,629.91
+Keyboard                   2        2,527.28
+USB Hub                    1          536.97
+--------------------------------------------
+Taxable Value:                      6,694.16
+CGST @ 9%:                            602.48
+SGST @ 9%:                            602.47
+Rounding:                              -0.11
+Net Payable:                        7,899.00
+--------------------------------------------
+Goods once sold will not be taken back

@@ -1,0 +1,24 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GSTIN/UIN: 19AACCB3456W1ZT
+TAX INVOICE
+--------------------------------------------
+Dated: 20-04-2025
+Bill No: RCPT-2024-71717
+--------------------------------------------
+Item                     Qty          Amount
+File Folder                3          175.05
+Printer Ink                3        1,520.91
+Marker Pen                 1           41.03
+Notebook 200pg             2          231.20
+Marker Pen                 1           28.22
+--------------------------------------------
+Total Qty: 10
+Taxable Amount:                     1,996.41
+IGST @ 18%:                           359.35
+Round Off:                              0.24
+Net Payable:                        2,356.00
+--------------------------------------------
+Goods once sold will not be taken back
+Card Payment

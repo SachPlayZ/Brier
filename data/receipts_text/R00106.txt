@@ -1,0 +1,23 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+GSTIN: 33AAECS7788N1ZJ
+RETAIL INVOICE
+--------------------------------------------
+Bill Date: 22/08/2025
+Inv No: INV-2024-79896
+Table: 7   Covers: 6
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       1          238.92
+Biryani                    3          749.34
+Filter Coffee              2          113.74
+Filter Coffee              4          163.64
+--------------------------------------------
+Total Qty: 10
+Taxable Value:                      1,265.64
+CGST @ 2.5%:                           31.64
+SGST @ 2.5%:                           31.64
+Round Off:                              0.08
+Net Payable:                        1,329.00
+--------------------------------------------
+Subject to local jurisdiction

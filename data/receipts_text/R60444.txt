@@ -1,0 +1,17 @@
+INDIAN OIL FUEL STATION
+OMR Perungudi, Chennai 600096
+GSTIN/UIN: 33AAACI0123R1ZQ
+RETAIL INVOICE
+--------------------------------------------
+Date: 15-08-2025
+Cash Memo No: INV-2024-16740
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                     8          836.80
+CNG                       45        3,440.25
+--------------------------------------------
+Taxable Value:                      4,277.05
+Round Off Adj:                         -0.05
+Total Amount:                       4,277.00
+--------------------------------------------
+Subject to local jurisdiction

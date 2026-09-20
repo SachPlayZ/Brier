@@ -1,0 +1,25 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN: 24AAHCP6677V1Z8
+GST INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2024-48643
+Date: 25/05/2025
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           2        1,013.58
+Sugar 1kg                  2           98.90
+Basmati Rice 5kg           3        1,842.81
+Sugar 1kg                  3          156.99
+Sunflower Oil 1L           4          611.00
+Toor Dal 1kg               3          360.24
+--------------------------------------------
+Total Qty: 17
+Subtotal:                           4,083.52
+CGST @ 2.5%:                          102.09
+SGST @ 2.5%:                          102.09
+Rounding:                               0.30
+Total Amount:                       4,288.00
+--------------------------------------------
+*** CUSTOMER COPY ***

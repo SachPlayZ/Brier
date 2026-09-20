@@ -1,0 +1,24 @@
+Hotel Sunrise Residency
+9 Connaught Place, New Delhi 110001
+Ph: 9811023456
+GST No.: 07AACCH9012Q1Z8
+GST INVOICE
+--------------------------------------------
+Receipt No: RCPT-2025-61753
+Date of Supply: 2025-04-13
+--------------------------------------------
+Item                     Qty          Amount
+Breakfast Buffet           3        2,361.84
+Breakfast Buffet           3        2,434.56
+Breakfast Buffet           4        2,678.96
+Laundry Service            4        1,679.04
+Laundry Service            4        1,821.44
+--------------------------------------------
+Subtotal:                          10,975.84
+CGST @ 6%:                            658.55
+SGST @ 6%:                            658.55
+Rounding:                               0.06
+Amount Payable:                    12,293.00
+--------------------------------------------
+Goods once sold will not be taken back
+Cash Payment

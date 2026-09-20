@@ -1,0 +1,27 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GST No.: 29AABCA1234M1ZQ
+RETAIL INVOICE
+--------------------------------------------
+Date: 18.06.2025
+Bill No: INV-2024-48369
+Table: 10   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    4        1,330.72
+Veg Thali                  3          462.54
+Masala Dosa                2          165.96
+Butter Naan                1           47.95
+Filter Coffee              4          263.04
+Veg Thali                  3          687.96
+--------------------------------------------
+Total Qty: 17
+Total Before Tax:                   2,958.17
+CGST @ 2.5%:                           73.96
+SGST @ 2.5%:                           73.95
+Rounding:                              -0.08
+Total:                             ₹3,106.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

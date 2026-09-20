@@ -1,0 +1,22 @@
+Lucknow Travels Agencies
+3 Hazratganj, Lucknow 226001
+Ph: 9839011223
+GST No.: 09AAGCL1122Y1ZT
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: TI-2024-12009
+Dated: 03/06/2025
+--------------------------------------------
+Item                     Qty          Amount
+Airport Transfer           1        1,018.29
+City Taxi                  2          884.48
+Outstation Cab             3        9,266.01
+City Taxi                  2        1,131.54
+--------------------------------------------
+Sub Total:                         12,300.32
+CGST @ 2.5%:                          307.51
+SGST @ 2.5%:                          307.51
+Rounding:                              -0.34
+Grand Total:                       12,915.00
+--------------------------------------------
+Thank you for your business

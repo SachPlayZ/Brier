@@ -1,0 +1,24 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST Reg No: 33AAACA6677D1ZW
+GST INVOICE
+--------------------------------------------
+Cash Memo No: INV-2024-79918
+Bill Date: 01/04/2025
+--------------------------------------------
+Item                     Qty          Amount
+Digital Thermometer        3          869.46
+Digital Thermometer        3        1,100.49
+Digital Thermometer        2          372.92
+Vitamin D3                 3          935.97
+Digital Thermometer        4        1,070.84
+Vitamin D3                 2          629.00
+--------------------------------------------
+Sub Total:                          4,978.68
+IGST @ 12%:                           597.44
+Round Off:                             -0.12
+Total:                              5,576.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

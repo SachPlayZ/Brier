@@ -1,0 +1,14 @@
+{% comment %}Receipt image with a reserved box, shimmer while loading, fade-in on load.
+Params: receipt, eager (True for the first image on the page: skips lazy loading and
+raises fetch priority so it does not hurt LCP). image_dims lets the browser reserve the
+exact aspect ratio, so nothing moves when the image arrives.{% endcomment %}
+{% load expenses_ui %}
+{% if receipt.image %}
+  {% with dims=receipt.image|image_dims %}
+  <div class="img-frame skeleton"{% if dims %} style="aspect-ratio: {{ dims.0 }} / {{ dims.1 }}"{% endif %}>
+    <img src="{{ receipt.image.url }}"{% if dims %} width="{{ dims.0 }}" height="{{ dims.1 }}"{% endif %}
+         {% if eager %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
+         decoding="async" alt="Receipt {{ receipt.receipt_id }}">
+  </div>
+  {% endwith %}
+{% endif %}

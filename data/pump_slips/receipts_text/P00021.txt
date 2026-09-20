@@ -1,0 +1,34 @@
+Seer
+KAVERI PETRO
+Welcome
+ANNAPURNA FUEL CENTRE
+SURVEY NO 88, HIGHWAY
+LUCKNOW 226001
+Tel. No.: 9850223937
+
+Inv. No: 00164125743692119
+FCC ID: 95603855670736770
+FIP No. : 03
+Nozzle No. : 03
+Product : Speed
+Density : 730.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 100.44
+Volume(L) : 00005.87
+Total Rs. : 00590.00
+--------------------------
+Vech: 38527271592.74
+Vtrd: 8284619554.390
+
+Vehicle No: 4427
+Mobile No : 9146951319
+
+Date : 20/05/2025
+Time : 21:52
+
+GST No: 09FUEMS9835V1Z7
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

@@ -1,0 +1,19 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+GST Reg No: 29AAECC2233B1Z7
+RETAIL INVOICE
+--------------------------------------------
+Bill Date: 16/07/2025
+Invoice No: TI-2024-63964
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          298.89
+Veg Thali                  4        1,220.80
+Paneer Butter Masala       3          834.72
+--------------------------------------------
+Taxable Value:                      2,354.41
+IGST @ 5%:                            117.72
+Rounding:                              -0.13
+Amount Payable:                     2,472.00
+--------------------------------------------
+Subject to local jurisdiction

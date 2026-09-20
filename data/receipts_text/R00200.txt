@@ -1,0 +1,23 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN/UIN: 36AADCH4567S1ZS
+CASH MEMO
+--------------------------------------------
+Invoice Date: 25.04.2025
+Cash Memo No: RCPT-2025-13166
+Table: 8   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       3          638.19
+Butter Naan                2          142.06
+Butter Naan                1           41.69
+Filter Coffee              2          107.28
+--------------------------------------------
+Taxable Amount:                       929.22
+CGST @ 2.5%:                           23.23
+SGST @ 2.5%:                           23.23
+Round Off:                              0.32
+Total:                               ₹976.00
+--------------------------------------------
+Goods once sold will not be taken back

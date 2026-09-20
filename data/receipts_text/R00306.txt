@@ -1,0 +1,22 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST Reg No: 29AAECC2233B1Z7
+TAX INVOICE
+--------------------------------------------
+Bill No: INV-2024-35556
+Invoice Date: 2025-05-15
+Table: 16   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    3        1,042.41
+Veg Thali                  2          609.94
+--------------------------------------------
+Total Before Tax:                   1,652.35
+CGST @ 2.5%:                           41.31
+SGST @ 2.5%:                           41.31
+Rounding:                               0.03
+Total:                             ₹1,735.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

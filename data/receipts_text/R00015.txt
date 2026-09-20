@@ -1,0 +1,21 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST No.: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 04-06-2025
+Invoice Number: RCPT-2024-82269
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   4        6,123.28
+Keyboard                   3        3,770.19
+Keyboard                   4        3,566.36
+--------------------------------------------
+Taxable Amount:                    13,459.83
+CGST @ 9%:                          1,211.39
+SGST @ 9%:                          1,211.38
+Rounding:                               0.40
+Total:                            ₹15,883.00
+--------------------------------------------
+Subject to local jurisdiction

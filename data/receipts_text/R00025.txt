@@ -1,0 +1,23 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GST Reg No: 09AABCG5566Z1ZD
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 2025-06-27
+Cash Memo No: TI-2025-07151
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   3          748.59
+Milk 1L                    3          203.85
+Milk 1L                    4          277.40
+Milk 1L                    4          239.12
+Sugar 1kg                  2          112.92
+--------------------------------------------
+Taxable Amount:                     1,581.88
+CGST @ 2.5%:                           39.55
+SGST @ 2.5%:                           39.54
+Round Off:                              0.03
+Grand Total:                        1,661.00
+--------------------------------------------
+Thank you for your business

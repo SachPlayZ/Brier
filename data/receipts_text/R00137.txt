@@ -1,0 +1,24 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GSTIN: 29AAGCB7383J1Z4
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 26-Apr-2025
+Receipt No: INV-2024-08224
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             1           58.76
+Printer Ink                2        2,214.52
+File Folder                3          240.00
+File Folder                3          190.20
+Stapler                    1          245.17
+Stapler                    2          495.00
+--------------------------------------------
+Total Before Tax:                   3,443.65
+IGST @ 18%:                           619.86
+Round Off Adj:                          0.49
+Total Amount:                      ₹4,064.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Card Payment

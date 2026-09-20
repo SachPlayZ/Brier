@@ -1,0 +1,21 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GSTIN: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 10-May-2025
+Invoice No: BILL-2024-92969
+--------------------------------------------
+Item                     Qty          Amount
+USB Hub                    2        1,353.58
+HDMI Cable 2m              4        1,110.12
+Extension Board            4        1,467.76
+--------------------------------------------
+Total Qty: 10
+Sub Total:                          3,931.46
+CGST @ 9%:                            353.83
+SGST @ 9%:                            353.83
+Round Off:                             -0.12
+Net Payable:                       ₹4,639.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

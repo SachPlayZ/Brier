@@ -1,0 +1,21 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+GST Reg No: 19AACCB3456W1ZT
+RETAIL INVOICE
+--------------------------------------------
+Bill No: RCPT-2024-40076
+Date: 11.07.2025
+--------------------------------------------
+Item                     Qty          Amount
+File Folder                3          181.65
+Stapler                    3          451.83
+Stapler                    4          907.36
+--------------------------------------------
+Total Qty: 10
+Taxable Value:                      1,540.84
+CGST @ 9%:                            138.68
+SGST @ 9%:                            138.67
+Round Off Adj:                         -0.19
+Amount Payable:                     1,818.00
+--------------------------------------------
+Thank you for your business

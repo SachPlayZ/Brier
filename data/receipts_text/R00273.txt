@@ -1,0 +1,24 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST Reg No: 19AAFCP7890X1ZW
+TAX INVOICE
+--------------------------------------------
+Date of Supply: 22-04-2025
+Inv No: BILL-2025-76687
+Table: 21   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                1           45.31
+Butter Naan                1           48.20
+Veg Thali                  3          935.19
+Paneer Butter Masala       1          252.40
+Filter Coffee              4          254.24
+--------------------------------------------
+Total Before Tax:                   1,535.34
+CGST @ 2.5%:                           38.39
+SGST @ 2.5%:                           38.38
+Rounding:                              -0.11
+Grand Total:                        1,612.00
+--------------------------------------------
+Thank you for your business

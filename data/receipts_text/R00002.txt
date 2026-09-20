@@ -1,0 +1,22 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GSTIN: 27AAACR5055K1Z7
+GST INVOICE
+--------------------------------------------
+Invoice No: RCPT-2024-47053
+Dated: 29/01/2025
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   3          950.58
+Sugar 1kg                  4          206.60
+Milk 1L                    1           61.94
+Sugar 1kg                  3          157.17
+--------------------------------------------
+Taxable Value:                      1,376.29
+CGST @ 2.5%:                           34.41
+SGST @ 2.5%:                           34.40
+Round Off:                             -0.10
+Grand Total:                       ₹1,445.00
+--------------------------------------------
+*** CUSTOMER COPY ***

@@ -1,0 +1,23 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN/UIN: 36AADCH4567S1ZS
+GST INVOICE
+--------------------------------------------
+Receipt No: INV-2025-68366
+Dated: 08.06.2025
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                1          135.07
+Paneer Butter Masala       1          326.21
+Veg Thali                  4          875.36
+Masala Dosa                2          205.66
+Filter Coffee              1           42.10
+--------------------------------------------
+Taxable Value:                      1,584.40
+CGST @ 2.5%:                           39.61
+SGST @ 2.5%:                           39.61
+Round Off Adj:                          0.38
+Amount Payable:                    ₹1,664.00
+--------------------------------------------
+Thank you for your business

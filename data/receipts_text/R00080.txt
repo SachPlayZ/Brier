@@ -1,0 +1,25 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN: 36AAGCD8899T1Z8
+RETAIL INVOICE
+--------------------------------------------
+Inv No: RCPT-2024-07236
+Bill Date: 2025-02-06
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             2          232.02
+Printer Ink                3        2,619.96
+Notebook 200pg             2          176.04
+Stapler                    4        1,021.68
+A4 Paper Ream              1          293.42
+File Folder                3          166.59
+--------------------------------------------
+Total Qty: 15
+Taxable Amount:                     4,509.71
+CGST @ 9%:                            405.88
+SGST @ 9%:                            405.87
+Round Off Adj:                         -0.46
+Total:                              5,321.00
+--------------------------------------------
+Thank you for your business

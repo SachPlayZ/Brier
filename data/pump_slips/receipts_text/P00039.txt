@@ -1,0 +1,43 @@
+ee
+SHELL
+Welcome
+NEW BHARAT AUTO FUELS
+PLOT 12, SECTOR 5
+BENGALURU 560066
+Tel. No.: 9818520347
+
+Invoice No: 2943732692560
+FCC ID: 03634169075018914
+FIP No. : 06
+Nozzle No. : 01
+Product : XP95
+Density : 831.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 86.56
+Volume(L) : 00034.66
+Amt(Rs) : 03000.00
+--------------------------
+Taxable Val  : ₹  2542.37
+CGST @9%     : ₹   228.82
+SGST @9%     : ₹   228.81
+Total GST    : ₹ 457 .63
+Pay Mode     : Cash
+UPI Ref: 063475314579
+--------------------------
+Vech: 79265522041.98
+Vtrd: 0153900589.638
+
+Vehicle No: 7575
+Mobile No : 9086940143
+
+Date : 12/07/25
+Time : 06:13
+
+GST No: 29VKCFM6396E1ZT
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

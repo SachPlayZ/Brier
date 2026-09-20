@@ -1,0 +1,23 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+GSTIN: 36AAGCD8899T1Z8
+GST INVOICE
+--------------------------------------------
+Date: 26.07.2025
+Invoice No: RCPT-2025-11579
+--------------------------------------------
+Item                     Qty          Amount
+Marker Pen                 4          227.88
+A4 Paper Ream              3          768.42
+A4 Paper Ream              2          506.32
+File Folder                1           79.33
+--------------------------------------------
+Total Qty: 10
+Taxable Amount:                     1,581.95
+CGST @ 9%:                            142.38
+SGST @ 9%:                            142.37
+Round Off:                              0.30
+Net Payable:                       ₹1,867.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

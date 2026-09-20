@@ -1,0 +1,23 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GST Reg No: 27AAACR5055K1Z7
+RETAIL INVOICE
+--------------------------------------------
+Date: 2025-04-17
+Invoice No: INV-2025-84124
+--------------------------------------------
+Item                     Qty          Amount
+Toor Dal 1kg               1          152.98
+Sugar 1kg                  2           87.02
+Atta 5kg                   1          279.48
+Atta 5kg                   3          737.10
+Sugar 1kg                  3          150.42
+--------------------------------------------
+Sub Total:                          1,407.00
+CGST @ 2.5%:                           35.18
+SGST @ 2.5%:                           35.17
+Round Off:                             -0.35
+Amount Payable:                    ₹1,477.00
+--------------------------------------------
+Subject to local jurisdiction

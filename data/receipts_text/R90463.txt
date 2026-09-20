@@ -1,0 +1,24 @@
+SHARMA TRADERS PVT LTD
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GST Reg No: 29AAGCB7383J1Z4
+CASH MEMO
+--------------------------------------------
+Bill No: INV-2024-08224
+Bill Date: 26.04.2025
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             1           58.76
+Printer Ink                2        2,214.52
+File Folder                3          240.00
+File Folder                3          190.20
+Stapler                    1          245.17
+Stapler                    2          495.00
+--------------------------------------------
+Sub Total:                          3,443.65
+IGST @ 18%:                           619.86
+Rounding:                              -0.51
+Total:                             ₹4,063.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

@@ -1,0 +1,24 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST Reg No: 19AACCB3456W1ZT
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 18/06/2025
+Bill No: INV-2025-58337
+--------------------------------------------
+Item                     Qty          Amount
+A4 Paper Ream              4          940.56
+Printer Ink                3        3,119.49
+Notebook 200pg             2          238.46
+A4 Paper Ream              1          315.67
+File Folder                1           58.76
+Printer Ink                3        2,198.52
+--------------------------------------------
+Total Qty: 14
+Total Before Tax:                   6,871.46
+IGST @ 18%:                         1,236.86
+Round Off Adj:                         -0.32
+Bill Total:                         8,108.00
+--------------------------------------------
+Thank you for your business

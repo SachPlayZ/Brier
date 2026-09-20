@@ -1,0 +1,22 @@
+Mumbai Print Solutions LLP
+21 Lower Parel, Mumbai 400013
+GSTIN: 27AAFCM4455C1ZM
+TAX INVOICE
+--------------------------------------------
+Invoice Number: RCPT-2024-86458
+Invoice Date: 2025-02-28
+--------------------------------------------
+Item                     Qty          Amount
+Business Cards 500         4        2,122.12
+Brochure Print 100         3        4,650.57
+Poster A2                  3          784.47
+Poster A2                  1          358.21
+--------------------------------------------
+Total Qty: 11
+Total Before Tax:                   7,915.37
+IGST @ 18%:                         1,424.77
+Round Off:                             -0.14
+Grand Total:                        9,340.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

@@ -1,0 +1,43 @@
+Seer
+Bharat Petroleum
+Happy Motoring
+KUMAR SERVICE STATION
+178, N S C BOSE ROAD
+LUCKNOW 226001
+Tel. No.: 9842226677
+
+Bill No.: 5296149486898639
+FCC ID: 88083053007800958
+FIP No. : 04
+Nozzle No. : 04
+Product : Diesel
+Density : 742.6Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 100.36
+Volume(L) : 00005.88
+Amt(Rs) : 00590.00
+--------------------------
+Taxable Val  : ₹   500.00
+CGST @9%     : ₹    45.00
+SGST @9%     : % 45 .00
+Total GST    : ₹ 90 .00
+Pay Mode     : Cash
+UPI Ref: 354888585074
+--------------------------
+Vech: 96210972529.74
+Vtrd: 5944929131.038
+
+Vehicle No: 8623
+Mobile No : 9488992340
+
+Date : 28/12/25
+Time : 14:57
+
+GST No: 09BFUET4660R1ZP
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

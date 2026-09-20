@@ -1,0 +1,23 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GSTIN/UIN: 19AACCB3456W1ZT
+GST INVOICE
+--------------------------------------------
+Invoice Number: RCPT-2025-82649
+Invoice Date: 2025-06-26
+--------------------------------------------
+Item                     Qty          Amount
+Marker Pen                 3          157.02
+A4 Paper Ream              1          278.86
+Notebook 200pg             2          226.86
+Notebook 200pg             2          250.78
+Stapler                    2          284.54
+Stapler                    4          826.60
+--------------------------------------------
+Taxable Value:                      2,024.66
+IGST @ 18%:                           364.44
+Round Off Adj:                         -0.10
+Amount Payable:                    ₹2,389.00
+--------------------------------------------
+Goods once sold will not be taken back

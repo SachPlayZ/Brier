@@ -1,0 +1,42 @@
+Sees
+SHELL
+NATIONAL AUTO SERVICE
+GT ROAD, OPP BUS STAND
+KOLKATA 700040
+Tel. No.: 9892854061
+
+Inv No.: 6998137830427599
+FCC ID: 84600131924463565
+FIP No. : 05
+Nozzle No. : 06
+Product : Petrol
+Density : 795.8Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 105.12
+Volume(L) : 00029.74
+Amount (INR) : 03126.27
+--------------------------
+Taxable Val  : 2 2649.38
+CGST @9%     : Z 238 .45
+SGST @9%     : Bs 238 .44
+Total GST    : = 476 .89
+Pay Mode     : Card
+UPI Ref: 625792658390
+--------------------------
+Vech: 80094819572.16
+Vtrd: 1793568108.289
+
+Vehicle No: 3435
+Mobile No : Not Entered
+
+Date : 27/08/25
+Time : 08:04
+
+GST No: 19ALJLD7965G1ZX
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

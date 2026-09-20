@@ -1,0 +1,100 @@
+{% comment %}Skeleton layouts, one per page family. loading.js clones the matching
+<template> into <main> if a navigation takes longer than --skeleton-delay. They reuse the
+real layout classes (page-head, panel, stat-card, rows) so shapes line up with the page
+that replaces them. Purely visual: the host is aria-hidden.{% endcomment %}
+
+<template data-skeleton="cards">
+  <div class="page-head">
+    <div><div class="skeleton sk-title"></div><div class="skeleton sk-line sk-w-40"></div></div>
+    <div class="skeleton sk-btn"></div>
+  </div>
+  <div class="row g-3 mb-3">
+    {% for i in "1234" %}
+    <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+      <div class="stat-top"><div class="skeleton sk-line sk-w-40"></div><div class="skeleton sk-chip"></div></div>
+      <div class="skeleton sk-stat"></div>
+      <div class="skeleton sk-line sk-w-50"></div>
+    </div></div>
+    {% endfor %}
+  </div>
+  <div class="row g-3">
+    {% for i in "123" %}
+    <div class="col-lg-4"><div class="panel h-100">
+      <div class="panel-head"><div class="skeleton sk-line sk-w-50"></div></div>
+      <div class="rows">
+        {% for j in "12345" %}<div class="row-item"><div class="skeleton sk-line sk-w-50"></div><div class="skeleton sk-line sk-w-15"></div></div>{% endfor %}
+      </div>
+    </div></div>
+    {% endfor %}
+  </div>
+</template>
+
+<template data-skeleton="table">
+  <div class="page-head">
+    <div><div class="skeleton sk-title"></div><div class="skeleton sk-line sk-w-40"></div></div>
+    <div class="skeleton sk-btn"></div>
+  </div>
+  <div class="filters mb-3">
+    <div class="field"><div class="skeleton sk-line sk-w-30"></div><div class="skeleton sk-field"></div></div>
+    <div class="field"><div class="skeleton sk-line sk-w-30"></div><div class="skeleton sk-field"></div></div>
+  </div>
+  <div class="panel">
+    <div class="sk-tr is-head">{% for i in "123456" %}<div class="skeleton sk-line sk-w-50"></div>{% endfor %}</div>
+    {% for r in "0123456789" %}
+    <div class="sk-tr">
+      <div class="skeleton sk-line sk-w-80"></div><div class="skeleton sk-line sk-w-50"></div>
+      <div class="skeleton sk-line sk-w-80"></div><div class="skeleton sk-line sk-w-60"></div>
+      <div class="skeleton sk-line sk-w-80"></div><div class="skeleton sk-line sk-w-50"></div>
+    </div>
+    {% endfor %}
+  </div>
+</template>
+
+<template data-skeleton="detail">
+  <div class="page-head">
+    <div><div class="skeleton sk-title"></div><div class="skeleton sk-line sk-w-60"></div></div>
+    <div><div class="skeleton sk-stat sk-amount"></div></div>
+  </div>
+  <div class="row g-3">
+    <div class="col-lg-7"><div class="stack">
+      <div class="panel">
+        <div class="panel-head"><div class="skeleton sk-line sk-w-40"></div></div>
+        <div class="rows">
+          {% for i in "12345678" %}<div class="row-item"><div class="skeleton sk-line sk-w-30"></div><div class="skeleton sk-line sk-w-40"></div></div>{% endfor %}
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="skeleton sk-line sk-w-30"></div></div>
+        <div class="panel-body"><div class="skeleton sk-line sk-w-80"></div><div class="skeleton sk-line sk-w-60"></div></div>
+      </div>
+    </div></div>
+    <div class="col-lg-5"><div class="stack">
+      <div class="panel">
+        <div class="panel-head"><div class="skeleton sk-line sk-w-40"></div></div>
+        <div class="panel-body"><div class="skeleton sk-block"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="skeleton sk-line sk-w-30"></div></div>
+        <div class="panel-body"><div class="skeleton sk-field"></div></div>
+      </div>
+    </div></div>
+  </div>
+</template>
+
+<template data-skeleton="form">
+  <div class="row justify-content-center"><div class="col-xl-8">
+    <div class="page-head">
+      <div><div class="skeleton sk-title"></div><div class="skeleton sk-line sk-w-80"></div></div>
+    </div>
+    <div class="panel"><div class="panel-body p-4">
+      <div class="skeleton sk-line sk-w-30"></div>
+      <div class="skeleton sk-field mb-4"></div>
+      <div class="skeleton sk-line sk-w-30"></div>
+      <div class="skeleton sk-block mb-4"></div>
+      <div class="row g-3">
+        <div class="col-md-8"><div class="skeleton sk-field"></div></div>
+        <div class="col-md-4"><div class="skeleton sk-field"></div></div>
+      </div>
+    </div></div>
+  </div></div>
+</template>

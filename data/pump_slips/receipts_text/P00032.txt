@@ -1,0 +1,40 @@
+ee
+KAVERI PETRO
+Welcome
+SHREE GANESH FUELS
+PLOT 12, SECTOR 5
+AHMEDABAD 380009
+Tel. No.: 9888370158
+
+Invoice No: 50912159522761387
+FIP No. : 05
+Nozzle No. : 08
+Product : Diesel
+Density : 763.4Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 97.35
+Volume(L) : 00007.70
+Sale Amt : 00750.00
+--------------------------
+Taxable Val  : ₹   635.58
+CGST @9%     : Bs 57 .21
+SGST @9%     : Bs 57.21
+Total GST    : ₹   114.42
+Pay Mode     : Card
+UPI Ref: 542355384133
+--------------------------
+
+Vehicle No: 7450
+Mobile No : 9564027008
+
+Date : 04/07/25
+Time : 06:39
+
+GST No: 24CSMDF3489C1ZF
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

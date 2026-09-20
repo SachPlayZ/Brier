@@ -1,0 +1,21 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GSTIN: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Date: 08/04/2025
+Inv No: INV-2024-66521
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        1,569.56
+HDMI Cable 2m              2          417.24
+--------------------------------------------
+Total Qty: 6
+Taxable Amount:                     1,986.80
+CGST @ 9%:                            178.81
+SGST @ 9%:                            178.81
+Rounding:                              -0.42
+Net Payable:                       ₹2,344.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

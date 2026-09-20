@@ -1,0 +1,23 @@
+Hotel Sunrise Residency
+9 Connaught Place, New Delhi 110001
+Ph: 9811023456
+GSTIN: 07AACCH9012Q1Z8
+CASH MEMO
+--------------------------------------------
+Bill No: TI-2025-31667
+Date: 14-02-2025
+--------------------------------------------
+Item                     Qty          Amount
+Breakfast Buffet           4        2,777.72
+Laundry Service            3          786.57
+Breakfast Buffet           2        1,599.46
+Breakfast Buffet           4        2,088.44
+--------------------------------------------
+Total Qty: 13
+Sub Total:                          7,252.19
+CGST @ 6%:                            435.13
+SGST @ 6%:                            435.13
+Rounding:                              -0.45
+Bill Total:                        ₹8,122.00
+--------------------------------------------
+*** CUSTOMER COPY ***

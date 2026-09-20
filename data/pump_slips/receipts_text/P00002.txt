@@ -1,0 +1,40 @@
+Shell
+Happy Motoring
+START NELL
+24, RING ROAD
+CHENNAI 600096
+Tel. No.: 9832762301
+
+Bill No.: 35336630780100
+FCC ID: 19963661026155482
+FIP No. : 03
+Nozzle No. : 04
+Product : Diesel
+Density : 758.4Kg/Cu.mtr
+Preset Type: Volume
+Rate(2/L) : 97.83
+Volume(L) : 00010.07
+Amount(Rs) : 00985.15
+--------------------------
+Taxable Val : ₹   842.01
+VAT @17%(Incl) : ® 143.14
+Pay Mode     : Cash
+UPI Ref: 525303724974
+--------------------------
+Vech: 74878966891.39
+Vtrd: 2901133398.042
+
+Vehicle No: 8963
+Mobile No : Not Entered
+
+Date : 27/02/2025
+Time : 08:51
+
+GST No: 
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

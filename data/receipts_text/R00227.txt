@@ -1,0 +1,24 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+GSTIN: 33AAECS7788N1ZJ
+TAX INVOICE
+--------------------------------------------
+Inv No: TI-2024-71328
+Invoice Date: 12-Feb-2025
+Table: 15   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       3          940.53
+Masala Dosa                1          148.75
+Biryani                    1          377.46
+Veg Thali                  1          166.51
+Butter Naan                1           47.89
+Masala Dosa                1           80.87
+--------------------------------------------
+Taxable Value:                      1,762.01
+CGST @ 2.5%:                           44.05
+SGST @ 2.5%:                           44.05
+Rounding:                              -0.11
+Total:                             ₹1,850.00
+--------------------------------------------
+*** CUSTOMER COPY ***

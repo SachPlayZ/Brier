@@ -1,0 +1,23 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST No.: 33AAACA6677D1ZW
+GST INVOICE
+--------------------------------------------
+Date: 15-Apr-2025
+Bill No: TI-2024-18508
+--------------------------------------------
+Item                     Qty          Amount
+Paracetamol Strip          1           40.07
+Digital Thermometer        3          819.78
+Digital Thermometer        2          805.10
+Paracetamol Strip          4          137.68
+--------------------------------------------
+Taxable Amount:                     1,802.63
+CGST @ 6%:                            108.16
+SGST @ 6%:                            108.16
+Rounding:                               0.05
+Amount Payable:                     2,019.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

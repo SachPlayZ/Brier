@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Trained models: optional at inference, rebuild with `manage.py train_models`
+models/
+
+# Working backups from earlier fixes, and the per-run error dump
+data/_backup_before_*/
+data/eval_errors.csv
+
+# Everything else is tracked on purpose, so a clone runs with no setup:
+#   tasks/                the working notes: lessons.md is the record of what
+#                         went wrong and why, todo.md the phase log
+#   db.sqlite3            the seeded database (logins, claims, flags, audit)
+#   media/                receipt files uploaded through the form
+#   data/receipts_images/ data/receipts_truth.csv, data/claims.csv and the rest
+#                         of the synthetic corpus the project is evaluated on
+#   data/eval_report.json read at request time for the landing page metrics

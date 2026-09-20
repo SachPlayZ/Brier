@@ -1,0 +1,26 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST No.: 19AAFCP7890X1ZW
+RETAIL INVOICE
+--------------------------------------------
+Dated: 2025-05-24
+Invoice No: RCPT-2024-34166
+Table: 10   Covers: 8
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                2          319.28
+Biryani                    3          847.20
+Filter Coffee              3          155.91
+Butter Naan                4          271.32
+Masala Dosa                1          156.38
+Veg Thali                  2          518.40
+--------------------------------------------
+Total Before Tax:                   2,268.49
+CGST @ 2.5%:                           56.71
+SGST @ 2.5%:                           56.71
+Rounding:                               0.09
+Amount Payable:                    ₹2,382.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

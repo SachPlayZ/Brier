@@ -1,0 +1,17 @@
+SHELL SELECT FUEL POINT
+Whitefield Main Rd, Bengaluru 560066
+Ph: 9845077889
+GST No.: 29AAACS9911A1ZI
+GST INVOICE
+--------------------------------------------
+Receipt No: INV-2024-17056
+Dated: 18.04.2025
+--------------------------------------------
+Product                 Litres          Amount
+Diesel                    34        3,152.82
+--------------------------------------------
+Sub Total:                          3,152.82
+Round Off:                              0.18
+Net Payable:                       ₹3,153.00
+--------------------------------------------
+Thank you for your business

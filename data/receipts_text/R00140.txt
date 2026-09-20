@@ -1,0 +1,24 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST Reg No: 19AACCB3456W1ZT
+RETAIL INVOICE
+--------------------------------------------
+Inv No: TI-2024-55891
+Date of Supply: 15.05.2025
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             4          324.56
+Printer Ink                2        1,945.00
+A4 Paper Ream              1          265.91
+A4 Paper Ream              3          721.44
+Marker Pen                 4          151.32
+--------------------------------------------
+Taxable Amount:                     3,408.23
+CGST @ 9%:                            306.74
+SGST @ 9%:                            306.74
+Rounding:                               0.29
+Total Amount:                      ₹4,022.00
+--------------------------------------------
+Goods once sold will not be taken back
+Cash Payment

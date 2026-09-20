@@ -1,0 +1,21 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+GST Reg No: 29AAGCB7383J1Z4
+RETAIL INVOICE
+--------------------------------------------
+Receipt No: TI-2025-78623
+Date of Supply: 29.05.2025
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             3          284.85
+Marker Pen                 3          134.97
+--------------------------------------------
+Total Qty: 6
+Total Before Tax:                     419.82
+CGST @ 9%:                             37.79
+SGST @ 9%:                             37.78
+Rounding:                              -0.39
+Amount Payable:                      ₹495.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

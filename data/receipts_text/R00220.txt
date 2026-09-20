@@ -1,0 +1,24 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GST Reg No: 29AABCA1234M1ZQ
+CASH MEMO
+--------------------------------------------
+Invoice Number: INV-2024-81364
+Date: 29/08/2025
+Table: 4   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          269.07
+Veg Thali                  1          296.96
+Veg Thali                  3          721.08
+--------------------------------------------
+Total Qty: 7
+Subtotal:                           1,287.11
+CGST @ 2.5%:                           32.18
+SGST @ 2.5%:                           32.18
+Rounding:                              -0.47
+Amount Payable:                     1,351.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+UPI Payment

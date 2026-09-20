@@ -1,0 +1,22 @@
+SARAVANA BHVAAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GST No.: 33AAECS7788N1ZJ
+RETAIL INVOICE
+--------------------------------------------
+Inv No: RCPT-2024-42970
+Date of Supply: 26.01.2025
+Table: 4   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              4          208.08
+Veg Thali                  1          247.91
+Filter Coffee              1           67.92
+--------------------------------------------
+Taxable Value:                        523.91
+CGST @ 2.5%:                           13.10
+SGST @ 2.5%:                           13.10
+Round Off Adj:                          0.89
+Bill Total:                           551.00
+--------------------------------------------
+Subject to local jurisdiction

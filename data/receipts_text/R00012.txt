@@ -1,0 +1,24 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GST Reg No: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Date: Mar 14, 2025
+Invoice Number: BILL-2024-65784
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           4        1,959.64
+Sugar 1kg                  1           47.71
+Sugar 1kg                  2           94.38
+Basmati Rice 5kg           1          423.90
+Atta 5kg                   1          240.61
+Milk 1L                    3          167.79
+--------------------------------------------
+Total Qty: 12
+Taxable Amount:                     2,934.03
+IGST @ 5%:                            146.70
+Round Off:                              0.27
+Grand Total:                        3,081.00
+--------------------------------------------
+Subject to local jurisdiction

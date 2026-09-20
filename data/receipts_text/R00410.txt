@@ -1,0 +1,25 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST No.: 33AAACA6677D1ZW
+CASH MEMO
+--------------------------------------------
+Invoice Date: 16-06-2025
+Inv No: BILL-2025-96541
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 1          280.68
+Vitamin D3                 3          754.32
+Vitamin D3                 4          578.68
+Antiseptic Liquid          4          550.92
+Antiseptic Liquid          3          425.46
+--------------------------------------------
+Total Qty: 15
+Total Before Tax:                   2,590.06
+CGST @ 6%:                            155.41
+SGST @ 6%:                            155.40
+Round Off:                              0.13
+Bill Total:                         2,901.00
+--------------------------------------------
+Thank you for your business
+Cash Payment

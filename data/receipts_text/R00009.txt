@@ -1,0 +1,24 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GST Reg No: 29AABCA1234M1ZQ
+RETAIL INVOICE
+--------------------------------------------
+Date of Supply: 01-07-2025
+Invoice No: TI-2025-33067
+Table: 9   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          449.01
+Masala Dosa                3          312.24
+Veg Thali                  1          184.34
+Butter Naan                4          188.16
+Filter Coffee              4          224.44
+--------------------------------------------
+Taxable Value:                      1,358.19
+CGST @ 2.5%:                           33.96
+SGST @ 2.5%:                           33.95
+Round Off:                             -0.10
+Total Amount:                      ₹1,426.00
+--------------------------------------------
+Goods once sold will not be taken back

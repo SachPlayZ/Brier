@@ -1,0 +1,23 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN/UIN: 36AAGCD8899T1Z8
+CASH MEMO
+--------------------------------------------
+Date of Supply: 08-06-2025
+Inv No: BILL-2025-41726
+--------------------------------------------
+Item                     Qty          Amount
+A4 Paper Ream              3          861.57
+File Folder                2           82.32
+A4 Paper Ream              2          521.96
+Printer Ink                1        1,051.19
+Marker Pen                 4          148.76
+--------------------------------------------
+Sub Total:                          2,665.80
+CGST @ 9%:                            239.92
+SGST @ 9%:                            239.92
+Rounding:                               0.36
+Total Amount:                      ₹3,146.00
+--------------------------------------------
+*** CUSTOMER COPY ***

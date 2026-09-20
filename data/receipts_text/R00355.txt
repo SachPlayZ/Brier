@@ -1,0 +1,23 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GST Reg No: 27AAACR5055K1Z7
+CASH MEMO
+--------------------------------------------
+Date: 13.04.2025
+Bill No: BILL-2025-77128
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           4        1,909.16
+Sunflower Oil 1L           2          358.90
+Atta 5kg                   1          285.27
+Toor Dal 1kg               1          155.10
+Sunflower Oil 1L           4          566.64
+--------------------------------------------
+Taxable Amount:                     3,275.07
+CGST @ 2.5%:                           81.88
+SGST @ 2.5%:                           81.87
+Rounding:                               0.18
+Total:                             ₹3,439.00
+--------------------------------------------
+Goods once sold will not be taken back

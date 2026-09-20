@@ -1,0 +1,42 @@
+SHELL
+Welcomes You
+ANNAPURNA FUEL CENTRE
+42/1, BARRACKPORE TRUNK RD
+LUCKNOW 226001
+Tel. No.: 9852810741
+
+Invoice No: 5871263322156
+FCC ID: 53378050673791311
+FIP No. : 07
+Nozzle No. : 08
+Product : XP95
+Density : 832.7Kg/Cu.mtr
+Preset Type: Volume
+Rate(Rs/L) : 86.49
+Volume(L) : 00024.68
+Amount(₹) 02134.57
+--------------------------
+Taxable Val  : ₹  1808.95
+CGST @9%     : ₹   162.81
+SGST @9%     : ₹ 162 .81
+Total GST    : ₹   325.62
+Pay Mode     : Cash
+UPI Ref: 273456950206
+--------------------------
+Vech: 71642805085.54
+Vtrd: 8105678015.389
+
+Vehicle No: 1375
+Mobile No : Not Entered
+
+Date : 27/03/25
+Time : 08:57
+
+GST No: 09GNKND4207K1ZX
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

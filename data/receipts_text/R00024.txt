@@ -1,0 +1,19 @@
+BHARAT PETROLEUM OUTLET
+NH-8 Bandra East, Mumbai 400051
+Ph: 9820011122
+GSTIN/UIN: 27AAACB1111P1ZW
+RETAIL INVOICE
+--------------------------------------------
+Invoice Date: 17.07.2025
+Invoice Number: INV-2024-83713
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                    26        2,704.52
+CNG                       27        2,025.54
+--------------------------------------------
+Sub Total:                          4,730.06
+Round Off Adj:                         -0.06
+Grand Total:                        4,730.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

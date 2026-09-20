@@ -1,0 +1,21 @@
+CAFE OCFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN: 29AAECC2233B1Z7
+CASH MEMO
+--------------------------------------------
+Bill No: TI-2024-63964
+Invoice Date: 16-Jul-2025
+Table: 10   Covers: 6
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          298.89
+Veg Thali                  4        1,220.80
+Paneer Butter Masala       3          834.72
+--------------------------------------------
+Sub Total:                          2,354.41
+IGST @ 5%:                            117.72
+Round Off:                              0.37
+Bill Total:                        ₹2,472.50
+--------------------------------------------
+THANK YOU VISIT AGAIN

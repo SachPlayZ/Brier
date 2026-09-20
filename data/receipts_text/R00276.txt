@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN/UIN: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Bill Date: 18/02/2025
+Cash Memo No: RCPT-2024-93496
+--------------------------------------------
+Item                     Qty          Amount
+Milk 1L                    1           58.76
+Atta 5kg                   1          336.51
+Milk 1L                    1           61.70
+Basmati Rice 5kg           3        1,622.49
+Basmati Rice 5kg           3        1,382.16
+--------------------------------------------
+Total Before Tax:                   3,461.62
+CGST @ 2.5%:                           86.54
+SGST @ 2.5%:                           86.54
+Rounding:                               0.30
+Grand Total:                       ₹3,635.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

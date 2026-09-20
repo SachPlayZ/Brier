@@ -1,0 +1,24 @@
+Hotel Sunrise Residency
+9 Connaught Place, New Delhi 110001
+GST Reg No: 07AACCH9012Q1Z8
+CASH MEMO
+--------------------------------------------
+Dated: 2025-01-15
+Bill No: RCPT-2024-27404
+--------------------------------------------
+Item                     Qty          Amount
+Breakfast Buffet           4        2,934.60
+Deluxe Room Night          4       20,928.64
+Breakfast Buffet           2        1,418.68
+Deluxe Room Night          1        2,903.33
+Laundry Service            4        1,898.80
+Deluxe Room Night          3        8,329.20
+--------------------------------------------
+Subtotal:                          38,413.25
+CGST @ 6%:                          2,304.80
+SGST @ 6%:                          2,304.79
+Round Off:                              0.16
+Bill Total:                        43,023.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

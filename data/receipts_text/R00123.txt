@@ -1,0 +1,21 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GSTIN: 07AAFCK3321L1ZK
+CASH MEMO
+--------------------------------------------
+Receipt No: RCPT-2025-58949
+Bill Date: 08-Jul-2025
+--------------------------------------------
+Item                     Qty          Amount
+Antiseptic Liquid          4          615.32
+Antiseptic Liquid          2          338.16
+--------------------------------------------
+Total Qty: 6
+Taxable Amount:                       953.48
+CGST @ 6%:                             57.21
+SGST @ 6%:                             57.21
+Round Off:                              0.10
+Grand Total:                        1,068.00
+--------------------------------------------
+Goods once sold will not be taken back

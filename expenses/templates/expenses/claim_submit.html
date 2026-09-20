@@ -1,0 +1,67 @@
+{% extends "expenses/base.html" %}
+{% block title %}Submit a claim{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><a href="{% url 'claim_list' %}">Claims</a><i class="ph ph-caret-right"></i><span class="current">Submit</span>{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-xl-8">
+    <div class="page-head">
+      <div>
+        <h1 class="page-title">Submit a reimbursement claim</h1>
+        <p class="page-sub">Upload or paste your receipt. It is extracted, checked for duplicates and prepared for approval.</p>
+      </div>
+    </div>
+
+    <div class="panel"><div class="panel-body p-4">
+      {% if form.non_field_errors %}
+        <div class="alert alert-danger alert-flex mb-4" role="alert"><i class="ph ph-warning-octagon"></i><div>{{ form.non_field_errors }}</div></div>
+      {% endif %}
+
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-section">
+          <h2 class="section-title"><i class="ph ph-receipt"></i>Receipt</h2>
+
+          <div class="mb-3">
+            <label class="form-label" for="{{ form.image.id_for_label }}">Receipt file</label>
+            {{ form.image }}
+            {% for error in form.image.errors %}<div class="invalid-feedback d-block" role="alert">{{ error }}</div>{% endfor %}
+            <div class="form-text">PDF, JPG, PNG, WEBP, GIF, BMP or TIFF, up to 15 MB. The text is read automatically.</div>
+          </div>
+
+          <div class="or-note">or paste the text</div>
+
+          <div class="mb-0">
+            <label class="form-label" for="{{ form.receipt_text.id_for_label }}">Receipt text</label>
+            {{ form.receipt_text }}
+            <div class="form-text">Extraction, confidence scoring and duplicate detection work the same way with text or images.</div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2 class="section-title"><i class="ph ph-notepad"></i>Details</h2>
+          <div class="row g-3">
+            <div class="col-md-8">
+              <label class="form-label" for="{{ form.description.id_for_label }}">Description</label>
+              {{ form.description }}
+              {% for error in form.description.errors %}<div class="invalid-feedback d-block" role="alert">{{ error }}</div>{% endfor %}
+              <div class="form-text">For example "Team lunch meeting" or "Client travel".</div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="{{ form.claimed_amount.id_for_label }}">Override amount</label>
+              {{ form.claimed_amount }}
+              {% for error in form.claimed_amount.errors %}<div class="invalid-feedback d-block" role="alert">{{ error }}</div>{% endfor %}
+              <div class="form-text">Leave blank to use the extracted total.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+          <button class="btn btn-primary" data-loading-label="Extracting receipt"><i class="ph ph-magic-wand"></i>Extract and submit</button>
+          <a href="{% url 'claim_list' %}" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+      </form>
+    </div></div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GSTIN: 09AABCG5566Z1ZD
+GST INVOICE
+--------------------------------------------
+Date of Supply: 23.05.2025
+Invoice No: BILL-2024-75834
+--------------------------------------------
+Item                     Qty          Amount
+Toor Dal 1kg               4          705.68
+Milk 1L                    1           66.00
+Basmati Rice 5kg           1          611.90
+Sunflower Oil 1L           2          300.90
+--------------------------------------------
+Subtotal:                           1,684.48
+CGST @ 2.5%:                           42.11
+SGST @ 2.5%:                           42.11
+Rounding:                               0.30
+Total:                             ₹1,769.00
+--------------------------------------------
+Thank you for your business
+Card Payment

@@ -1,0 +1,23 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+GSTIN/UIN: 36AADCH4567S1ZS
+TAX INVOICE
+--------------------------------------------
+Date of Supply: Aug 01, 2025
+Invoice Number: TI-2025-45102
+Table: 13   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  4          728.00
+Biryani                    4          733.16
+Filter Coffee              2           62.70
+Filter Coffee              1           34.08
+Butter Naan                2           89.68
+Butter Naan                3          216.75
+--------------------------------------------
+Subtotal:                           1,864.37
+IGST @ 5%:                             93.22
+Rounding:                               0.41
+Grand Total:                       ₹1,958.00
+--------------------------------------------
+Goods once sold will not be taken back

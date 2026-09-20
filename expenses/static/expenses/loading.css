@@ -1,0 +1,140 @@
+/* Loading states: preloader, navigation bar, skeletons, button spinner, image fade.
+   Everything animates transform or opacity only (compositor, 60fps on mobile).
+   Tune timing and colour in the :root block below; loading.js reads the *-ms values
+   from here, so this file is the single place to change them. */
+
+:root {
+  --load-min: 350ms;         /* preloader is never shown for less than this */
+  --load-cap: 1500ms;        /* preloader is never shown for more than this */
+  --skeleton-delay: 250ms;   /* wait this long before a skeleton replaces the page */
+  --shimmer-speed: 1.4s;
+  --bar-height: 2px;
+  --fade-ms: 300ms;
+
+  --z-preloader: 90;
+  --z-navbar: 95;
+}
+
+[data-bs-theme="light"] {
+  --shimmer-color: rgba(255, 255, 255, 0.65);
+  --sk-base: color-mix(in srgb, var(--track) 70%, transparent);
+  --bar-color: var(--ink);
+}
+[data-bs-theme="dark"] {
+  --shimmer-color: rgba(255, 255, 255, 0.07);
+  --sk-base: color-mix(in srgb, var(--track) 80%, transparent);
+  --bar-color: var(--ink);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { to { transform: translateX(100%); } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes preloader-failsafe { to { opacity: 0; visibility: hidden; } }
+
+/* ------------------------------------------------------------ 1. preloader */
+/* Shown only when the inline <head> gate added html.has-preloader (first page of a
+   session, motion allowed). Repeat visits never render it. */
+.preloader {
+  display: none; position: fixed; inset: 0; z-index: var(--z-preloader);
+  place-items: center; background: var(--page);
+}
+html.has-preloader .preloader {
+  display: grid;
+  /* If loading.js never runs, get out of the way anyway. */
+  animation: preloader-failsafe 0.01s 3s forwards;
+}
+.preloader-inner { display: grid; justify-items: center; gap: 1rem; animation: rise 0.5s var(--ease) both; }
+.preloader-brand { display: flex; align-items: center; gap: 0.75rem; }
+.preloader-bar { width: 120px; height: 2px; background: var(--track); border-radius: 1px; overflow: hidden; }
+.preloader-bar > span {
+  display: block; height: 100%; background: var(--ink); transform-origin: left; transform: scaleX(0);
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.preloader.is-running .preloader-bar > span { transform: scaleX(0.9); }
+.preloader.is-done .preloader-bar > span { transform: scaleX(1); transition-duration: 0.15s; }
+.preloader.is-leaving {
+  opacity: 0; transform: translateY(-8px); pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s var(--ease);
+}
+
+/* ------------------------------------------------- 4. navigation progress */
+.nav-bar {
+  position: fixed; inset: 0 0 auto 0; height: var(--bar-height); z-index: var(--z-navbar);
+  pointer-events: none; opacity: 0;
+}
+.nav-bar > span {
+  display: block; height: 100%; background: var(--bar-color); transform-origin: left;
+  transform: scaleX(var(--p, 0)); transition: transform 0.3s var(--ease);
+}
+.nav-bar.is-active { opacity: 1; }
+.nav-bar.is-finishing { opacity: 0; transition: opacity 0.25s ease; }
+.nav-bar.no-anim > span { transition: none; }
+
+/* ------------------------------------------------------------ 2. skeletons */
+.skeleton { position: relative; overflow: hidden; background: var(--sk-base); border-radius: var(--r-ctl); }
+.skeleton::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, var(--shimmer-color), transparent);
+  animation: shimmer var(--shimmer-speed) ease-in-out infinite;
+}
+.sk-line { height: 0.75rem; margin: 0.35rem 0; }
+.sk-title { height: 1.5rem; width: 220px; max-width: 70%; margin-bottom: 0.5rem; }
+.sk-btn { height: 34px; width: 120px; }
+.sk-chip { width: 32px; height: 32px; flex: none; }
+.sk-stat { height: 1.9rem; width: 60%; margin: 0.75rem 0 0.5rem; }
+.sk-amount { width: 150px; margin: 0; }
+.sk-block { height: 280px; }
+.sk-field { height: 34px; }
+.sk-w-15 { width: 15%; } .sk-w-30 { width: 30%; } .sk-w-40 { width: 40%; }
+.sk-w-50 { width: 50%; } .sk-w-60 { width: 60%; } .sk-w-80 { width: 80%; }
+.sk-tr { display: grid; grid-template-columns: 0.8fr 0.6fr 1.6fr 1fr 1fr 1fr; gap: 1rem; align-items: center; padding: 0.9rem 1rem; border-bottom: 1px solid var(--line-soft); }
+.sk-tr:last-child { border-bottom: 0; }
+.sk-tr.is-head { background: var(--surface-2); padding: 0.75rem 1rem; }
+.sk-tr .sk-line { margin: 0; }
+@media (max-width: 767.98px) { .sk-tr { grid-template-columns: 1fr 1fr 1fr; } .sk-tr > :nth-child(n+4) { display: none; } }
+
+/* While a navigation is pending, the skeleton host replaces the page content. The
+   old content is hidden, not destroyed, so a cancelled navigation can restore it. */
+.page.is-pending > :not(.sk-host) { display: none !important; }
+
+/* --------------------------------------------------------- 5. image frames */
+.img-frame { margin-bottom: 0.75rem; border: 1px solid var(--line); }
+/* Only reserve a fallback height when there are no dimensions to reserve the exact box. */
+.img-frame:not([style*="aspect-ratio"]) { min-height: 120px; }
+.img-frame img { display: block; width: 100%; height: auto; opacity: 0; transition: opacity var(--fade-ms) ease; }
+.img-frame.is-loaded { background: transparent; min-height: 0; }
+.img-frame.is-loaded::after { display: none; }
+.img-frame img.is-loaded { opacity: 1; }
+/* themed pairs (landing previews): show only the capture that matches the theme */
+[data-bs-theme="dark"] .img-frame img[data-theme="light"], [data-bs-theme="light"] .img-frame img[data-theme="dark"] { display: none; }
+.img-frame.is-error { background: var(--surface-2); }
+.img-frame.is-error::after { display: none; }
+.img-frame.is-error img { display: none; }
+.img-fallback { display: grid; place-items: center; align-content: center; gap: 0.35rem; min-height: 160px; padding: 1.5rem; color: var(--muted); font-size: 0.8rem; }
+.img-fallback i { font-size: 1.5rem; }
+
+/* ----------------------------------------------------- 3. button loading */
+/* The label stays in flow (hidden) and the spinner sits on top, so the button keeps
+   its exact width. Spinner and dots both exist; motion preference picks one. */
+.btn-label { display: inline-flex; align-items: center; justify-content: inherit; gap: inherit; }
+.btn-spinner { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; }
+.is-loading { position: relative; pointer-events: none; }
+.is-loading .btn-label { visibility: hidden; }
+.is-loading .btn-spinner { display: flex; }
+.is-disabled { pointer-events: none; opacity: 0.6; }
+.spinner {
+  width: 1.05em; height: 1.05em; border-radius: 50%; border: 2px solid currentColor;
+  border-right-color: transparent; animation: spin 0.7s linear infinite;
+}
+.dots { display: none; gap: 4px; }
+.dots i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+
+/* ------------------------------------------------------- reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after { display: none; }
+  .spinner { display: none; }
+  .dots { display: inline-flex; }
+  .preloader-inner { animation: none; }
+  .img-frame img { transition: none; }
+  .nav-bar > span { transition: none; }
+}

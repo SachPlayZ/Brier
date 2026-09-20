@@ -1,0 +1,23 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GSTIN/UIN: 07AAFCK3321L1ZK
+CASH MEMO
+--------------------------------------------
+Receipt No: BILL-2024-70066
+Bill Date: 03-02-2025
+--------------------------------------------
+Item                     Qty          Amount
+Antiseptic Liquid          4          693.00
+Vitamin D3                 2          282.42
+Digital Thermometer        2          716.78
+Vitamin D3                 2          519.38
+--------------------------------------------
+Taxable Value:                      2,211.58
+CGST @ 6%:                            132.70
+SGST @ 6%:                            132.69
+Round Off:                              0.03
+Total Amount:                       2,477.00
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

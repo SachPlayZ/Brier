@@ -1,0 +1,22 @@
+Deccan Office
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GST Reg No: 36AAGCD8899T1Z8
+RETAIL INVOICE
+--------------------------------------------
+Invoice Date: 06/07/2025
+Invoice Number: TI-2024-54755
+--------------------------------------------
+Item                     Qty          Amount
+Printer Ink                3        3,012.99
+File Folder                4          167.20
+Notebook 200pg             4          479.88
+Stapler                    3          499.02
+--------------------------------------------
+Total Qty: 14
+Total Before Tax:                   4,159.09
+IGST @ 18%:                           748.64
+Rounding:                               0.77
+Amount Payable:                     4,908.50
+--------------------------------------------
+*** CUSTOMER COPY ***

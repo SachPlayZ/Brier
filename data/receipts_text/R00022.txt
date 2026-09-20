@@ -1,0 +1,24 @@
+Hotel Sunrise Residency
+9 Connaught Place, New Delhi 110001
+Ph: 9811023456
+GST No.: 07AACCH9012Q1Z8
+TAX INVOICE
+--------------------------------------------
+Invoice Number: TI-2025-43460
+Date: 15-May-2025
+--------------------------------------------
+Item                     Qty          Amount
+Breakfast Buffet           1          664.48
+Deluxe Room Night          4       23,312.64
+Laundry Service            4        1,822.56
+Breakfast Buffet           1          467.16
+Laundry Service            1          376.07
+--------------------------------------------
+Taxable Value:                     26,642.91
+CGST @ 6%:                          1,598.58
+SGST @ 6%:                          1,598.57
+Rounding:                              -0.06
+Grand Total:                      ₹29,840.00
+--------------------------------------------
+Goods once sold will not be taken back
+Card Payment

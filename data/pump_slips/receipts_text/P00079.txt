@@ -1,0 +1,34 @@
+ee
+KAVERI PETRO
+Welcome
+GREEN VALLEY FUEL POINT
+178, N S C BOSE ROAD
+BENGALURU 560066
+Tel. No.: 9816437967
+
+Inv.No: 8369957631306647
+FCC ID: 84558063001657550
+FIP No. : 03
+Nozzle No. : 03
+Product : Diesel
+Density : 739.0Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 87.68
+Volume(L) : 00036.14
+Amount(Rs) : 03168.76
+--------------------------
+Vech: 38430323374.44
+Vtrd: 6227412638.913
+
+Vehicle No: 6299
+Mobile No : 9439202430
+
+Date : 03-04-2025
+Time : 05:55
+
+GST No: 29LNCFE3199C1ZE
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

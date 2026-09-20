@@ -1,0 +1,41 @@
+Shell
+SHREE GANESH FUELS
+42/1, BARRACKPORE TRUNK RD
+AHMEDABAD 380009
+Tel. No.: 9813007670
+
+Inv No.: 671094827629005
+FCC ID: 44132848694709862
+FIP No. : 08
+Nozzle No. : 06
+Product : Speed
+Density : 848.0Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 99.69
+Volume(L) : 00015.05
+Amount Rs : 01500.00
+--------------------------
+Taxable Val  : ₹  1271.18
+CGST @9%     : ₹   114.41
+SGST @9%     : ₹   114.41
+Total GST    : ₹   228.82
+Pay Mode     : UPI
+UPI Ref: 533878458542
+--------------------------
+Vech: 76192153346.48
+Vtrd: 3780593341.589
+
+Vehicle No: 6658
+Mobile No : 9023119192
+
+Date : 26.12.25
+Time : 20:55
+
+GST No: 24PLRBL0790H1Z9
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

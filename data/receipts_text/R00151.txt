@@ -1,0 +1,25 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+Ph: 9820044556
+GSTIN/UIN: 27AAACR5055K1Z7
+CASH MEMO
+--------------------------------------------
+Cash Memo No: BILL-2025-40481
+Date: Feb 09, 2025
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   3          880.86
+Basmati Rice 5kg           1          696.49
+Toor Dal 1kg               4          597.00
+Atta 5kg                   4          975.28
+Toor Dal 1kg               3          372.66
+Toor Dal 1kg               3          409.50
+--------------------------------------------
+Taxable Value:                      3,931.79
+CGST @ 2.5%:                           98.30
+SGST @ 2.5%:                           98.29
+Round Off:                             -0.38
+Total Amount:                      ₹4,128.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

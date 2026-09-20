@@ -1,0 +1,84 @@
+{% extends "expenses/base.html" %}
+{% load humanize %}
+{% block title %}Dashboard{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><span class="current">Dashboard</span>{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Overview</h1>
+    <p class="page-sub">Claim volume, duplicate flags and extraction health.</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'claim_submit' %}" class="btn btn-primary"><i class="ph ph-plus"></i>Submit claim</a>
+  </div>
+</div>
+
+<div class="row g-3 mb-3">
+  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+    <div class="stat-top"><span class="stat-label">Claims</span><span class="chip"><i class="ph ph-files"></i></span></div>
+    <div class="stat">{{ n_claims|intcomma }}</div>
+    <div class="stat-note">{{ n_receipts|intcomma }} receipts</div>
+  </div></div>
+  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+    <div class="stat-top"><span class="stat-label">Duplicate flags</span><span class="chip warn"><i class="ph ph-copy"></i></span></div>
+    <div class="stat">{{ n_flags|intcomma }}</div>
+    <div class="stat-note">{{ n_open_flags }} open, {{ n_confirmed }} confirmed</div>
+  </div></div>
+  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+    <div class="stat-top"><span class="stat-label">Prevented payout</span><span class="chip ok"><i class="ph ph-shield-check"></i></span></div>
+    <div class="stat ok">
+      {% for row in prevented_by_currency %}<div>{{ row.display }}</div>{% empty %}0{% endfor %}
+    </div>
+    <div class="stat-note">Confirmed duplicates</div>
+  </div></div>
+  <div class="col-sm-6 col-xl-3"><div class="panel stat-card">
+    <div class="stat-top"><span class="stat-label">Awaiting decision</span><span class="chip bad"><i class="ph ph-warning"></i></span></div>
+    <div class="stat bad">
+      {% for row in at_risk_by_currency %}<div>{{ row.display }}</div>{% empty %}0{% endfor %}
+    </div>
+    <div class="stat-note">Open EXACT and HIGH flags</div>
+  </div></div>
+</div>
+
+<div class="row g-3">
+  <div class="col-lg-4"><div class="panel h-100">
+    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-list-checks"></i>Claims by status</h2></div>
+    <div class="rows">
+      {% for label, count in by_status %}
+        <div class="row-item">
+          <span class="row-title">{{ label }}</span>
+          <span class="row-value">{{ count }}</span>
+        </div>
+      {% empty %}
+        <div class="empty"><strong>No claims yet</strong></div>
+      {% endfor %}
+    </div>
+  </div></div>
+
+  <div class="col-lg-4"><div class="panel h-100">
+    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-flag"></i>Flags by band</h2></div>
+    <div class="rows">
+      {% for row in band_counts %}
+        <div class="row-item">
+          <span class="badge band-{{ row.band }}">{{ row.band }}</span>
+          <span class="row-value">{{ row.n }}</span>
+        </div>
+      {% empty %}
+        <div class="empty"><i class="ph ph-check-circle"></i><strong>No flags</strong>Nothing has matched as a duplicate.</div>
+      {% endfor %}
+    </div>
+  </div></div>
+
+  <div class="col-lg-4"><div class="panel h-100">
+    <div class="panel-head"><h2 class="panel-title"><i class="ph ph-heartbeat"></i>Extraction health</h2></div>
+    <div class="rows">
+      <div class="row-item"><span class="row-title">Mean document confidence</span><span class="row-value">{{ mean_confidence }}</span></div>
+      <div class="row-item"><span class="row-title">Amounts reconcile</span><span class="row-value">{{ arithmetic_pct }}%</span></div>
+      <div class="row-item"><span class="row-title">Routed to manual review</span><span class="row-value">{{ needs_review_pct }}%</span></div>
+    </div>
+    <div class="panel-body pt-0">
+      <p class="panel-note">Measured accuracy and calibration live in <code>data/eval_report.md</code> (<code>manage.py evaluate</code>).</p>
+    </div>
+  </div></div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN/UIN: 19AAFCP7890X1ZW
+GST INVOICE
+--------------------------------------------
+Invoice Date: 15.06.2025
+Cash Memo No: INV-2025-23412
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    4        1,408.08
+Paneer Butter Masala       2          632.60
+Masala Dosa                3          395.88
+--------------------------------------------
+Total Qty: 9
+Taxable Amount:                     2,436.56
+CGST @ 2.5%:                           60.92
+SGST @ 2.5%:                           60.91
+Round Off:                             -0.39
+Net Payable:                        2,558.00
+--------------------------------------------
+Thank you for your business
+Card Payment

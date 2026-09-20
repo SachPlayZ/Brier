@@ -1,0 +1,40 @@
+GANGA PETROCHEM
+Welcome
+SHREE GANESH FUELS
+17, STATION ROAD
+CHENNAI 600096
+Tel. No.: 9820074058
+
+Invoice No: 093402557483063
+FCC ID: 95896258676696588
+FIP No. : 03
+Nozzle No. : 06
+Product : Speed
+Density : 730.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 95.82
+Volume(L) : 00026.09
+Amount(₹) 02500.00
+--------------------------
+Taxable Val : ₹ 2136 .75
+VAT @17%(Incl) : ₹ 363 .25
+Pay Mode     : Cash
+UPI Ref: 852584943995
+--------------------------
+Vech: 99955815214.32
+Vtrd: 5824676165.051
+
+Vehicle No: 1036
+Mobile No : 9631420527
+
+Date : 10/07/26
+Time : 12:47
+
+GST No: 
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

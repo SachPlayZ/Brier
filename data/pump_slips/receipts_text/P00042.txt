@@ -1,0 +1,34 @@
+Seer
+GANGA PETROCHEM
+Welcome
+SAI KRUPA PETROLEUM
+PLOT 12, SECTOR 5
+NEW DELHI 110019
+Tel. No.: 9871009359
+
+Inv No.: 68541757873724
+FCC ID: 53413847263664058
+FIP No. : 06
+Nozzle No. : 04
+Product : Power
+Density : 829.4Kg/Cu.mtr
+Preset Type: Volume
+Rate(Rs/L) : 92.83
+Volume(L) : 00019.74
+Amount(Rs) : 01832.46
+--------------------------
+Vech: 68772535272.42
+Vtrd: 5217982468.078
+
+Vehicle No: 5601
+Mobile No : 9638703725
+
+Date : 16/01/26
+Time : 05:08
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

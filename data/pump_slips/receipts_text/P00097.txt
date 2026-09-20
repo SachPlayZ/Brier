@@ -1,0 +1,42 @@
+Indian Oil
+Happy Motoring
+MAA TARA FILLING STATION
+PLOT 12, SECTOR 5
+CHENNAI 600096
+Tel. No.: 9886059065
+
+Bill No.: 131688376183
+FCC ID: 55845014435419888
+FIP No. : 08
+Nozzle No. : 05
+Product : Diesel
+Density : 766.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 99.28
+Volume(L) : 00005.94
+Amount (Rs.) : 00590.00
+--------------------------
+Taxable Val  : ₹   500.00
+CGST @9%     : ₹    45.00
+SGST @9%     : ₹    45.00
+Total GST    : B ES 90.00
+Pay Mode     : Cash
+UPI Ref: 340951155591
+--------------------------
+Vech: 41396067741.54
+Vtrd: 1937829420.352
+
+Vehicle No: 9439
+Mobile No : 9636028877
+
+Date : 16.11.25
+Time : 12:16
+
+GST No: 33BTWJD9457D1ZO
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

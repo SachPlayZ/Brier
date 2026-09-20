@@ -1,0 +1,18 @@
+SHELL SELECT FUEL POINT
+Whitefield Main Rd, Bengaluru 560066
+Ph: 9845077889
+GST Reg No: 29AAACS9911A1ZI
+CASH MEMO
+--------------------------------------------
+Receipt No: RCPT-2025-15913
+Bill Date: 2025-03-21
+--------------------------------------------
+Product                 Litres          Amount
+Diesel                    32        3,010.24
+Petrol                    37        3,528.69
+--------------------------------------------
+Taxable Amount:                     6,538.93
+Round Off:                              0.07
+Total Amount:                       6,539.00
+--------------------------------------------
+*** CUSTOMER COPY ***

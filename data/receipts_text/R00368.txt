@@ -1,0 +1,22 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST No.: 29AAECC2233B1Z7
+CASH MEMO
+--------------------------------------------
+Inv No: TI-2024-26009
+Date of Supply: 18.02.2025
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                4          214.80
+Biryani                    2          756.20
+Butter Naan                4          254.76
+--------------------------------------------
+Total Qty: 10
+Total Before Tax:                   1,225.76
+IGST @ 5%:                             61.29
+Round Off Adj:                         -0.05
+Total Amount:                      ₹1,287.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

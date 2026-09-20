@@ -1,0 +1,33 @@
+ee
+KAVERI PETRO
+Welcome
+BARRACKPORE FUEL POINT
+PLOT 12, SECTOR 5
+CHENNAI 600096
+Tel. No.: 9845713663
+
+Inv No.: 213993250753155
+FIP No. : 05
+Nozzle No. : 08
+Product : XP95
+Density : 774.8Kg/Cu.mtr
+Preset Type: Volume
+Rate(Rs/L) : 88.86
+Volume(L) : 00031.57
+Amount (INR) : 02805.31
+--------------------------
+Vech: 32269896847.32
+Vtrd: 7246952128.236
+
+Vehicle No: 6005
+Mobile No : Not Entered
+
+Date : 09/03/2025
+Time : 10:09
+
+GST No: 33MUAWB9527T1ZH
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

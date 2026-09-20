@@ -1,0 +1,23 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN: 36AADCH4567S1ZS
+TAX INVOICE
+--------------------------------------------
+Date of Supply: Aug 27, 2025
+Invoice No: TI-2024-45713
+Table: 19   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  4          706.44
+Butter Naan                3          131.94
+Butter Naan                3          163.44
+--------------------------------------------
+Total Qty: 10
+Taxable Value:                      1,001.82
+CGST @ 2.5%:                           25.05
+SGST @ 2.5%:                           25.04
+Round Off:                              0.09
+Total:                             ₹1,052.00
+--------------------------------------------
+Subject to local jurisdiction

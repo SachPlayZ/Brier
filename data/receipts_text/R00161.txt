@@ -1,0 +1,23 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GSTIN: 07AAFCK3321L1ZK
+CASH MEMO
+--------------------------------------------
+Bill Date: 2025-02-18
+Bill No: INV-2025-43733
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 1          230.92
+Digital Thermometer        4        1,082.48
+Digital Thermometer        1          269.30
+Digital Thermometer        1          201.72
+Vitamin D3                 3          543.39
+--------------------------------------------
+Taxable Amount:                     2,327.81
+CGST @ 6%:                            139.67
+SGST @ 6%:                            139.67
+Round Off:                             -0.15
+Total Amount:                      ₹2,607.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

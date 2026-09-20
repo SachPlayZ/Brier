@@ -1,0 +1,41 @@
+Seer
+HP
+Happy Motoring
+START NELL
+SURVEY NO 88, HIGHWAY
+LUCKNOW 226001
+Tel. No.: 9837490718
+
+Inv No.: 24353712288556
+FCC ID: 25282541964171943
+FIP No. : 06
+Nozzle No. : 05
+Product : XP95
+Density : 768.5Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 98.23
+Volume(L) : 00015.27
+Amount(₹) 01500.00
+--------------------------
+Taxable Val  : ₹  1271.18
+CGST @9%     : ₹   114.41
+SGST @9%     : ₹   114.41
+Total GST    : % 228.82
+Pay Mode     : UPI
+UPI Ref: 060664545065
+--------------------------
+
+Vehicle No: 3043
+Mobile No : 9758762271
+
+Date : 01/11/2025
+Time : 21:02
+
+GST No: 09MKUFT1180J1ZO
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

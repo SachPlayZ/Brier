@@ -1,0 +1,22 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN/UIN: 24AAHCP6677V1Z8
+CASH MEMO
+--------------------------------------------
+Bill No: INV-2024-36610
+Dated: 01-09-2025
+--------------------------------------------
+Item                     Qty          Amount
+Sunflower Oil 1L           2          291.00
+Sunflower Oil 1L           1          128.19
+Milk 1L                    4          272.60
+Atta 5kg                   4        1,214.76
+--------------------------------------------
+Total Before Tax:                   1,906.55
+CGST @ 2.5%:                           47.67
+SGST @ 2.5%:                           47.66
+Rounding:                               0.12
+Amount Payable:                     2,002.00
+--------------------------------------------
+*** CUSTOMER COPY ***

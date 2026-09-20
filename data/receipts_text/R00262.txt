@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Bill Date: Jun 16, 2025
+Cash Memo No: TI-2024-42946
+--------------------------------------------
+Item                     Qty          Amount
+HDMI Cable 2m              1          197.60
+Extension Board            3        1,112.88
+Keyboard                   1          784.08
+Keyboard                   2        2,823.28
+--------------------------------------------
+Sub Total:                          4,917.84
+CGST @ 9%:                            442.61
+SGST @ 9%:                            442.60
+Round Off:                             -0.05
+Total Amount:                      ₹5,803.00
+--------------------------------------------
+Goods once sold will not be taken back

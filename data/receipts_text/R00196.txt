@@ -1,0 +1,22 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST Reg No: 19AAFCP7890X1ZW
+CASH MEMO
+--------------------------------------------
+Dated: 04/07/2025
+Receipt No: BILL-2025-67887
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       2          484.86
+Paneer Butter Masala       4        1,228.32
+Masala Dosa                3          361.47
+Masala Dosa                2          171.16
+--------------------------------------------
+Total Qty: 11
+Total Before Tax:                   2,245.81
+IGST @ 5%:                            112.29
+Rounding:                              -0.10
+Net Payable:                       ₹2,358.00
+--------------------------------------------
+*** CUSTOMER COPY ***

@@ -1,0 +1,21 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GST No.: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Invoice Number: TI-2025-73516
+Bill Date: 2025-01-09
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    1          215.93
+Butter Naan                1           74.83
+--------------------------------------------
+Total Qty: 2
+Total Before Tax:                     290.76
+CGST @ 2.5%:                            7.27
+SGST @ 2.5%:                            7.27
+Round Off Adj:                         -0.30
+Total Amount:                        ₹305.00
+--------------------------------------------
+Thank you for your business

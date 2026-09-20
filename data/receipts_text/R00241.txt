@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+GSTIN: 24AAHCP6677V1Z8
+GST INVOICE
+--------------------------------------------
+Receipt No: BILL-2024-78710
+Date: 24-06-2025
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           4        2,273.92
+Toor Dal 1kg               4          576.12
+Basmati Rice 5kg           2        1,169.66
+Sunflower Oil 1L           3          369.93
+Sunflower Oil 1L           4          492.36
+--------------------------------------------
+Total Qty: 17
+Sub Total:                          4,881.99
+CGST @ 2.5%:                          122.05
+SGST @ 2.5%:                          122.05
+Rounding:                              -0.09
+Bill Total:                        ₹5,126.00
+--------------------------------------------
+Subject to local jurisdiction

@@ -1,0 +1,54 @@
+receipt_id,field,error,truth,predicted,pattern_id,confidence,noise_tier,template_id
+P00006,gstin,MISSED,24VTNLH3537C1ZL,,,0.0,2,pump-gst
+P00006,invoice_no,MISSED,5187065482336,,,0.0,2,pump-gst
+P00007,vendor,WRONG_VALUE,VAYU FUELS,VAU FUELS,vendor.fallback,0.5948,3,pump-plain
+P00007,gstin,MISSED,24VKDFT0636R1ZP,,,0.0,3,pump-plain
+P00015,date,MISSED,2025-11-27,,,0.0,2,pump-plain
+P00016,invoice_no,MISSED,02733350357222836,,,0.0,2,pump-plain
+P00020,date,MISSED,2025-05-22,,,0.0,2,pump-plain
+P00021,total,WRONG_VALUE,590,5.87,total.max,0.347,3,pump-plain
+P00022,invoice_no,WRONG_VALUE,32648715689618559,326,invoice_no.labelled,0.8367,3,pump-plain
+P00024,subtotal,WRONG_VALUE,635.59,692.79,subtotal.derived,0.4789,2,pump-gst
+P00024,sgst,MISSED,57.20,,,0.0,2,pump-gst
+P00026,gstin,MISSED,27FAKKD9764L1Z7,,,0.0,3,pump-gst
+P00026,subtotal,MISSED,2118.64,,,0.0,3,pump-gst
+P00026,total,MISSED,2500,,,0.0,3,pump-gst
+P00035,subtotal,MISSED,854.70,,,0.0,3,pump-vat
+P00040,vendor,WRONG_VALUE,NILGIRI ENERGY,NILGIRI ENER6Y,vendor.brand,0.7405,2,pump-vat
+P00040,invoice_no,MISSED,8578506117873,,,0.0,2,pump-vat
+P00040,subtotal,MISSED,2564.10,,,0.0,2,pump-vat
+P00040,total,WRONG_VALUE,3000,3000.25,total.derived,0.4245,2,pump-vat
+P00043,total,WRONG_VALUE,1500,23.07,total.positional,0.5243,2,pump-plain
+P00045,invoice_no,MISSED,930745321150190,,,0.0,3,pump-vat
+P00046,date,MISSED,2025-03-05,,,0.0,2,pump-plain
+P00057,vendor,WRONG_VALUE,KAVERI PETRO,SYAMBAZAR FUEL POINT,vendor.fallback,0.7567,1,pump-gst
+P00058,gstin,MISSED,19PDLUF6291J1ZD,,,0.0,3,pump-gst
+P00058,invoice_no,MISSED,94141818228052,,,0.0,3,pump-gst
+P00058,sgst,MISSED,23.09,,,0.0,3,pump-gst
+P00058,total,WRONG_VALUE,302.75,279.66,total.derived,0.4206,3,pump-gst
+P00060,invoice_no,MISSED,5296149486898639,,,0.0,3,pump-gst
+P00063,gstin,MISSED,07RHSTW9586B1ZR,,,0.0,2,pump-plain
+P00064,date,MISSED,2026-06-27,,,0.0,1,pump-plain
+P00065,vendor,WRONG_VALUE,KAVERI PETRO,BARRACKPORE FUEL POINT,vendor.fallback,0.7023,2,pump-plain
+P00065,invoice_no,MISSED,213993250753155,,,0.0,2,pump-plain
+P00065,total,WRONG_VALUE,2805.31,2805,total.amount_label,0.6131,2,pump-plain
+P00066,invoice_no,MISSED,31580621991883705,,,0.0,3,pump-gst
+P00066,subtotal,MISSED,1694.92,,,0.0,3,pump-gst
+P00066,cgst,MISSED,152.54,,,0.0,3,pump-gst
+P00066,sgst,WRONG_VALUE,152.54,9,sgst.labelled,0.8014,3,pump-gst
+P00069,vendor,WRONG_VALUE,KAVERI PETRO,KAVERI ETRO,vendor.brand,0.7251,3,pump-gst
+P00069,gstin,WRONG_VALUE,07JBMHC7665L1ZD,07JBMHC7665L1ZO,gstin.strict,0.3416,3,pump-gst
+P00069,invoice_no,WRONG_VALUE,5039444348760882,503944438760882,invoice_no.labelled,0.8257,3,pump-gst
+P00069,subtotal,WRONG_VALUE,3361.41,3663.94,subtotal.derived,0.4788,3,pump-gst
+P00069,cgst,MISSED,302.53,,,0.0,3,pump-gst
+P00083,invoice_no,MISSED,9399256857009064,,,0.0,2,pump-gst
+P00083,cgst,MISSED,38.14,,,0.0,2,pump-gst
+P00083,sgst,WRONG_VALUE,38.13,8.13,sgst.labelled,0.6608,2,pump-gst
+P00086,invoice_no,MISSED,68630785662554,,,0.0,3,pump-plain
+P00086,total,WRONG_VALUE,200,1043.90,total.derived,0.4552,3,pump-plain
+P00093,gstin,MISSED,27CDHWS0337U1ZB,,,0.0,3,pump-gst
+P00093,subtotal,MISSED,700.92,,,0.0,3,pump-gst
+P00093,sgst,MISSED,63.08,,,0.0,3,pump-gst
+P00093,total,WRONG_VALUE,827.08,6861724658.56,total.positional,0.5605,3,pump-gst
+P00098,vendor,WRONG_VALUE,GANGA PETROCHEM,GANGA PETROCHM,vendor.fallback,0.639,3,pump-gst
+P00098,invoice_no,WRONG_VALUE,363202566580,36320Z566580,invoice_no.labelled,0.8193,3,pump-gst

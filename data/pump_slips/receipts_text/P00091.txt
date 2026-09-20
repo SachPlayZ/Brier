@@ -1,0 +1,34 @@
+Seer
+Shell
+Welcome
+RAJDHANI SERVICE CENTRE
+PLOT 12, SECTOR 5
+CHENNAI 600096
+Tel. No.: 9894968250
+
+Invoice No: 1075792483157
+FCC ID: 06726035853489786
+FIP No. : 01
+Nozzle No. : 06
+Product : XP95
+Density : 812.6Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 86.23
+Volume(L) : 00023.19
+Amount(₹) : 02000.00
+--------------------------
+Vech: 75213858171.97
+Vtrd: 9392587119.266
+
+Vehicle No: 3656
+Mobile No : 9056208960
+
+Date : 13.09.25
+Time : 20:34
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

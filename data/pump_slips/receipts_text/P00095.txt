@@ -1,0 +1,39 @@
+ee
+BHARAT PETROLEUM
+Happy Motoring
+ANNAPURNA FUEL CENTRE
+42/1, BARRACKPORE TRUNK RD
+AHMEDABAD 380009
+Tel. No.: 9855530838
+
+Inv.No: 550413426012272
+FCC ID: 96526787712785464
+FIP No. : 02
+Nozzle No. : 06
+Product : Diesel
+Density : 740.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 95.0
+Volume(L) : 00001.05
+Amount Rs : 00100.00
+--------------------------
+Taxable Val : ₹    85.47
+VAT @17%(Incl) : ₹    14.53
+Pay Mode     : UPI
+UPI Ref: 955830619130
+--------------------------
+
+Vehicle No: 9548
+Mobile No : Not Entered
+
+Date : 02/09/2025
+Time : 06:29
+
+GST No: 24AUSSL5601K1Z7
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

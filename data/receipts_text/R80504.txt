@@ -1,0 +1,22 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN: 29AAECC2233B1Z7
+RETAIL INVOICE
+--------------------------------------------
+Dated: 19-Jan-2025
+Inv No: BILL-2025-75987
+Table: 18   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              1           58.45
+Veg Thali                  2          554.94
+--------------------------------------------
+Total Qty: 3
+Subtotal:                             613.39
+CGST @ 2.5%:                           15.34
+SGST @ 2.5%:                           15.33
+Round Off Adj:                         -0.06
+Total:                               ₹644.00
+--------------------------------------------
+Subject to local jurisdiction

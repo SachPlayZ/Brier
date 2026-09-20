@@ -1,0 +1,18 @@
+INDIAN OIL FUEL STATION
+OMR Perungudi, Chennai 600096
+GSTIN/UIN: 33AAACI0123R1ZQ
+CASH MEMO
+--------------------------------------------
+Date: 12-Jul-2025
+Bill No: RCPT-2024-37866
+--------------------------------------------
+Product                 Litres          Amount
+Diesel                    16        1,481.28
+Petrol                    41        4,213.57
+--------------------------------------------
+Total Before Tax:                   5,694.85
+Round Off Adj:                          0.15
+Bill Total:                         5,695.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

@@ -1,0 +1,21 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN/UIN: 36AAGCD8899T1Z8
+GST INVOICE
+--------------------------------------------
+Invoice No: TI-2025-72902
+Invoice Date: 04-Apr-2025
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             3          357.30
+Printer Ink                1          764.50
+--------------------------------------------
+Total Qty: 4
+Sub Total:                          1,121.80
+IGST @ 18%:                           201.92
+Round Off Adj:                          0.28
+Total:                              1,324.00
+--------------------------------------------
+Goods once sold will not be taken back
+Cash Payment

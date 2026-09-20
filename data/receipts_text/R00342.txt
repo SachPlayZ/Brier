@@ -1,0 +1,21 @@
+PATEL STORES
+31 Adajan, Surat 395007
+GSTIN/UIN: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Bill No: INV-2025-23010
+Bill Date: 24.03.2025
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  3          179.88
+Milk 1L                    2          128.60
+Atta 5kg                   2          659.88
+Toor Dal 1kg               3          333.00
+--------------------------------------------
+Subtotal:                           1,301.36
+CGST @ 2.5%:                           32.54
+SGST @ 2.5%:                           32.53
+Rounding:                              -0.43
+Total:                             ₹1,366.00
+--------------------------------------------
+Goods once sold will not be taken back

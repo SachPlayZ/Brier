@@ -1,0 +1,42 @@
+SHELL
+Welcome
+NATIONAL AUTO SERVICE
+M G ROAD
+LUCKNOW 226001
+Tel. No.: 9866172261
+
+Inv. No: 818302485421226
+FCC ID: 45591291441547256
+FIP No. : 05
+Nozzle No. : 06
+Product : XP95
+Density : 789.4Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 88.75
+Volume(L) : 00006.65
+Amount (₹) : 00590.00
+--------------------------
+Taxable Val  : ₹   500.00
+CGST @9%     : ₹ 45 .00
+SGST @9%     : Bs 45.00
+Total GST    : ₹    90.00
+Pay Mode     : Cash
+UPI Ref: 047233246877
+--------------------------
+Vech: 86811928714.39
+Vtrd: 8495690757.595
+
+Vehicle No: 2774
+Mobile No : 9969281728
+
+Date : 18/10/25
+Time : 10:45
+
+GST No: 09UDGBV6777N1ZM
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

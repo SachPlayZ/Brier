@@ -1,0 +1,26 @@
+Django>=5.1,<5.2
+dj-database-url>=2.2
+# PostgreSQL driver. SQLite is the default and needs nothing; this is only used
+# when DATABASE_URL points at Postgres. See "PostgreSQL" in the README.
+psycopg[binary]>=3.2
+python-dotenv>=1.0
+Pillow>=10.4
+rapidfuzz>=3.9
+scikit-learn>=1.5
+numpy>=1.26
+pandas>=2.2
+ImageHash>=4.3
+pytest>=8.3
+pytest-django>=4.9
+# Real OCR. Needs the Tesseract binary too:
+#   winget install UB-Mannheim.TesseractOCR
+# Without the binary the pipeline falls back to text input automatically.
+pytesseract>=0.3.13
+# PDF receipts: text layer, or pages rendered for OCR (no external binary needed)
+pypdfium2>=4.30
+
+# Notebook analysis (notebooks/ml_analysis.ipynb)
+matplotlib>=3.9
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29

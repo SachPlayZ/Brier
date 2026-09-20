@@ -1,0 +1,22 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GSTIN/UIN: 19AAFCP7890X1ZW
+GST INVOICE
+--------------------------------------------
+Bill No: RCPT-2024-14457
+Date: Jun 14, 2025
+Table: 5   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       2          523.18
+Veg Thali                  2          512.48
+--------------------------------------------
+Subtotal:                           1,035.66
+CGST @ 2.5%:                           25.89
+SGST @ 2.5%:                           25.89
+Round Off Adj:                         -0.44
+Net Payable:                        1,087.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

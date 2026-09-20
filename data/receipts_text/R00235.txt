@@ -1,0 +1,24 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GSTIN/UIN: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Invoice Date: 02.09.2025
+Cash Memo No: BILL-2025-09921
+--------------------------------------------
+Item                     Qty          Amount
+HDMI Cable 2m              4        1,292.20
+USB Hub                    3        1,109.25
+HDMI Cable 2m              4        1,205.56
+USB Hub                    4        2,964.04
+Extension Board            3          937.59
+Extension Board            1          392.16
+--------------------------------------------
+Subtotal:                           7,900.80
+CGST @ 9%:                            711.07
+SGST @ 9%:                            711.07
+Round Off:                              0.06
+Grand Total:                       ₹9,323.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

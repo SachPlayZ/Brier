@@ -1,0 +1,25 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+GSTIN/UIN: 09AABCG5566Z1ZD
+RETAIL INVOICE
+--------------------------------------------
+Invoice No: RCPT-2025-17281
+Date of Supply: 06.01.2025
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  2          111.50
+Sugar 1kg                  2          113.04
+Sunflower Oil 1L           1          182.68
+Sunflower Oil 1L           2          288.18
+Basmati Rice 5kg           4        1,888.76
+Toor Dal 1kg               3          500.58
+--------------------------------------------
+Total Qty: 14
+Subtotal:                           3,084.74
+CGST @ 2.5%:                           77.12
+SGST @ 2.5%:                           77.12
+Rounding:                               0.02
+Total Amount:                       3,239.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

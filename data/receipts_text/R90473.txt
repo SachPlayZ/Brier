@@ -1,0 +1,24 @@
+PARK STREET
+40 Park Street, Kolkata 700017
+GST No.: 19AAFCP7890X1ZW
+TAX INVOICE
+--------------------------------------------
+Date of Supply: 24-May-2025
+Inv No: RCPT-2024-34166
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                2          319.28
+Biryani                    3          847.20
+Filter Coffee              3          155.91
+Butter Naan                4          271.32
+Masala Dosa                1          156.38
+Veg Thali                  2          518.40
+--------------------------------------------
+Total Qty: 15
+Sub Total:                          2,268.49
+CGST @ 2.5%:                           56.71
+SGST @ 2.5%:                           56.71
+Rounding:                              -0.91
+Total:                              2,381.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

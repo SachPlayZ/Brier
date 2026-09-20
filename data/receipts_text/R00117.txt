@@ -1,0 +1,23 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST No.: 19AAFCP7890X1ZW
+GST INVOICE
+--------------------------------------------
+Bill No: BILL-2025-76375
+Bill Date: 01/09/2025
+Table: 8   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                4          177.60
+Butter Naan                4          186.96
+Biryani                    3          557.88
+--------------------------------------------
+Sub Total:                            922.44
+CGST @ 2.5%:                           23.06
+SGST @ 2.5%:                           23.06
+Round Off:                              0.44
+Total Amount:                        ₹969.00
+--------------------------------------------
+Goods once sold will not be taken back
+Cash Payment

@@ -1,0 +1,20 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST Reg No: 29AAECC2233B1Z7
+RETAIL INVOICE
+--------------------------------------------
+Invoice No: BILL-2024-40903-1
+Date: Jan 20, 2025
+Table: 2   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    4        1,301.56
+--------------------------------------------
+Subtotal:                           1,301.56
+CGST @ 2.5%:                           32.54
+SGST @ 2.5%:                           32.53
+Net Payable:                       ₹1,366.63
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

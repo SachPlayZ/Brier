@@ -1,0 +1,24 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GST No.: 24AAHCP6677V1Z8
+CASH MEMO
+--------------------------------------------
+Cash Memo No: INV-2025-39044
+Dated: 12-Apr-2025
+--------------------------------------------
+Item                     Qty          Amount
+Milk 1L                    3          206.22
+Toor Dal 1kg               1          163.97
+Basmati Rice 5kg           3        1,623.48
+Milk 1L                    4          219.00
+--------------------------------------------
+Total Qty: 11
+Total Before Tax:                   2,212.67
+CGST @ 2.5%:                           55.32
+SGST @ 2.5%:                           55.31
+Round Off:                             -0.30
+Amount Payable:                     2,323.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Card Payment

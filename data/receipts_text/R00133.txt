@@ -1,0 +1,20 @@
+Mumbai Print Solutions LLP
+21 Lower Parel, Mumbai 400013
+Ph: 9820077331
+GSTIN/UIN: 27AAFCM4455C1ZM
+RETAIL INVOICE
+--------------------------------------------
+Receipt No: INV-2024-04563
+Dated: 21-05-2025
+--------------------------------------------
+Item                     Qty          Amount
+Business Cards 500         2        1,029.60
+Brochure Print 100         1        2,833.47
+--------------------------------------------
+Total Qty: 3
+Subtotal:                           3,863.07
+IGST @ 18%:                           695.35
+Round Off:                             -0.42
+Total:                              4,558.00
+--------------------------------------------
+*** CUSTOMER COPY ***

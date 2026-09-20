@@ -1,0 +1,24 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GSTIN/UIN: 07AAFCK3321L1ZK
+GST INVOICE
+--------------------------------------------
+Invoice Number: TI-2024-31046
+Dated: 10-Jan-2025
+--------------------------------------------
+Item                     Qty          Amount
+Paracetamol Strip          4           73.32
+Paracetamol Strip          3           66.57
+Antiseptic Liquid          3          517.95
+Antiseptic Liquid          2          248.78
+Vitamin D3                 3          637.41
+--------------------------------------------
+Total Qty: 15
+Taxable Amount:                     1,544.03
+CGST @ 6%:                             92.64
+SGST @ 6%:                             92.64
+Rounding:                              -0.31
+Grand Total:                       ₹1,729.00
+--------------------------------------------
+Thank you for your business

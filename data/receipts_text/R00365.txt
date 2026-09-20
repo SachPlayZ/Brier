@@ -1,0 +1,17 @@
+SHELL SELECT FUEL POINT
+Whitefield Main Rd, Bengaluru 560066
+Ph: 9845077889
+GSTIN/UIN: 29AAACS9911A1ZI
+CASH MEMO
+--------------------------------------------
+Invoice Date: 04-Apr-2025
+Bill No: INV-2024-43505
+--------------------------------------------
+Product                 Litres          Amount
+CNG                       11          832.04
+--------------------------------------------
+Sub Total:                            832.04
+Rounding:                              -0.04
+Amount Payable:                      ₹832.00
+--------------------------------------------
+Thank you for your business

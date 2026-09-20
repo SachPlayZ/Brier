@@ -1,0 +1,22 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+GSTIN: 07AAFCK3321L1ZK
+TAX INVOICE
+--------------------------------------------
+Bill No: RCPT-2024-59481
+Date: 29-01-2025
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 3          732.30
+Vitamin D3                 1          237.02
+Antiseptic Liquid          4          700.24
+--------------------------------------------
+Total Qty: 8
+Taxable Amount:                     1,669.56
+CGST @ 6%:                            100.18
+SGST @ 6%:                            100.17
+Round Off Adj:                          0.09
+Bill Total:                        ₹1,870.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

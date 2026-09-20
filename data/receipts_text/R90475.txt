@@ -1,0 +1,20 @@
+GANGA DEPARTMENTAL
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GSTIN: 09AABCG5566Z1ZD
+CASH MEMO
+--------------------------------------------
+Bill No: TI-2025-73353
+Date of Supply: 12.02.2025
+--------------------------------------------
+Item                     Qty          Amount
+Atta 5kg                   3          730.05
+Basmati Rice 5kg           1          533.34
+--------------------------------------------
+Total Before Tax:                   1,263.39
+IGST @ 5%:                             63.17
+Rounding:                              -1.56
+Amount Payable:                     1,325.00
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

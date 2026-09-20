@@ -1,0 +1,30 @@
+{% extends "expenses/base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<div class="auth-brand">
+  <span class="brand-mark"><i class="ph ph-receipt"></i></span>
+  <span class="brand-name">Brier</span>
+</div>
+<div class="panel"><div class="panel-body p-4">
+  <h1 class="page-title fs-5 mb-1">Log in</h1>
+  <p class="page-sub mb-4">Use your employee or reviewer account.</p>
+  {% if form.errors %}<div class="alert alert-danger py-2" role="alert">Wrong username or password.</div>{% endif %}
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label" for="id_username">Username</label>
+      <input id="id_username" name="username" autocomplete="username" class="form-control" autofocus>
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="id_password">Password</label>
+      <input id="id_password" name="password" type="password" autocomplete="current-password" class="form-control">
+    </div>
+    <button class="btn btn-primary w-100" data-loading-label="Logging in">Log in</button>
+  </form>
+  <p class="meta text-center mt-3 mb-0">New here? <a href="{% url 'signup' %}">Sign up</a></p>
+  <hr class="my-4">
+  <p class="meta mb-0">
+    Demo logins come from <code>manage.py seed_users</code>: <code>finance</code> is the reviewer, <code>e001</code> an employee.
+  </p>
+</div></div>
+{% endblock %}

@@ -1,0 +1,42 @@
+Sees
+GANGA PETROCHEM
+Welcome
+NEW BHARAT AUTO FUELS
+17, STATION ROAD
+MUMBAI 400051
+Tel. No.: 9845474876
+
+Inv No.: 363202566580
+FIP No. : 04
+Nozzle No. : 01
+Product : Power
+Density : 806.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 103.24
+Volume(L) : 00019.37
+Amount(Rs) : 02000.00
+--------------------------
+Taxable Val  : B ES 1694.92
+CGST @9%     : ₹   152.54
+SGST @9%     : ₹   152.54
+Total GST    : ₹ 305 .08
+Pay Mode     : Card
+UPI Ref: 658185696758
+--------------------------
+Vech: 30060902846.45
+Vtrd: 9760083998.853
+
+Vehicle No: 8118
+Mobile No : 9754707935
+
+Date : 15-01-2026
+Time : 22:03
+
+GST No: 27KBNMG4885M1ZS
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

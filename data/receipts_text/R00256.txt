@@ -1,0 +1,21 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GSTIN/UIN: 33AAACA6677D1ZW
+RETAIL INVOICE
+--------------------------------------------
+Invoice Date: 30-01-2025
+Bill No: INV-2024-99467
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 3          549.63
+Antiseptic Liquid          2          206.96
+--------------------------------------------
+Sub Total:                            756.59
+CGST @ 6%:                             45.40
+SGST @ 6%:                             45.39
+Round Off Adj:                         -0.38
+Total Amount:                        ₹847.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+UPI Payment

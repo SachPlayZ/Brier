@@ -1,0 +1,21 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GST Reg No: 07AAFCK3321L1ZK
+CASH MEMO
+--------------------------------------------
+Invoice Number: INV-2025-52372
+Dated: 2025-03-07
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 3          746.19
+Antiseptic Liquid          2          232.78
+Vitamin D3                 3          416.10
+--------------------------------------------
+Total Before Tax:                   1,395.07
+CGST @ 6%:                             83.71
+SGST @ 6%:                             83.70
+Round Off:                             -0.48
+Grand Total:                       ₹1,562.00
+--------------------------------------------
+Subject to local jurisdiction

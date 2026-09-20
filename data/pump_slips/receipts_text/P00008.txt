@@ -1,0 +1,34 @@
+Seer
+IndianOil
+Happy Motoring
+NATIONAL AUTO SERVICE
+17, STATION ROAD
+CHENNAI 600096
+Tel. No.: 9810539375
+
+Inv No.: 2031160907523
+FCC ID: 28084818674914235
+FIP No. : 08
+Nozzle No. : 07
+Product : Petrol
+Density : 802.8Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 102.4
+Volume(L) : 00035.77
+Total Amount : 03662.85
+--------------------------
+Vech: 74856664087.09
+Vtrd: 6990102475.833
+
+Vehicle No: 2296
+Mobile No : 9855191027
+
+Date : 17.01.26
+Time : 17:10
+
+GST No: 33BBKNM3243R1ZB
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

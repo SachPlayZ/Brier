@@ -1,0 +1,21 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN: 29AAECC2233B1Z7
+TAX INVOICE
+--------------------------------------------
+Date of Supply: Aug 15, 2025
+Invoice No: TI-2025-62550
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       4          764.56
+Paneer Butter Masala       2          457.48
+Butter Naan                3          213.00
+--------------------------------------------
+Total Qty: 9
+Sub Total:                          1,435.04
+IGST @ 5%:                             71.75
+Rounding:                               0.21
+Total Amount:                      ₹1,507.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GSTIN: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Invoice Date: 18-Jul-2025
+Receipt No: TI-2024-99853
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  4          228.88
+Toor Dal 1kg               3          427.38
+Sunflower Oil 1L           2          308.82
+Sugar 1kg                  2           91.22
+--------------------------------------------
+Total Qty: 11
+Taxable Amount:                     1,056.30
+CGST @ 2.5%:                           26.41
+SGST @ 2.5%:                           26.41
+Round Off Adj:                         -0.12
+Net Payable:                       ₹1,109.00
+--------------------------------------------
+Thank you for your business

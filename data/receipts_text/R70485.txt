@@ -1,0 +1,22 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GSTIN/UIN: 29AABCA1234M1ZQ
+TAX INVOICE
+--------------------------------------------
+Bill Date: 22/06/2025
+Invoice No: TI-2025-68280-2
+Table: 3   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  1          290.67
+Veg Thali                  1          317.40
+Veg Thali                  3          929.82
+--------------------------------------------
+Total Qty: 5
+Sub Total:                          1,537.89
+CGST @ 2.5%:                           38.45
+SGST @ 2.5%:                           38.44
+Net Payable:                        1,614.78
+--------------------------------------------
+Subject to local jurisdiction

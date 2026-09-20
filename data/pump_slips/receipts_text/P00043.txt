@@ -1,0 +1,33 @@
+IndianOil
+Happy Motoring
+RAJDHANI SERVICE CENTRE
+M G ROAD
+KOLKATA 700040
+Tel. No.: 9866685666
+
+Inv.No: 85045167361178
+FCC ID: 97185867169475811
+FIP No. : 07
+Nozzle No. : 06
+Product : Petrol
+Density : 745.5Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 99.32
+Volume(L) : 00015.10
+Amount (₹) 01500.00
+--------------------------
+Vech: 14420009606.22
+Vtrd: 1300429958.886
+
+Vehicle No: 9471
+Mobile No : Not Entered
+
+Date : 23.07.25
+Time : 10:40
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

@@ -1,0 +1,34 @@
+ee
+NAYARA ENERGY
+Welcome
+KUMAR SERVICE STATION
+NH-48 NEAR TOLL PLAZA
+CHENNAI 600096
+Tel. No.: 9853146426
+
+Inv No.: 5735243333361
+FCC ID: 97266929581162299
+FIP No. : 02
+Nozzle No. : 06
+Product : Diesel
+Density : 839.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 107.27
+Volume(L) : 00000.93
+Amount (Rs.) : 00100.00
+--------------------------
+Vech: 25215096933.10
+Vtrd: 6779358762.854
+
+Vehicle No: 6151
+Mobile No : Not Entered
+
+Date : 13/03/2026
+Time : 21:43
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

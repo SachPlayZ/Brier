@@ -1,0 +1,24 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GSTIN/UIN: 29AABCA1234M1ZQ
+TAX INVOICE
+--------------------------------------------
+Bill Date: 09-Jul-2025
+Cash Memo No: BILL-2025-74223
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              4          259.48
+Masala Dosa                3          422.67
+Paneer Butter Masala       1          336.66
+Butter Naan                4          233.12
+Veg Thali                  1          281.46
+--------------------------------------------
+Total Before Tax:                   1,533.39
+CGST @ 2.5%:                           38.34
+SGST @ 2.5%:                           38.33
+Round Off:                             -0.06
+Total:                             ₹1,610.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

@@ -1,0 +1,43 @@
+Seer
+IndianOil
+Welcome
+START NELL
+42/1, BARRACKPORE TRUNK RD
+NEW DELHI 110019
+Tel. No.: 9807609171
+
+Inv. No: 474133757577
+FCC ID: 24244534568328325
+FIP No. : 07
+Nozzle No. : 06
+Product : Petrol
+Density : 733.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 93.26
+Volume(L) : 00002.14
+Amount(Rs) : 00200.00
+--------------------------
+Taxable Val  : ₹   169.48
+CGST @9%     : 2 15.26
+SGST @9%     : ® 15.26
+Total GST    : ₹    30.52
+Pay Mode     : Card
+UPI Ref: 949527879255
+--------------------------
+Vech: 80077888766.85
+Vtrd: 5560177060.544
+
+Vehicle No: 1187
+Mobile No : 9652234947
+
+Date : 12.07.26
+Time : 10:48
+
+GST No: 07CSVWP4534A1Z5
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

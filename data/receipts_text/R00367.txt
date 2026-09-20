@@ -1,0 +1,22 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+GSTIN: 09AABCG5566Z1ZD
+RETAIL INVOICE
+--------------------------------------------
+Invoice No: BILL-2024-64785
+Dated: 09.05.2025
+--------------------------------------------
+Item                     Qty          Amount
+Sunflower Oil 1L           3          482.61
+Basmati Rice 5kg           4        1,832.48
+Basmati Rice 5kg           2        1,305.32
+Sunflower Oil 1L           3          368.91
+--------------------------------------------
+Total Before Tax:                   3,989.32
+CGST @ 2.5%:                           99.74
+SGST @ 2.5%:                           99.73
+Rounding:                               0.21
+Grand Total:                       ₹4,189.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

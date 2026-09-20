@@ -1,0 +1,18 @@
+BHARAT PETROLEUM OUTLET
+NH-8 Bandra East, Mumbai 400051
+GSTIN: 27AAACB1111P1ZW
+CASH MEMO
+--------------------------------------------
+Date: 01.09.2025
+Inv No: RCPT-2024-95686
+--------------------------------------------
+Product                 Litres          Amount
+Diesel                    37        3,361.08
+Petrol                    32        3,315.20
+--------------------------------------------
+Taxable Value:                      6,676.28
+Rounding:                              -0.28
+Net Payable:                        6,676.00
+--------------------------------------------
+Subject to local jurisdiction
+Card Payment

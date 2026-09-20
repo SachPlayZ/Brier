@@ -1,0 +1,22 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN: 36AADCH4567S1ZS
+RETAIL INVOICE
+--------------------------------------------
+Date of Supply: 21.03.2025
+Invoice Number: BILL-2024-21906
+Table: 12   Covers: 3
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                1           65.87
+Paneer Butter Masala       4        1,303.80
+Paneer Butter Masala       2          553.12
+--------------------------------------------
+Subtotal:                           1,922.79
+CGST @ 2.5%:                           48.07
+SGST @ 2.5%:                           48.07
+Round Off Adj:                          0.07
+Amount Payable:                     2,019.00
+--------------------------------------------
+Thank you for your business

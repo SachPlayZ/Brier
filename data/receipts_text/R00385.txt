@@ -1,0 +1,23 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+GSTIN/UIN: 09AABCG5566Z1ZD
+TAX INVOICE
+--------------------------------------------
+Bill Date: May 01, 2025
+Invoice Number: TI-2025-75339
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  2           91.04
+Basmati Rice 5kg           3        1,341.63
+Basmati Rice 5kg           4        2,102.60
+Toor Dal 1kg               2          294.60
+Sugar 1kg                  4          238.64
+--------------------------------------------
+Total Qty: 15
+Taxable Value:                      4,068.51
+CGST @ 2.5%:                          101.72
+SGST @ 2.5%:                          101.71
+Round Off:                              0.06
+Total Amount:                      ₹4,272.00
+--------------------------------------------
+Thank you for your business

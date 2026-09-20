@@ -1,0 +1,41 @@
+IndianOil
+SHREE GANESH FUELS
+24, RING ROAD
+AHMEDABAD 380009
+Tel. No.: 9893291622
+
+Inv. No: 385482663539963
+FCC ID: 40270622481147561
+FIP No. : 04
+Nozzle No. : 06
+Product : Power
+Density : 840.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 95.0
+Volume(L) : 00003.16
+Amount Rs : 00300.00
+--------------------------
+Taxable Val  : ₹   254.24
+CGST @9%     : ₹    22.88
+SGST @9%     : B ES 22.88
+Total GST    : ₹    45.76
+Pay Mode     : UPI
+UPI Ref: 666661298387
+--------------------------
+Vech: 12261786067.48
+Vtrd: 9505540248.438
+
+Vehicle No: 7314
+Mobile No : 9423760261
+
+Date : 28-08-2025
+Time : 18:34
+
+GST No: 24TJANS4394H1ZM
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

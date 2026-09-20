@@ -1,0 +1,21 @@
+RELIANCE FRESH SUPERMARKET
+Shop 4 Kurla West, Mumbai 400070
+GSTIN/UIN: 27AAACR5055K1Z7
+GST INVOICE
+--------------------------------------------
+Bill No: INV-2024-50221
+Date: 22-Feb-2025
+--------------------------------------------
+Item                     Qty          Amount
+Milk 1L                    2          134.34
+Basmati Rice 5kg           4        2,380.20
+Sugar 1kg                  1           44.95
+Sugar 1kg                  1           53.92
+Basmati Rice 5kg           2        1,127.54
+--------------------------------------------
+Total Before Tax:                   3,740.95
+CGST @ 2.5%:                           93.53
+SGST @ 2.5%:                           93.52
+Total Amount:                      ₹3,928.00
+--------------------------------------------
+Thank you for your business

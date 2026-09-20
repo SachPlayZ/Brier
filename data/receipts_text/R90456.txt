@@ -1,0 +1,26 @@
+Deccan Offiec Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN: 36AAGCD8899T1Z8
+TAX INVOICE
+--------------------------------------------
+Date: 01/06/2025
+Inv No: TI-2025-27219
+--------------------------------------------
+Item                     Qty          Amount
+Stapler                    3          711.60
+File Folder                2          142.28
+Notebook 200pg             3          171.63
+Stapler                    1          235.13
+Printer Ink                3        1,525.50
+File Folder                2           75.16
+--------------------------------------------
+Total Qty: 14
+Taxable Amount:                     2,861.30
+CGST @ 9%:                            257.52
+SGST @ 9%:                            257.51
+Rounding:                              -0.33
+Grand Total:                        3,376.00
+--------------------------------------------
+Thank you for your business
+Cash Payment

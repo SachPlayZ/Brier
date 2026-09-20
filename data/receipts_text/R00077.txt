@@ -1,0 +1,21 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST No.: 19AACCB3456W1ZT
+CASH MEMO
+--------------------------------------------
+Bill Date: 14-Jun-2025
+Bill No: RCPT-2024-38829
+--------------------------------------------
+Item                     Qty          Amount
+A4 Paper Ream              1          307.31
+Stapler                    3          500.22
+Marker Pen                 2          101.30
+--------------------------------------------
+Total Qty: 6
+Taxable Value:                        908.83
+IGST @ 18%:                           163.59
+Round Off:                             -0.42
+Net Payable:                        1,072.00
+--------------------------------------------
+*** CUSTOMER COPY ***

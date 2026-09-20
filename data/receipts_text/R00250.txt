@@ -1,0 +1,23 @@
+PATEL STORES
+31 Adajan, Surat 395007
+GST Reg No: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Cash Memo No: TI-2024-25025
+Date: 06-03-2025
+--------------------------------------------
+Item                     Qty          Amount
+Toor Dal 1kg               2          355.36
+Toor Dal 1kg               2          347.06
+Sunflower Oil 1L           1          164.94
+Atta 5kg                   1          237.42
+--------------------------------------------
+Total Qty: 6
+Subtotal:                           1,104.78
+CGST @ 2.5%:                           27.62
+SGST @ 2.5%:                           27.62
+Round Off Adj:                         -0.02
+Total Amount:                       1,160.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

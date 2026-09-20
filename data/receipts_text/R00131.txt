@@ -1,0 +1,21 @@
+Hotel Sunrise Residency
+9 Connaught Place, New Delhi 110001
+GSTIN: 07AACCH9012Q1Z8
+TAX INVOICE
+--------------------------------------------
+Invoice No: TI-2025-94442
+Invoice Date: May 18, 2025
+--------------------------------------------
+Item                     Qty          Amount
+Deluxe Room Night          3       18,894.90
+Deluxe Room Night          3       10,449.69
+--------------------------------------------
+Total Qty: 6
+Sub Total:                         29,344.59
+CGST @ 6%:                          1,760.68
+SGST @ 6%:                          1,760.67
+Rounding:                               0.06
+Net Payable:                       32,866.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

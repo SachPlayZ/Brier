@@ -1,0 +1,39 @@
+BHARAT PETROLEUM
+START NELL
+178, N S C BOSE ROAD
+NEW DELHI 110019
+Tel. No.: 9823708366
+
+Invoice No: 930745321150190
+FCC ID: 73432536727382693
+FIP No. : 04
+Nozzle No. : 05
+Product : XP95
+Density : 834.9Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 105.46
+Volume(L) : 00006.07
+Sale Amt : 00640.14
+--------------------------
+Taxable Val : ₹   547.13
+VAT @17%(Incl) : ₹    93.01
+Pay Mode     : Card
+UPI Ref: 343047157078
+--------------------------
+Vech: 05391536004.83
+Vtrd: 7548667269.881
+
+Vehicle No: 4718
+Mobile No : Not Entered
+
+Date : 04/02/26
+Time : 09:03
+
+GST No: 07KETCS3926R1ZT
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

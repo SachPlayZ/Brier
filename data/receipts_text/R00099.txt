@@ -1,0 +1,22 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GST No.: 36AADCH4567S1ZS
+TAX INVOICE
+--------------------------------------------
+Invoice Date: 2025-06-08
+Inv No: BILL-2025-80581
+Table: 3   Covers: 8
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  3          468.75
+Biryani                    1          352.39
+--------------------------------------------
+Taxable Amount:                       821.14
+CGST @ 2.5%:                           20.53
+SGST @ 2.5%:                           20.53
+Rounding:                              -0.20
+Total:                               ₹862.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

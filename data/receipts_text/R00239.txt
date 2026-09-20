@@ -1,0 +1,24 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN/UIN: 36AAGCD8899T1Z8
+GST INVOICE
+--------------------------------------------
+Cash Memo No: INV-2025-67485
+Bill Date: 17-Apr-2025
+--------------------------------------------
+Item                     Qty          Amount
+Printer Ink                2        1,354.84
+Printer Ink                3        3,320.13
+Stapler                    3          488.55
+File Folder                4          178.12
+--------------------------------------------
+Total Qty: 12
+Subtotal:                           5,341.64
+CGST @ 9%:                            480.75
+SGST @ 9%:                            480.75
+Rounding:                              -0.14
+Grand Total:                        6,303.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

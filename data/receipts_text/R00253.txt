@@ -1,0 +1,24 @@
+KUMAR MEDICALS
+44 Kalkaji Main Rd, New Delhi 110019
+Ph: 9811099887
+GST No.: 07AAFCK3321L1ZK
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2024-69235
+Invoice Date: 22-Apr-2025
+--------------------------------------------
+Item                     Qty          Amount
+Digital Thermometer        2          716.22
+Paracetamol Strip          4           79.24
+Digital Thermometer        1          330.59
+Digital Thermometer        2          836.86
+Vitamin D3                 2          530.98
+Vitamin D3                 1          293.07
+--------------------------------------------
+Taxable Amount:                     2,786.96
+CGST @ 6%:                            167.22
+SGST @ 6%:                            167.22
+Rounding:                              -0.40
+Total Amount:                      ₹3,121.00
+--------------------------------------------
+Goods once sold will not be taken back

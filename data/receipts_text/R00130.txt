@@ -1,0 +1,21 @@
+Lucknow Travels Agencies
+3 Hazratganj, Lucknow 226001
+GSTIN: 09AAGCL1122Y1ZT
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2025-98267
+Bill Date: 05-Jun-2025
+--------------------------------------------
+Item                     Qty          Amount
+City Taxi                  1          447.18
+Outstation Cab             3        5,662.17
+City Taxi                  4        1,602.44
+Airport Transfer           1        1,448.44
+--------------------------------------------
+Taxable Amount:                     9,160.23
+CGST @ 2.5%:                          229.01
+SGST @ 2.5%:                          229.00
+Rounding:                              -0.24
+Bill Total:                        ₹9,618.00
+--------------------------------------------
+*** CUSTOMER COPY ***

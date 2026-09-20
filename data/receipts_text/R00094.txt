@@ -1,0 +1,22 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+GST No.: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Date of Supply: 24-08-2025
+Bill No: RCPT-2025-05611
+Table: 11   Covers: 7
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                1           41.57
+Biryani                    3          761.58
+Veg Thali                  4          734.32
+--------------------------------------------
+Taxable Value:                      1,537.47
+CGST @ 2.5%:                           38.44
+SGST @ 2.5%:                           38.43
+Rounding:                              -0.34
+Grand Total:                       ₹1,614.00
+--------------------------------------------
+Goods once sold will not be taken back
+Cash Payment

@@ -1,0 +1,20 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST No.: 29AAECC2233B1Z7
+GST INVOICE
+--------------------------------------------
+Invoice No: BILL-2024-40903-2
+Bill Date: 20/01/2025
+Table: 8   Covers: 2
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                3          147.60
+Filter Coffee              3          147.87
+--------------------------------------------
+Subtotal:                             295.47
+CGST @ 2.5%:                            7.39
+SGST @ 2.5%:                            7.39
+Net Payable:                         ₹310.25
+--------------------------------------------
+Goods once sold will not be taken back

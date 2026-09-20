@@ -1,0 +1,42 @@
+KAVERI PETRO
+Welcome
+SHYAMBAZAR FUEL POINT
+PLOT 12, SECTOR 5
+AHMEDABAD 380009
+Tel. No.: 9855710594
+
+Inv. No: 93668885771920836
+FCC ID: 63499389920083922
+FIP No. : 02
+Nozzle No. : 02
+Product : Diesel
+Density : 746.1Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 100.41
+Volume(L) : 00014.94
+Amount (INR) 01500.00
+--------------------------
+Taxable Val  : ₹  1271.18
+CGST @9%     : ₹   114.41
+SGST @9%     : ₹   114.41
+Total GST    : 2 228.82
+Pay Mode     : UPI
+UPI Ref: 728037450643
+--------------------------
+Vech: 58327681976.70
+Vtrd: 5187563500.255
+
+Vehicle No: 4919
+Mobile No : 9970276033
+
+Date : 13/01/2026
+Time : 21:32
+
+GST No: 24SPSRA1753D1ZM
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

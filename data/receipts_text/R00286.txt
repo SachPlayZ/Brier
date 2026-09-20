@@ -1,0 +1,21 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GST No.: 29AABCA1234M1ZQ
+TAX INVOICE
+--------------------------------------------
+Inv No: BILL-2025-51397
+Dated: 13-05-2025
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          428.01
+Paneer Butter Masala       4        1,029.64
+--------------------------------------------
+Taxable Amount:                     1,457.65
+CGST @ 2.5%:                           36.44
+SGST @ 2.5%:                           36.44
+Round Off Adj:                          0.47
+Amount Payable:                    ₹1,531.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

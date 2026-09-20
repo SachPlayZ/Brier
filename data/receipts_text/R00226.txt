@@ -1,0 +1,22 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+GSTIN: 29AAECC2233B1Z7
+CASH MEMO
+--------------------------------------------
+Inv No: RCPT-2025-18131
+Date: 20-02-2025
+Table: 21   Covers: 7
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       2          546.28
+Biryani                    2          417.16
+Veg Thali                  2          427.62
+Veg Thali                  3          638.31
+--------------------------------------------
+Sub Total:                          2,029.37
+CGST @ 2.5%:                           50.74
+SGST @ 2.5%:                           50.73
+Round Off:                              0.16
+Total Amount:                      ₹2,131.00
+--------------------------------------------
+Goods once sold will not be taken back

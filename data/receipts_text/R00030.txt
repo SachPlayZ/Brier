@@ -1,0 +1,24 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GST No.: 29AAECC2233B1Z7
+RETAIL INVOICE
+--------------------------------------------
+Cash Memo No: RCPT-2024-69264
+Date of Supply: 17/06/2025
+Table: 19   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Paneer Butter Masala       2          484.38
+Veg Thali                  1          236.60
+Paneer Butter Masala       2          482.64
+Filter Coffee              2          116.02
+--------------------------------------------
+Total Qty: 7
+Subtotal:                           1,319.64
+CGST @ 2.5%:                           32.99
+SGST @ 2.5%:                           32.99
+Round Off:                              0.38
+Total Amount:                      ₹1,386.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST Reg No: 24AABCG2244U1ZA
+GST INVOICE
+--------------------------------------------
+Invoice Number: TI-2024-06701
+Date: 26/06/2025
+--------------------------------------------
+Item                     Qty          Amount
+USB Hub                    2        1,768.56
+Keyboard                   1          825.10
+USB Hub                    1          547.27
+--------------------------------------------
+Sub Total:                          3,140.93
+CGST @ 9%:                            282.69
+SGST @ 9%:                            282.68
+Rounding:                              -0.30
+Amount Payable:                    ₹3,706.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

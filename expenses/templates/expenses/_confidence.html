@@ -1,0 +1,11 @@
+{% comment %}Reusable confidence bar plus its provenance.{% endcomment %}
+{% if field.band == "absent" %}
+  <small class="dim fst-italic">not present on receipt</small>
+{% else %}
+  <div class="conf-bar conf-{{ field.band }}" title="confidence {{ field.confidence_pct }}%">
+    <span style="width: {{ field.confidence_pct }}%"></span>
+  </div>
+  <small class="meta">{{ field.confidence_pct }}%{% if field.pattern_id %} <code>{{ field.pattern_id }}</code>{% endif %}
+    {% for w in field.warnings %}<span class="badge bg-warning">{{ w }}</span>{% endfor %}
+  </small>
+{% endif %}

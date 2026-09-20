@@ -1,0 +1,41 @@
+ee
+Indian Oil
+Happy Motoring
+NATIONAL AUTO SERVICE
+PLOT 12, SECTOR 5
+NEW DELHI 110019
+Tel. No.: 9810936381
+
+Bill No.: 2650514655807
+FCC ID: 85324791693046148
+FIP No. : 05
+Nozzle No. : 03
+Product : Speed
+Density : 805.7Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 95.6
+Volume(L) : 00002.09
+Total Rs. : 00200.00
+--------------------------
+Taxable Val  : ₹   169.49
+CGST @9%     : Z 15.26
+SGST @9%     : ₹    15.25
+Total GST    : ₹    30.51
+Pay Mode     : Cash
+UPI Ref: 846986686691
+--------------------------
+
+Vehicle No: 3631
+Mobile No : Not Entered
+
+Date : 04-11-2025
+Time : 17:50
+
+GST No: 07DCDPS0562R1ZZ
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

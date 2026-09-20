@@ -1,0 +1,31 @@
+SHELL
+START NELL
+M G ROAD
+MUMBAI 400051
+Tel. No.: 9877525568
+
+Invoice No: 448538317951
+FIP No. : 04
+Nozzle No. : 07
+Product : Power
+Density : 733.2Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 104.62
+Volume(L) : 00005.64
+Amount (INR) : 00590.00
+--------------------------
+Vech: 32016872879.37
+Vtrd: 5302477075.445
+
+Vehicle No: 4317
+Mobile No : Not Entered
+
+Date : 06/05/2026
+Time : 16:24
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

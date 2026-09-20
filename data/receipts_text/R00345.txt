@@ -1,0 +1,24 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GST No.: 24AABCG2244U1ZA
+RETAIL INVOICE
+--------------------------------------------
+Invoice No: INV-2024-69647
+Invoice Date: 2025-08-17
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        2,140.04
+Keyboard                   2        2,869.70
+USB Hub                    1          459.47
+Extension Board            4        1,642.40
+Extension Board            3          926.19
+Extension Board            2        1,051.38
+--------------------------------------------
+Taxable Amount:                     9,089.18
+CGST @ 9%:                            818.03
+SGST @ 9%:                            818.02
+Rounding:                              -0.23
+Net Payable:                      ₹10,725.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

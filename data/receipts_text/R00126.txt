@@ -1,0 +1,22 @@
+Mumbai Print Solutions LLP
+21 Lower Parel, Mumbai 400013
+GSTIN: 27AAFCM4455C1ZM
+CASH MEMO
+--------------------------------------------
+Bill Date: 2025-06-17
+Inv No: RCPT-2024-95487
+--------------------------------------------
+Item                     Qty          Amount
+Brochure Print 100         4        7,174.40
+Poster A2                  4        1,151.28
+Poster A2                  2          815.48
+Brochure Print 100         2        5,149.90
+Brochure Print 100         1        2,704.60
+--------------------------------------------
+Taxable Value:                     16,995.66
+IGST @ 18%:                         3,059.22
+Round Off Adj:                          0.12
+Grand Total:                       20,055.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

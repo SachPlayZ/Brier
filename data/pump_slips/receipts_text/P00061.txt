@@ -1,0 +1,39 @@
+Shell
+Welcomes You
+NEW BHARAT AUTO FUELS
+NH-48 NEAR TOLL PLAZA
+MUMBAI 400051
+Tel. No.: 9811471081
+
+Invoice No: 617128376556
+FIP No. : 05
+Nozzle No. : 02
+Product : Diesel
+Density : 814.8Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 89.62
+Volume(L) : 00035.52
+Amount(Rs) 03183.30
+--------------------------
+Taxable Val : = 2720 .77
+VAT @17%(Incl) : ₹ 462 .53
+Pay Mode     : UPI
+UPI Ref: 573926242271
+--------------------------
+Vech: 54642254700.68
+Vtrd: 6972159264.458
+
+Vehicle No: 5877
+Mobile No : 9296169248
+
+Date : 05.01.26
+Time : 10:28
+
+GST No: 27NGWFC1027T1ZZ
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

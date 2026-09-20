@@ -1,0 +1,20 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Date of Supply: 13.03.2025
+Invoice No: BILL-2025-25816-2
+--------------------------------------------
+Item                     Qty          Amount
+Keyboard                   2        1,915.18
+USB Hub                    4        2,070.64
+--------------------------------------------
+Total Qty: 6
+Subtotal:                           3,985.82
+CGST @ 9%:                            358.73
+SGST @ 9%:                            358.72
+Total:                              4,703.27
+--------------------------------------------
+Goods once sold will not be taken back

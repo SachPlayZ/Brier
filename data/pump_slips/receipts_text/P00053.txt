@@ -1,0 +1,42 @@
+ee
+HINDUSTAN PETROLEUM
+Happy Motoring
+NATIONAL AUTO SERVICE
+178, N S C BOSE ROAD
+KOLKATA 700040
+Tel. No.: 9855565463
+
+Inv No.: 80114850337736161
+FIP No. : 06
+Nozzle No. : 03
+Product : Petrol
+Density : 832.1Kg/Cu.mtr
+Preset Type: Volume
+Rate(2/L) : 89.2
+Volume(L) : 00013.96
+Amount (₹) : 01245.23
+--------------------------
+Taxable Val  : % 1055 .27
+CGST @9%     : ® 94.98
+SGST @9%     : ₹    94.98
+Total GST    : ₹   189.96
+Pay Mode     : Card
+UPI Ref: 984961483933
+--------------------------
+Vech: 79587503978.50
+Vtrd: 5960525400.623
+
+Vehicle No: 3167
+Mobile No : Not Entered
+
+Date : 06.05.25
+Time : 05:33
+
+GST No: 19GCESC0857K1Z8
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

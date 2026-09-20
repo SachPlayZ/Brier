@@ -1,0 +1,21 @@
+Gujarat
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST No.: 24AABCG2244U1ZA
+TAX INVOICE
+--------------------------------------------
+Cash Memo No: INV-2024-04286
+Dated: 2025-04-28
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        1,081.64
+Keyboard                   4        2,097.80
+HDMI Cable 2m              2          362.04
+--------------------------------------------
+Total Qty: 10
+Taxable Value:                      3,541.48
+IGST @ 18%:                           637.47
+Rounding:                              -1.95
+Net Payable:                        4,177.00
+--------------------------------------------
+Thank you for your business

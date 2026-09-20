@@ -1,0 +1,18 @@
+BHARAT PETROLEUM OUTLET
+NH-8 Bandra East, Mumbai 400051
+Ph: 9820011122
+GSTIN/UIN: 27AAACB1111P1ZW
+GST INVOICE
+--------------------------------------------
+Date: 06/04/2025
+Invoice No: INV-2025-57683
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                    32        3,163.20
+--------------------------------------------
+Taxable Amount:                     3,163.20
+Rounding:                              -0.20
+Net Payable:                        3,163.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

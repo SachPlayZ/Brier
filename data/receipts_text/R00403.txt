@@ -1,0 +1,24 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GSTIN/UIN: 36AAGCD8899T1Z8
+CASH MEMO
+--------------------------------------------
+Receipt No: RCPT-2025-24175
+Date: 25-07-2025
+--------------------------------------------
+Item                     Qty          Amount
+Notebook 200pg             3          238.26
+Notebook 200pg             1           62.16
+Stapler                    3          383.64
+File Folder                4          226.56
+Notebook 200pg             4          484.56
+Printer Ink                3        2,347.32
+--------------------------------------------
+Sub Total:                          3,742.50
+CGST @ 9%:                            336.83
+SGST @ 9%:                            336.82
+Round Off Adj:                         -0.15
+Grand Total:                        4,416.00
+--------------------------------------------
+*** CUSTOMER COPY ***

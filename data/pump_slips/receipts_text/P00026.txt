@@ -1,0 +1,42 @@
+IndianOil
+Welcomes You
+NATIONAL AUTO SERVICE
+M G ROAD
+MUMBAI 400051
+Tel. No.: 9871041561
+
+Inv.No: 3520197075799949
+FCC ID: 52945150080495653
+FIP No. : 02
+Nozzle No. : 03
+Product : XP95
+Density : 774.2Kg/Cu.mtr
+Preset Type: Amount
+Rate(Rs/L) : 90.74
+Volume(L) : 00027.55
+Amount (INR) : 02500.00
+--------------------------
+Taxable Val  : B ES 2118.64
+CGST @9%     : ₹ 190 .68
+SGST @9%     : ₹ 190 .68
+Total GST    : ₹   381.36
+Pay Mode     : Card
+UPI Ref: 884308057286
+--------------------------
+Vech: 17369993134.48
+Vtrd: 6846037481.410
+
+Vehicle No: 6186
+Mobile No : Not Entered
+
+Date : 17.03.25
+Time : 13:35
+
+GST No: 27FAKKD9764L1Z7
+LST No:
+VAT No:
+
+Rate inclusive of GST.
+
+Thank You! Please Visit
+Again..

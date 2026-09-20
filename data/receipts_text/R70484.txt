@@ -1,0 +1,22 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GST No.: 29AABCA1234M1ZQ
+CASH MEMO
+--------------------------------------------
+Cash Memo No: TI-2025-68280-1
+Invoice Date: 22-06-2025
+Table: 1   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                2          194.48
+Butter Naan                1           56.14
+--------------------------------------------
+Total Qty: 3
+Taxable Amount:                       250.62
+CGST @ 2.5%:                            6.27
+SGST @ 2.5%:                            6.27
+Total Amount:                         263.16
+--------------------------------------------
+Thank you for your business
+UPI Payment

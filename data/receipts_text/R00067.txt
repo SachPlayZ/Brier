@@ -1,0 +1,26 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GSTIN: 36AADCH4567S1ZS
+RETAIL INVOICE
+--------------------------------------------
+Bill No: INV-2024-14545
+Date: 2025-03-25
+Table: 4   Covers: 5
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    1          394.40
+Masala Dosa                3          455.52
+Paneer Butter Masala       4        1,033.40
+Paneer Butter Masala       1          253.85
+Masala Dosa                1          129.35
+Masala Dosa                2          217.04
+--------------------------------------------
+Taxable Amount:                     2,483.56
+CGST @ 2.5%:                           62.09
+SGST @ 2.5%:                           62.09
+Rounding:                               0.26
+Total:                             ₹2,608.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

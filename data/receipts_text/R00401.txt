@@ -1,0 +1,25 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GST Reg No: 24AABCG2244U1ZA
+CASH MEMO
+--------------------------------------------
+Invoice Number: INV-2024-28042
+Bill Date: 02/02/2025
+--------------------------------------------
+Item                     Qty          Amount
+HDMI Cable 2m              3        1,289.79
+Extension Board            3        1,620.48
+USB Hub                    1          766.82
+Keyboard                   1        1,176.60
+HDMI Cable 2m              1          417.64
+Extension Board            4        1,213.92
+--------------------------------------------
+Sub Total:                          6,485.25
+CGST @ 9%:                            583.68
+SGST @ 9%:                            583.67
+Round Off Adj:                          0.40
+Net Payable:                       ₹7,653.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

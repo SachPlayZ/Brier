@@ -1,0 +1,21 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN/UIN: 29AAECC2233B1Z7
+CASH MEMO
+--------------------------------------------
+Cash Memo No: INV-2025-73230
+Date: 29.07.2025
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  1          210.94
+Butter Naan                2          122.92
+--------------------------------------------
+Taxable Value:                        333.86
+CGST @ 2.5%:                            8.35
+SGST @ 2.5%:                            8.34
+Round Off Adj:                          0.45
+Net Payable:                         ₹351.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

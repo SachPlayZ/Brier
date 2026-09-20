@@ -1,0 +1,13 @@
+{% comment %}Real product screenshot with a dark and a light capture. CSS shows the one that matches the
+theme (loading.css); the hidden one is lazy, so it is only fetched if the theme is toggled. The
+frame reserves its box (no layout shift), shimmers while the visible image loads, and fades it in
+(loading.js). Params: name (file stem under static/expenses/landing/, without -dark/-light), w, h,
+alt, eager (first image on the page: raises fetch priority; the landing head preloads the right theme),
+crop (CSS height, e.g. "24rem": show the top of a tall image instead of its full ratio).{% endcomment %}
+{% load static %}
+<div class="img-frame skeleton shot"{% if crop %} style="height: {{ crop }}"{% else %} style="aspect-ratio: {{ w }} / {{ h }}"{% endif %}>
+  <img data-theme="dark" src="{% static 'expenses/landing/'|add:name|add:'-dark.webp' %}" width="{{ w }}" height="{{ h }}"{% if crop %} class="shot-crop"{% endif %}
+       loading="lazy"{% if eager %} fetchpriority="high"{% endif %} decoding="async" alt="{{ alt }}">
+  <img data-theme="light" src="{% static 'expenses/landing/'|add:name|add:'-light.webp' %}" width="{{ w }}" height="{{ h }}"{% if crop %} class="shot-crop"{% endif %}
+       loading="lazy"{% if eager %} fetchpriority="high"{% endif %} decoding="async" alt="{{ alt }}">
+</div>

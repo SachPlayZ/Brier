@@ -1,0 +1,24 @@
+PATEL STORES
+31 Adajan, Surat 395007
+Ph: 9825099001
+GST No.: 24AAHCP6677V1Z8
+RETAIL INVOICE
+--------------------------------------------
+Bill Date: 13-Jan-2025
+Invoice Number: BILL-2025-40739
+--------------------------------------------
+Item                     Qty          Amount
+Milk 1L                    1           61.19
+Sunflower Oil 1L           4          514.68
+Atta 5kg                   1          330.47
+Sugar 1kg                  3          161.46
+Milk 1L                    2          128.72
+--------------------------------------------
+Total Qty: 11
+Taxable Value:                      1,196.52
+CGST @ 2.5%:                           29.92
+SGST @ 2.5%:                           29.91
+Round Off Adj:                         -0.35
+Total:                              1,256.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

@@ -1,0 +1,23 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST Reg No: 19AAFCP7890X1ZW
+TAX INVOICE
+--------------------------------------------
+Invoice No: RCPT-2025-04145
+Invoice Date: Apr 01, 2025
+Table: 13   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    3          824.16
+Filter Coffee              2           97.50
+--------------------------------------------
+Total Qty: 5
+Subtotal:                             921.66
+CGST @ 2.5%:                           23.04
+SGST @ 2.5%:                           23.04
+Round Off Adj:                          0.26
+Total Amount:                         968.00
+--------------------------------------------
+Thank you for your business
+Cash Payment

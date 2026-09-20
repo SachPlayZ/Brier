@@ -1,0 +1,24 @@
+CAFE COFFEE JUNCTION
+8 Indiranagar, Bengaluru 560095
+Ph: 9845033445
+GSTIN: 29AAECC2233B1Z7
+GST INVOICE
+--------------------------------------------
+Bill No: BILL-2025-45711
+Date of Supply: 31-07-2025
+--------------------------------------------
+Item                     Qty          Amount
+Biryani                    3          997.29
+Masala Dosa                4          551.68
+Veg Thali                  4          777.92
+Butter Naan                1           59.33
+Biryani                    2          720.92
+Filter Coffee              2           88.84
+--------------------------------------------
+Taxable Amount:                     3,195.98
+CGST @ 2.5%:                           79.90
+SGST @ 2.5%:                           79.90
+Round Off Adj:                          0.22
+Amount Payable:                     3,356.00
+--------------------------------------------
+Thank you for your business

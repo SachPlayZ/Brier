@@ -1,0 +1,17 @@
+INDIAN OIL FUEL STATION
+OMR Perungudi, Chennai 600096
+Ph: 9840055667
+GSTIN/UIN: 33AAACI0123R1ZQ
+TAX INVOICE
+--------------------------------------------
+Inv No: BILL-2025-84965
+Invoice Date: 21.04.2025
+--------------------------------------------
+Product                 Litres          Amount
+Petrol                    38        3,895.38
+--------------------------------------------
+Taxable Amount:                     3,895.38
+Rounding:                              -0.38
+Grand Total:                       ₹3,895.00
+--------------------------------------------
+Thank you for your business

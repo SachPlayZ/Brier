@@ -1,0 +1,22 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+GSTIN/UIN: 36AADCH4567S1ZS
+TAX INVOICE
+--------------------------------------------
+Dated: 02.03.2025
+Bill No: BILL-2025-44472
+Table: 15   Covers: 7
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              2          100.68
+Filter Coffee              3           91.68
+--------------------------------------------
+Total Qty: 5
+Taxable Value:                        192.36
+CGST @ 2.5%:                            4.81
+SGST @ 2.5%:                            4.81
+Round Off:                              0.02
+Total:                                202.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Card Payment

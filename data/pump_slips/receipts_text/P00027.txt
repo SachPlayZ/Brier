@@ -1,0 +1,38 @@
+Seer
+VAYU FUELS
+Welcome
+PARK CIRCUS FILLING STATION
+M G ROAD
+HYDERABAD 500081
+Tel. No.: 9895950414
+
+Invoice No: 389615624787438
+FIP No. : 05
+Nozzle No. : 01
+Product : Petrol
+Density : 837.3Kg/Cu.mtr
+Preset Type: Amount
+Rate(₹/L) : 103.17
+Volume(L) : 00001.94
+Total Rs. : 00200.00
+--------------------------
+Taxable Val : = 170 .94
+VAT @17%(Incl) : ₹    29.06
+Pay Mode     : Card
+UPI Ref: 444360281978
+--------------------------
+
+Vehicle No: 8493
+Mobile No : 9931288402
+
+Date : 21.12.25
+Time : 16:49
+
+GST No: 
+LST No:
+VAT No:
+
+Fuel prices incl. VAT.
+
+Thank You! Please Visit
+Again..

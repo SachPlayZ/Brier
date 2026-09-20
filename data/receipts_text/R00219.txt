@@ -1,0 +1,22 @@
+BENGAL BOOK DEPOT
+6 Park Street, Kolkata 700016
+Ph: 9830011234
+GST No.: 19AACCB3456W1ZT
+CASH MEMO
+--------------------------------------------
+Bill Date: 10-Jul-2025
+Bill No: TI-2024-80637
+--------------------------------------------
+Item                     Qty          Amount
+Printer Ink                2        1,023.68
+File Folder                4          255.28
+File Folder                1           83.10
+--------------------------------------------
+Total Qty: 7
+Taxable Amount:                     1,362.06
+IGST @ 18%:                           245.17
+Round Off Adj:                         -0.23
+Net Payable:                        1,607.00
+--------------------------------------------
+Thank you for your business
+Card Payment

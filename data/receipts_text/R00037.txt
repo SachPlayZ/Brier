@@ -1,0 +1,23 @@
+Mumbai Print Solutions LLP
+21 Lower Parel, Mumbai 400013
+Ph: 9820077331
+GST No.: 27AAFCM4455C1ZM
+CASH MEMO
+--------------------------------------------
+Invoice Date: 2025-01-23
+Invoice Number: BILL-2025-26491
+--------------------------------------------
+Item                     Qty          Amount
+Poster A2                  1          427.49
+Business Cards 500         3        3,272.25
+Business Cards 500         2        2,372.36
+Brochure Print 100         2        6,063.72
+--------------------------------------------
+Total Before Tax:                  12,135.82
+CGST @ 9%:                          1,092.23
+SGST @ 9%:                          1,092.22
+Round Off:                             -0.27
+Amount Payable:                    14,320.00
+--------------------------------------------
+Subject to local jurisdiction
+UPI Payment

@@ -1,0 +1,33 @@
+VAYU FUELS
+Welcome
+ANNAPURNA FUEL CENTRE
+PLOT 12, SECTOR 5
+AHMEDABAD 380009
+Tel. No.: 9897831238
+
+Invoice No: 45258778909208
+FCC ID: 11244748075051104
+FIP No. : 02
+Nozzle No. : 04
+Product : Power
+Density : 799.9Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 101.96
+Volume(L) : 00024.52
+Amount (₹) 02500.00
+--------------------------
+Vech: 30135997384.50
+Vtrd: 4170359346.696
+
+Vehicle No: 1544
+Mobile No : 9474619107
+
+Date : 03/02/26
+Time : 15:12
+
+GST No: 24VKDFT0636R1ZP
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

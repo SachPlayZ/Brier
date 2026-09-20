@@ -1,0 +1,24 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GSTIN/UIN: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Date of Supply: 06-Mar-2025
+Cash Memo No: INV-2025-99090
+Table: 12   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                2          135.58
+Butter Naan                3          154.53
+Veg Thali                  4        1,138.60
+Veg Thali                  1          184.00
+Butter Naan                4          162.92
+--------------------------------------------
+Total Qty: 14
+Taxable Amount:                     1,775.63
+IGST @ 5%:                             88.78
+Rounding:                              -0.41
+Net Payable:                       ₹1,864.00
+--------------------------------------------
+Subject to local jurisdiction

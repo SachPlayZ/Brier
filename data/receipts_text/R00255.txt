@@ -1,0 +1,25 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+Ph: 9830044332
+GST No.: 19AAFCP7890X1ZW
+CASH MEMO
+--------------------------------------------
+Bill No: BILL-2025-39404
+Date of Supply: 2025-02-02
+Table: 9   Covers: 8
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                3          356.37
+Filter Coffee              2          101.80
+Filter Coffee              4          129.60
+Filter Coffee              2           74.42
+Butter Naan                2          139.78
+--------------------------------------------
+Subtotal:                             801.97
+CGST @ 2.5%:                           20.05
+SGST @ 2.5%:                           20.05
+Round Off Adj:                         -0.07
+Net Payable:                         ₹842.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

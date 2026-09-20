@@ -1,0 +1,19 @@
+Sharma Traders Pvt Ltd
+14 MG Road, Bengaluru 560001
+Ph: 9845012345
+GST Reg No: 29AAGCB7383J1Z4
+RETAIL INVOICE
+--------------------------------------------
+Cash Memo No: TI-2025-03394
+Date of Supply: 2025-05-15
+--------------------------------------------
+Item                     Qty          Amount
+File Folder                1           37.26
+A4 Paper Ream              2          455.48
+--------------------------------------------
+Total Before Tax:                     492.74
+IGST @ 18%:                            88.69
+Round Off:                             -0.43
+Net Payable:                          581.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

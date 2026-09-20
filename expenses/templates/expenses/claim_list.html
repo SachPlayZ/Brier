@@ -1,0 +1,71 @@
+{% extends "expenses/base.html" %}
+{% load humanize %}
+{% block title %}Claims{% endblock %}
+{% block crumbs %}<i class="ph ph-caret-right"></i><span class="current">Claims</span>{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1 class="page-title">Your claims</h1>
+    <p class="page-sub">Track submissions, status and flags in one place.</p>
+  </div>
+  <div class="page-actions">
+    <a href="{% url 'claim_submit' %}" class="btn btn-primary"><i class="ph ph-plus"></i>Submit claim</a>
+  </div>
+</div>
+
+<form method="get" class="filters mb-3">
+  <div class="field">
+    <label class="form-label" for="f-status">Status</label>
+    <select id="f-status" name="status" class="form-select form-select-sm" onchange="this.form.requestSubmit()">
+      <option value="">All statuses</option>
+      {% for value, label in statuses %}
+        <option value="{{ value }}" {% if current_status == value %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  {% if is_finance %}<div class="field">
+    <label class="form-label" for="f-scope">Show</label>
+    <select id="f-scope" name="scope" class="form-select form-select-sm" onchange="this.form.requestSubmit()">
+      <option value="mine" {% if scope == 'mine' %}selected{% endif %}>My claims</option>
+      <option value="all" {% if scope == 'all' %}selected{% endif %}>All claims</option>
+    </select>
+  </div>{% endif %}
+  <noscript><button class="btn btn-sm btn-outline-secondary">Apply</button></noscript>
+</form>
+
+<div class="panel"><div class="table-wrap">
+<table class="table align-middle">
+  <thead><tr>
+    <th>Claim</th><th>Employee</th><th>Vendor</th><th>Date</th>
+    <th class="text-end">Amount</th><th>Confidence</th><th>Status</th><th>Flags</th>
+  </tr></thead>
+  <tbody>
+  {% for claim in claims %}
+    <tr>
+      <td><a class="cell-link" href="{% url 'claim_detail' claim.claim_id %}">{{ claim.claim_id }}</a></td>
+      <td class="dim mono">{{ claim.employee.employee_code }}</td>
+      <td>{{ claim.receipt.vendor.name|default:claim.receipt.vendor_raw|default:"-"|truncatechars:26 }}</td>
+      <td class="dim">{{ claim.receipt.invoice_date|date:"d M Y"|default:"-" }}</td>
+      <td class="num">{{ claim.amount_display }}</td>
+      <td class="conf-cell">
+        <div class="conf-bar conf-{{ claim.receipt.confidence_band }}" title="{{ claim.receipt.confidence_pct }}%">
+          <span style="width:{{ claim.receipt.confidence_pct }}%"></span>
+        </div>
+      </td>
+      <td><span class="badge">{{ claim.get_status_display }}</span></td>
+      <td>{% if claim.n_flags %}<span class="badge bg-danger"><i class="ph ph-flag"></i>{{ claim.n_flags }}</span>{% else %}<span class="dim">-</span>{% endif %}</td>
+    </tr>
+  {% empty %}
+    <tr><td colspan="8">
+      <div class="empty">
+        <i class="ph ph-files"></i>
+        <strong>No claims yet</strong>
+        <p>Upload a receipt and it is extracted and checked for duplicates.</p>
+        <a href="{% url 'claim_submit' %}" class="btn btn-primary btn-sm"><i class="ph ph-plus"></i>Submit your first claim</a>
+      </div>
+    </td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div></div>
+{% endblock %}

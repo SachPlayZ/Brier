@@ -1,0 +1,20 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+GST No.: 36AAGCD8899T1Z8
+TAX INVOICE
+--------------------------------------------
+Invoice Number: INV-2025-71903
+Date: 23/07/2025
+--------------------------------------------
+Item                     Qty          Amount
+Marker Pen                 4          233.84
+Marker Pen                 2          114.34
+--------------------------------------------
+Total Qty: 6
+Sub Total:                            348.18
+CGST @ 9%:                             31.34
+SGST @ 9%:                             31.33
+Rounding:                               0.15
+Amount Payable:                      ₹411.00
+--------------------------------------------
+Subject to local jurisdiction

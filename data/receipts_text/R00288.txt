@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+GST No.: 24AABCG2244U1ZA
+RETAIL INVOICE
+--------------------------------------------
+Date of Supply: 20.07.2025
+Cash Memo No: BILL-2025-77265
+--------------------------------------------
+Item                     Qty          Amount
+Extension Board            4        1,922.16
+USB Hub                    1          605.35
+USB Hub                    4        3,355.64
+--------------------------------------------
+Total Qty: 9
+Subtotal:                           5,883.15
+CGST @ 9%:                            529.49
+SGST @ 9%:                            529.48
+Rounding:                              -0.12
+Total Amount:                       6,942.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

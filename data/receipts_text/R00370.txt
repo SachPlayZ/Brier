@@ -1,0 +1,23 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GST Reg No: 33AAACA6677D1ZW
+CASH MEMO
+--------------------------------------------
+Bill Date: 12/03/2025
+Invoice Number: BILL-2025-70646
+--------------------------------------------
+Item                     Qty          Amount
+Digital Thermometer        4        1,424.24
+Antiseptic Liquid          3          498.30
+Digital Thermometer        1          385.29
+Antiseptic Liquid          1           90.26
+--------------------------------------------
+Taxable Value:                      2,398.09
+CGST @ 6%:                            143.89
+SGST @ 6%:                            143.88
+Rounding:                               0.14
+Net Payable:                        2,686.00
+--------------------------------------------
+Goods once sold will not be taken back
+Card Payment

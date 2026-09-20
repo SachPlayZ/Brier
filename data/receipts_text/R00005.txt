@@ -1,0 +1,26 @@
+HYDERABAD BIRYANI HOUSE
+5 Gachibowli, Hyderabad 500081
+Ph: 9848012345
+GST No.: 36AADCH4567S1ZS
+RETAIL INVOICE
+--------------------------------------------
+Invoice Number: RCPT-2024-14688
+Bill Date: 19-04-2025
+Table: 13   Covers: 1
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              1           60.45
+Butter Naan                2          132.16
+Filter Coffee              4          153.36
+Masala Dosa                4          487.44
+Butter Naan                4          168.24
+Biryani                    3        1,066.41
+--------------------------------------------
+Total Qty: 18
+Taxable Value:                      2,068.06
+CGST @ 2.5%:                           51.70
+SGST @ 2.5%:                           51.70
+Round Off:                             -0.46
+Bill Total:                        ₹2,171.00
+--------------------------------------------
+Subject to local jurisdiction

@@ -1,0 +1,24 @@
+PARK STREET CAFE
+40 Park Street, Kolkata 700017
+GST No.: 19AAFCP7890X1ZW
+GST INVOICE
+--------------------------------------------
+Invoice Number: TI-2025-86142
+Date: 01-06-2025
+Table: 11   Covers: 4
+--------------------------------------------
+Item                     Qty          Amount
+Filter Coffee              4          121.32
+Veg Thali                  3          753.30
+Paneer Butter Masala       4          936.72
+Veg Thali                  2          406.08
+Filter Coffee              3           91.44
+Butter Naan                1           59.29
+--------------------------------------------
+Subtotal:                           2,368.15
+IGST @ 5%:                            118.41
+Round Off Adj:                          0.44
+Net Payable:                        2,487.00
+--------------------------------------------
+*** CUSTOMER COPY ***
+Cash Payment

@@ -1,0 +1,22 @@
+Gujarat Enterprises
+7 CG Road, Ahmedabad 380009
+Ph: 9825011234
+GSTIN/UIN: 24AABCG2244U1ZA
+GST INVOICE
+--------------------------------------------
+Invoice Number: BILL-2025-31071
+Invoice Date: 2025-05-29
+--------------------------------------------
+Item                     Qty          Amount
+HDMI Cable 2m              4        1,624.16
+HDMI Cable 2m              4          754.52
+Keyboard                   2        3,037.62
+--------------------------------------------
+Sub Total:                          5,416.30
+CGST @ 9%:                            487.47
+SGST @ 9%:                            487.46
+Round Off:                             -0.23
+Bill Total:                         6,391.00
+--------------------------------------------
+THANK YOU VISIT AGAIN
+Cash Payment

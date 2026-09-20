@@ -1,0 +1,23 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GSTIN: 29AABCA1234M1ZQ
+TAX INVOICE
+--------------------------------------------
+Receipt No: RCPT-2025-78588
+Invoice Date: 14-08-2025
+Table: 5   Covers: 8
+--------------------------------------------
+Item                     Qty          Amount
+Veg Thali                  1          279.86
+Butter Naan                3          163.35
+Filter Coffee              3          148.35
+--------------------------------------------
+Total Qty: 7
+Taxable Amount:                       591.56
+CGST @ 2.5%:                           14.79
+SGST @ 2.5%:                           14.79
+Round Off:                             -0.14
+Amount Payable:                       621.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

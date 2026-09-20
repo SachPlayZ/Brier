@@ -1,0 +1,34 @@
+ee
+Hindustan Petroleum
+Happy Motoring
+START NELL
+42/1, BARRACKPORE TRUNK RD
+BENGALURU 560066
+Tel. No.: 9899718589
+
+Invoice No: 310558462392
+FCC ID: 25119438584169593
+FIP No. : 07
+Nozzle No. : 01
+Product : Diesel
+Density : 767.8Kg/Cu.mtr
+Preset Type: Amount
+Rate(2/L) : 105.41
+Volume(L) : 00018.97
+Amount (INR) : 02000.00
+--------------------------
+Vech: 52497403654.06
+Vtrd: 9339818972.922
+
+Vehicle No: 1988
+Mobile No : Not Entered
+
+Date : 31/05/2026
+Time : 15:32
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

@@ -1,0 +1,22 @@
+GANGA DEPARTMENTAL STORE
+17 Mall Road, Kanpur 208001
+Ph: 9839066554
+GST No.: 09AABCG5566Z1ZD
+CASH MEMO
+--------------------------------------------
+Inv No: RCPT-2024-58240
+Date of Supply: 2025-02-27
+--------------------------------------------
+Item                     Qty          Amount
+Sugar 1kg                  4          168.76
+Basmati Rice 5kg           4        2,779.84
+Toor Dal 1kg               1          172.56
+Toor Dal 1kg               2          251.30
+--------------------------------------------
+Subtotal:                           3,372.46
+CGST @ 2.5%:                           84.31
+SGST @ 2.5%:                           84.31
+Round Off Adj:                         -0.08
+Total Amount:                      ₹3,541.00
+--------------------------------------------
+THANK YOU VISIT AGAIN

@@ -1,0 +1,23 @@
+Deccan Office Supplies
+12 Madhapur, Hyderabad 500032
+Ph: 9848077665
+GST No.: 36AAGCD8899T1Z8
+CASH MEMO
+--------------------------------------------
+Date: 16.06.2025
+Receipt No: TI-2025-69609
+--------------------------------------------
+Item                     Qty          Amount
+Stapler                    3          539.79
+Notebook 200pg             1           90.83
+Printer Ink                3        2,275.50
+Marker Pen                 3          165.39
+--------------------------------------------
+Taxable Amount:                     3,071.51
+CGST @ 9%:                            276.44
+SGST @ 9%:                            276.43
+Rounding:                              -0.38
+Total:                             ₹3,624.00
+--------------------------------------------
+Subject to local jurisdiction
+Cash Payment

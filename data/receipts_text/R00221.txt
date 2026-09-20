@@ -1,0 +1,22 @@
+APOLLO PHARMACY OUTLET
+Rajiv Gandhi Salai, Chennai 600028
+Ph: 9840099887
+GSTIN/UIN: 33AAACA6677D1ZW
+CASH MEMO
+--------------------------------------------
+Receipt No: RCPT-2024-26831
+Invoice Date: 2025-04-13
+--------------------------------------------
+Item                     Qty          Amount
+Vitamin D3                 4          674.84
+Digital Thermometer        4        1,182.84
+Vitamin D3                 2          581.26
+--------------------------------------------
+Sub Total:                          2,438.94
+CGST @ 6%:                            146.34
+SGST @ 6%:                            146.33
+Round Off Adj:                          0.39
+Total:                              2,732.00
+--------------------------------------------
+Thank you for your business
+UPI Payment

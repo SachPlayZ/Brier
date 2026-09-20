@@ -1,0 +1,23 @@
+SARAVANA BHAVAN
+18 T Nagar, Chennai 600017
+Ph: 9840011223
+GST Reg No: 33AAECS7788N1ZJ
+CASH MEMO
+--------------------------------------------
+Date: 23-02-2025
+Bill No: INV-2024-62954
+Table: 15   Covers: 7
+--------------------------------------------
+Item                     Qty          Amount
+Masala Dosa                1          135.20
+Butter Naan                1           50.86
+--------------------------------------------
+Total Qty: 2
+Subtotal:                             186.06
+CGST @ 2.5%:                            4.65
+SGST @ 2.5%:                            4.65
+Rounding:                              -0.36
+Net Payable:                          195.00
+--------------------------------------------
+Goods once sold will not be taken back
+UPI Payment

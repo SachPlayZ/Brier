@@ -1,0 +1,33 @@
+SAHYADRI ENERGY
+Welcome
+KUMAR SERVICE STATION
+PLOT 12, SECTOR 5
+AHMEDABAD 380009
+Tel. No.: 9837989447
+
+Inv. No: 3810058950475968
+FCC ID: 57860258084606398
+FIP No. : 05
+Nozzle No. : 02
+Product : XP95
+Density : 764.7Kg/Cu.mtr
+Preset Type: Volume
+Rate(₹/L) : 95.48
+Volume(L) : 00018.73
+Amount (INR) 01788.34
+--------------------------
+Vech: 47763500182.99
+Vtrd: 9659809833.691
+
+Vehicle No: 8397
+Mobile No : Not Entered
+
+Date : 27.11.25
+Time : 10:21
+
+GST No: 
+LST No:
+VAT No:
+
+Thank You! Please Visit
+Again..

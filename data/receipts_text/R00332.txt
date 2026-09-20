@@ -1,0 +1,19 @@
+PATEL STORES
+31 Adajan, Surat 395007
+GSTIN: 24AAHCP6677V1Z8
+TAX INVOICE
+--------------------------------------------
+Bill Date: 22.05.2025
+Inv No: RCPT-2024-86708
+--------------------------------------------
+Item                     Qty          Amount
+Basmati Rice 5kg           2        1,210.74
+Milk 1L                    1           55.08
+--------------------------------------------
+Total Qty: 3
+Sub Total:                          1,265.82
+IGST @ 5%:                             63.29
+Rounding:                              -0.11
+Total:                              1,329.00
+--------------------------------------------
+Thank you for your business

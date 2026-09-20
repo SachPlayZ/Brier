@@ -1,0 +1,22 @@
+ANNAPURNA RESTAURANT
+22 Koramangala 5th Blk, Bengaluru 560034
+Ph: 9845112233
+GSTIN: 29AABCA1234M1ZQ
+RETAIL INVOICE
+--------------------------------------------
+Invoice Number: RCPT-2025-14084
+Bill Date: 2025-01-15
+Table: 10   Covers: 8
+--------------------------------------------
+Item                     Qty          Amount
+Butter Naan                3          154.77
+Butter Naan                1           54.46
+--------------------------------------------
+Total Qty: 4
+Taxable Value:                        209.23
+CGST @ 2.5%:                            5.23
+SGST @ 2.5%:                            5.23
+Round Off Adj:                          0.31
+Amount Payable:                       220.00
+--------------------------------------------
+Subject to local jurisdiction
