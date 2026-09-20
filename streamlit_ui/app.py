@@ -14,6 +14,7 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db.models import Case, Count, IntegerField, Max, Q, Sum, When
+from django.utils import timezone
 
 from core import object_storage
 from core.currency import format_amount
@@ -98,7 +99,7 @@ def _auth_screen() -> None:
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<h1 class="hero">Receipts in.<br><i>Risk exposed.</i></h1>',
+            '<h1 class="hero">Receipts in. <i>Risk exposed.</i></h1>',
             unsafe_allow_html=True,
         )
         st.markdown(
@@ -107,9 +108,9 @@ def _auth_screen() -> None:
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div class="proof"><span>01</span> Field-level confidence</div>'
-            '<div class="proof"><span>02</span> Explainable duplicate signals</div>'
-            '<div class="proof"><span>03</span> Guarded finance approval</div>',
+            '<div class="proof">Field-level confidence</div>'
+            '<div class="proof">Explainable duplicate signals</div>'
+            '<div class="proof">Guarded finance approval</div>',
             unsafe_allow_html=True,
         )
     with right:
@@ -182,7 +183,7 @@ def _signup() -> None:
 def _sidebar(user: User, finance: bool) -> None:
     with st.sidebar:
         st.markdown(
-            '<div class="wordmark">BRIER<span>•</span></div>', unsafe_allow_html=True
+            '<div class="wordmark">Brier</div>', unsafe_allow_html=True
         )
         st.caption("FINANCE CONTROL SYSTEM")
         st.markdown("---")
@@ -225,7 +226,7 @@ def _upload(user: User) -> None:
     )
     status = ocr_status()
     if status["available"]:
-        st.success("OCR online · image and scanned-PDF uploads are enabled", icon="✅")
+        st.success("OCR online. Image and scanned-PDF uploads are enabled.")
     else:
         st.warning(
             "OCR is unavailable. Text-layer PDFs and pasted receipt text still work."
@@ -237,7 +238,7 @@ def _upload(user: User) -> None:
             upload = st.file_uploader(
                 "Invoice or receipt",
                 type=_streamlit_extensions(),
-                help="PDF, JPG, PNG, WEBP, GIF, BMP or TIFF · 15 MB max",
+                help="PDF, JPG, PNG, WEBP, GIF, BMP or TIFF. 15 MB max.",
             )
             description = st.text_input(
                 "Business purpose",
@@ -412,7 +413,7 @@ def _claims(user: User, finance: bool) -> None:
         "Open a claim",
         claims,
         format_func=lambda c: (
-            f"{c.claim_id} · {c.employee.full_name or c.employee.employee_code} · {c.amount_display}"
+            f"{c.claim_id} / {c.employee.full_name or c.employee.employee_code} / {c.amount_display}"
         ),
     )
     if st.button("Inspect claim", type="primary"):
@@ -425,13 +426,13 @@ def _claim_row(claim: Claim) -> dict:
         "Employee": claim.employee.full_name or claim.employee.employee_code,
         "Vendor": claim.receipt.vendor.name
         if claim.receipt.vendor
-        else claim.receipt.vendor_raw or "—",
+        else claim.receipt.vendor_raw or "-",
         "Amount": claim.amount_display,
         "Status": claim.get_status_display(),
         "Confidence": f"{claim.receipt.confidence_pct}%",
         "Submitted": claim.submitted_at.strftime("%d %b %Y")
         if claim.submitted_at
-        else "—",
+        else "-",
     }
 
 
@@ -507,7 +508,7 @@ def _review_queue(user: User) -> None:
         "Review claim",
         claims,
         format_func=lambda c: (
-            f"{c.claim_id} · {c.amount_display} · {c.n_open} open flags"
+            f"{c.claim_id} / {c.amount_display} / {c.n_open} open flags"
         ),
     )
     if st.button("Open review", type="primary"):
@@ -534,7 +535,7 @@ def _claim_detail(user: User, finance: bool) -> None:
         receipt.vendor.name
         if receipt.vendor
         else receipt.vendor_raw or "Unidentified vendor",
-        f"{claim.employee.full_name or claim.employee.employee_code} · {claim.get_status_display()}",
+        f"{claim.employee.full_name or claim.employee.employee_code} / {claim.get_status_display()}",
     )
     m1, m2, m3, m4 = st.columns(4)
     m1.metric("Claimed", claim.amount_display)
@@ -569,7 +570,7 @@ def _claim_detail(user: User, finance: bool) -> None:
                 [
                     {
                         "Field": FIELD_LABELS.get(f.name, f.name),
-                        "Value": f.display_value or "—",
+                        "Value": f.display_value or "-",
                         "Confidence": f"{f.confidence_pct}%",
                         "Review": "Yes" if f.needs_review else "No",
                     }
@@ -581,10 +582,10 @@ def _claim_detail(user: User, finance: bool) -> None:
         )
         for field in fields:
             with st.expander(
-                f"{FIELD_LABELS.get(field.name, field.name)} · {field.confidence_pct}%"
+                f"{FIELD_LABELS.get(field.name, field.name)} / {field.confidence_pct}%"
             ):
                 if field.warnings:
-                    st.caption(" · ".join(field.warnings))
+                    st.caption(" / ".join(field.warnings))
                 if field.components:
                     st.json(field.components, expanded=False)
                 if finance:
@@ -687,7 +688,7 @@ def _duplicate_actions(claim: Claim, user: User) -> None:
     for flag in flags:
         other = flag.matched_claim if flag.claim_id == claim.id else flag.claim
         with st.expander(
-            f"{flag.band} · {flag.score_pct}% · versus {other.claim_id} · {flag.get_status_display()}"
+            f"{flag.band} / {flag.score_pct}% / versus {other.claim_id} / {flag.get_status_display()}"
         ):
             if flag.reasons:
                 for reason in flag.reasons:
@@ -722,12 +723,12 @@ def _audit_trail(claim: Claim) -> None:
         pd.DataFrame(
             [
                 {
-                    "Time": event.at.strftime("%d %b %Y · %H:%M"),
+                    "Time": event.at.strftime("%d %b %Y / %H:%M"),
                     "Action": event.action.replace("_", " ").title(),
-                    "From": event.from_status or "—",
-                    "To": event.to_status or "—",
+                    "From": event.from_status or "-",
+                    "To": event.to_status or "-",
                     "Actor": event.actor.username if event.actor else "System",
-                    "Note": event.note or "—",
+                    "Note": event.note or "-",
                 }
                 for event in events
             ]
@@ -739,70 +740,128 @@ def _audit_trail(claim: Claim) -> None:
 
 # --------------------------------------------------------------------- dashboard
 def _dashboard() -> None:
-    _page_title(
-        "CONTROL / LIVE",
-        "Finance control room",
-        "The expense book, reduced to decisions that need attention.",
-    )
     claims = Claim.objects.all()
     receipts = Receipt.objects.all()
     open_flags = DuplicateFlag.objects.filter(status=DuplicateFlag.OPEN)
-    approved = claims.filter(status=Claim.APPROVED)
-    m1, m2, m3, m4 = st.columns(4)
-    m1.metric("Claims", claims.count())
-    m2.metric("Awaiting action", claims.filter(status__in=Claim.OPEN_STATUSES).count())
-    m3.metric("Open duplicate flags", open_flags.count())
-    m4.metric("Approved", approved.count())
+    confirmed = DuplicateFlag.objects.filter(status=DuplicateFlag.CONFIRMED)
+    total_claims = claims.count()
+    total_receipts = receipts.count()
+    total_for_rates = max(total_receipts, 1)
+    open_claims = claims.filter(status__in=Claim.OPEN_STATUSES).count()
+    mean_confidence = sum(receipts.values_list("doc_confidence", flat=True)) / total_for_rates
+    mean_pct = round(mean_confidence * 100)
+    manual_pct = round(receipts.filter(needs_review=True).count() * 100 / total_for_rates, 1)
+    reconcile_pct = round(receipts.filter(arithmetic_ok=True).count() * 100 / total_for_rates, 1)
 
-    left, right = st.columns([1.1, 0.9], gap="large")
-    with left:
-        st.markdown("### Workflow volume")
-        by_status = list(
-            claims.values("status").annotate(count=Count("id")).order_by("status")
-        )
-        if by_status:
-            chart = pd.DataFrame(by_status).set_index("status")
-            st.bar_chart(chart, color="#0F766E")
-        else:
-            st.info("No claims yet.")
-    with right:
-        st.markdown("### Extraction health")
-        total = max(receipts.count(), 1)
-        st.metric(
-            "Mean confidence",
-            f"{sum(receipts.values_list('doc_confidence', flat=True)) / total:.1%}",
-        )
-        st.metric(
-            "Needs manual review",
-            f"{receipts.filter(needs_review=True).count() / total:.1%}",
-        )
-        st.metric(
-            "Amounts reconcile",
-            f"{receipts.filter(arithmetic_ok=True).count() / total:.1%}",
+    prevented = _dashboard_money(confirmed)
+    at_risk = _dashboard_money(open_flags.filter(band__in=["EXACT", "HIGH"]))
+    prevented_html = "".join(f"<span>{escape(value)}</span>" for value in prevented)
+    at_risk_html = "".join(f"<span>{escape(value)}</span>" for value in at_risk)
+
+    by_status = dict(claims.values_list("status").annotate(count=Count("id")))
+    status_rows = []
+    for key, label in Claim.STATUSES:
+        count = by_status.get(key, 0)
+        pct = round(count * 100 / (total_claims or 1))
+        status_rows.append(
+            f'<div class="fin-chart-row status-{key.lower()}">'
+            f'<div><span>{escape(label)}</span><strong>{count:,}</strong></div>'
+            f'<i style="--value:{pct}%"></i></div>'
         )
 
-    st.markdown("### Exposure awaiting resolution")
-    exposure = (
-        open_flags.filter(band__in=["EXACT", "HIGH"])
-        .values("claim__receipt__currency")
-        .annotate(total=Sum("claim__claimed_amount"))
+    raw_bands = list(
+        DuplicateFlag.objects.values("band").annotate(count=Count("id")).order_by("-count")
     )
-    if exposure:
-        st.write(
-            " · ".join(
-                format_amount(
-                    row["total"] or 0, row["claim__receipt__currency"] or "INR"
-                )
-                for row in exposure
-            )
+    max_band = max((row["count"] for row in raw_bands), default=1)
+    band_rows = []
+    for row in raw_bands:
+        pct = round(row["count"] * 100 / max_band)
+        band = escape(row["band"].title())
+        band_rows.append(
+            f'<div class="fin-band band-{row["band"].lower()}">'
+            f'<div><span>{band}</span><strong>{row["count"]:,}</strong></div>'
+            f'<i style="--value:{pct}%"></i></div>'
+        )
+    if not band_rows:
+        band_rows.append('<div class="fin-empty">No duplicate signals yet.</div>')
+
+    st.markdown(
+        f"""
+        <div class="fin-dashboard">
+          <header class="fin-head fin-enter" style="--order:0">
+            <div><h1>Financial control</h1><p>Claims, duplicate exposure and extraction quality in one operational view.</p></div>
+            <time datetime="{timezone.localdate().isoformat()}">{timezone.localdate():%d %b %Y}</time>
+          </header>
+          <section class="fin-kpis">
+            <article class="fin-card fin-exposure fin-enter" style="--order:1">
+              <div class="fin-card-top"><div><p class="fin-label">Prevented duplicate payout</p><div class="fin-hero-value">{prevented_html}</div></div><span class="fin-icon">✓</span></div>
+              <footer><span><strong>{confirmed.count():,}</strong> confirmed duplicates</span><span>Approval guard active</span></footer>
+            </article>
+            <article class="fin-card fin-metric fin-risk fin-enter" style="--order:2">
+              <p class="fin-label">Awaiting decision</p><div class="fin-metric-value">{at_risk_html}</div><footer><span>{open_flags.count():,} open flags</span><span>Review required</span></footer>
+            </article>
+            <article class="fin-card fin-metric fin-enter" style="--order:3">
+              <p class="fin-label">Open claims</p><div class="fin-metric-value"><span>{open_claims:,}</span></div><footer><span>Need finance action</span><span>{total_claims:,} total</span></footer>
+            </article>
+            <article class="fin-card fin-metric fin-docs fin-enter" style="--order:4">
+              <p class="fin-label">Documents processed</p><div class="fin-metric-value"><span>{total_receipts:,}</span></div><footer><span>Mean confidence</span><strong>{mean_confidence:.3f}</strong></footer>
+            </article>
+          </section>
+          <section class="fin-analytics">
+            <article class="fin-card fin-flow fin-enter" style="--order:5">
+              <header><div><h2>Claims flow</h2><p>Distribution across every decision state.</p></div></header>
+              <div class="fin-chart">{"".join(status_rows)}</div>
+            </article>
+            <article class="fin-card fin-health fin-enter" style="--order:6">
+              <header><div><h2>Extraction health</h2><p>Confidence and arithmetic checks.</p></div></header>
+              <div class="fin-health-body"><div class="fin-ring" style="--score:{mean_pct}%"><div><strong>{mean_pct}%</strong><span>confidence</span></div></div>
+              <div class="fin-health-stats"><div><span>Amounts reconcile</span><strong>{reconcile_pct}%</strong></div><div><span>Manual review</span><strong>{manual_pct}%</strong></div><div><span>Receipts checked</span><strong>{total_receipts:,}</strong></div></div></div>
+            </article>
+            <article class="fin-card fin-signals fin-enter" style="--order:7">
+              <header><div><h2>Duplicate signals</h2><p>Flags grouped by detection strength.</p></div></header>
+              <div class="fin-bands">{"".join(band_rows)}</div>
+            </article>
+          </section>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    recent = list(
+        Claim.objects.select_related("receipt", "receipt__vendor", "employee")
+        .defer("receipt__image_blob")
+        .order_by("-submitted_at")[:8]
+    )
+    st.markdown(
+        '<div class="fin-section-head fin-enter" style="--order:8"><div><h2>Recent claims</h2>'
+        '<p>Latest submissions across the organization.</p></div></div>',
+        unsafe_allow_html=True,
+    )
+    if recent:
+        st.dataframe(
+            pd.DataFrame([_claim_row(claim) for claim in recent]),
+            width="stretch",
+            hide_index=True,
         )
     else:
-        st.success("No high-risk exposure is currently open.")
+        st.info("No claims have been submitted.")
+
+
+def _dashboard_money(flags) -> list[str]:
+    rows = (
+        flags.values("claim__receipt__currency")
+        .annotate(total=Sum("claim__claimed_amount"))
+        .order_by("-total")
+    )
+    values = [
+        format_amount(row["total"] or 0, row["claim__receipt__currency"] or "INR")
+        for row in rows
+    ]
+    return values or ["₹0.00"]
 
 
 # --------------------------------------------------------------------- design
-def _page_title(kicker: str, title: str, subtitle: str) -> None:
-    st.markdown(f'<div class="eyebrow">{escape(kicker)}</div>', unsafe_allow_html=True)
+def _page_title(_kicker: str, title: str, subtitle: str) -> None:
     st.markdown(f'<h1 class="page-title">{escape(title)}</h1>', unsafe_allow_html=True)
     st.markdown(
         f'<p class="page-subtitle">{escape(subtitle)}</p>', unsafe_allow_html=True
@@ -813,34 +872,133 @@ def _styles() -> None:
     st.markdown(
         """
         <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,500&display=swap');
-        :root { --ink:#17201f; --paper:#f4f0e8; --teal:#0f766e; --line:#cbc4b7; --acid:#d8f34a; }
-        html, body, [class*="css"] { color:var(--ink); }
-        .stApp { background:
-          linear-gradient(rgba(23,32,31,.035) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(23,32,31,.025) 1px, transparent 1px), var(--paper);
-          background-size:32px 32px; }
-        h1,h2,h3 { font-family:"Newsreader", Georgia, serif !important; letter-spacing:-.025em; }
-        .hero { font-size:clamp(4rem,8vw,7.4rem); line-height:.82; margin:.5rem 0 2rem; max-width:880px; }
-        .hero i { color:var(--teal); font-weight:500; }
-        .lede { max-width:690px; font-size:1.2rem; line-height:1.6; color:#4a5552; }
-        .eyebrow,.panel-kicker { font:600 .72rem/1.2 "IBM Plex Mono",monospace; letter-spacing:.16em; color:var(--teal); }
-        .page-title { font-size:clamp(3rem,6vw,5.4rem); line-height:.92; margin:.35rem 0 .7rem; }
-        .page-subtitle { color:#5d6663; font-size:1.08rem; margin-bottom:2.4rem; }
-        .proof { border-top:1px solid var(--line); padding:1rem 0; font:500 .8rem "IBM Plex Mono",monospace; max-width:680px; }
-        .proof span { color:var(--teal); margin-right:1.2rem; }
-        .wordmark { font:600 2rem "Newsreader",serif; letter-spacing:-.04em; }
-        .wordmark span { color:var(--teal); }
-        [data-testid="stSidebar"] { border-right:1px solid var(--line); background:#ebe6dc; }
-        [data-testid="stMetric"] { border-top:3px solid var(--ink); padding:1rem 0; }
-        [data-testid="stMetricValue"] { font-family:"Newsreader",serif; }
-        .stButton>button, .stFormSubmitButton>button { border-radius:0; font:600 .76rem "IBM Plex Mono",monospace; letter-spacing:.04em; min-height:2.8rem; }
-        .stButton>button[kind="primary"], .stFormSubmitButton>button[kind="primary"] { background:var(--teal); border-color:var(--teal); }
-        [data-testid="stFileUploaderDropzone"], [data-testid="stDataFrame"], [data-testid="stExpander"] { border-radius:0; border-color:var(--line); }
-        input, textarea { border-radius:0 !important; }
-        [data-baseweb="tab-list"] { gap:1.5rem; border-bottom:1px solid var(--line); }
-        [data-baseweb="tab"] { font-family:"IBM Plex Mono",monospace; }
-        @media (max-width: 700px) { .hero{font-size:3.8rem}.page-title{font-size:3rem} }
+        :root {
+          --fin-page:#090b0e; --fin-surface:#0f1317; --fin-surface-2:#151a20;
+          --fin-line:#252c33; --fin-line-soft:#1b2228; --fin-ink:#eef1ea;
+          --fin-muted:#9aa39d; --fin-accent:#a8d96a; --fin-accent-ink:#11170d;
+          --fin-danger:#ff818a; --fin-warn:#e4b95f; --fin-cool:#84a7d8;
+          --fin-radius:14px; --fin-control:8px; --fin-ease:cubic-bezier(.16,1,.3,1);
+          --fin-mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+          --fin-sans:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
+        }
+        html,body,[class*="css"] { color:var(--fin-ink); font-family:var(--fin-sans); }
+        .stApp { background:var(--fin-page); }
+        [data-testid="stAppViewContainer"]>.main { background:var(--fin-page); }
+        [data-testid="stMainBlockContainer"] { max-width:1480px; padding-top:2rem; padding-bottom:5rem; }
+        h1,h2,h3 { font-family:var(--fin-sans) !important; letter-spacing:-.035em; }
+        .hero { max-width:820px; margin:.4rem 0 1.5rem; font-size:clamp(3.25rem,7vw,6.4rem); font-weight:560; line-height:.92; }
+        .hero i { color:var(--fin-accent); font-style:normal; font-weight:560; }
+        .lede { max-width:650px; color:var(--fin-muted); font-size:1.08rem; line-height:1.6; }
+        .eyebrow,.panel-kicker { color:var(--fin-accent); font:600 .7rem/1.2 var(--fin-mono); letter-spacing:.12em; }
+        .page-title { margin:.3rem 0 .5rem; font-size:clamp(2.3rem,5vw,4.2rem); font-weight:560; line-height:1; }
+        .page-subtitle { max-width:680px; margin-bottom:2rem; color:var(--fin-muted); font-size:1rem; }
+        .proof { max-width:650px; padding:.9rem 0; border-top:1px solid var(--fin-line); color:var(--fin-ink); font:500 .78rem var(--fin-mono); }
+        .proof span { display:none; }
+        .wordmark { color:var(--fin-ink); font-size:1.55rem; font-weight:650; letter-spacing:-.045em; }
+        [data-testid="stSidebar"] { border-right:1px solid var(--fin-line); background:#0c0f13; }
+        [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p { color:var(--fin-muted); }
+        [data-testid="stSidebar"] hr { border-color:var(--fin-line); }
+        [data-testid="stMetric"] { padding:1rem; border:1px solid var(--fin-line); border-radius:var(--fin-radius); background:var(--fin-surface); }
+        [data-testid="stMetricValue"] { font-family:var(--fin-mono); letter-spacing:-.04em; }
+        .stButton>button,.stFormSubmitButton>button {
+          min-height:2.65rem; border-radius:var(--fin-control); border-color:var(--fin-line);
+          font:600 .78rem var(--fin-sans); transition:transform .2s var(--fin-ease),border-color .2s,background-color .2s;
+        }
+        .stButton>button:hover,.stFormSubmitButton>button:hover { transform:translateY(-1px); border-color:var(--fin-accent); }
+        .stButton>button:active,.stFormSubmitButton>button:active { transform:translateY(1px) scale(.99); }
+        .stButton>button[kind="primary"],.stFormSubmitButton>button[kind="primary"] { color:var(--fin-accent-ink); background:var(--fin-accent); border-color:var(--fin-accent); }
+        [data-testid="stFileUploaderDropzone"],[data-testid="stDataFrame"],[data-testid="stExpander"] { border-radius:var(--fin-radius); border-color:var(--fin-line); background:var(--fin-surface); }
+        input,textarea,[data-baseweb="select"]>div { border-radius:var(--fin-control) !important; border-color:#626d76 !important; }
+        [data-baseweb="tab-list"] { gap:1.25rem; border-bottom:1px solid var(--fin-line); }
+        [data-baseweb="tab"] { font-family:var(--fin-sans); }
+        [data-testid="stAlert"] { border-radius:var(--fin-control); }
+
+        .fin-dashboard { margin-top:.2rem; }
+        .fin-head { display:flex; align-items:flex-end; justify-content:space-between; gap:1.5rem; margin-bottom:1.25rem; }
+        .fin-head h1 { margin:0; color:var(--fin-ink); font-size:clamp(2rem,4vw,3rem); font-weight:560; }
+        .fin-head p,.fin-section-head p { margin:.4rem 0 0; color:var(--fin-muted); font-size:.88rem; }
+        .fin-head time { min-width:max-content; padding:.55rem .7rem; border:1px solid var(--fin-line); border-radius:var(--fin-control); color:var(--fin-muted); background:var(--fin-surface); font:500 .72rem var(--fin-mono); }
+        .fin-kpis { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(140px,auto)); gap:.75rem; margin-bottom:.75rem; }
+        .fin-card { position:relative; min-width:0; overflow:hidden; border:1px solid var(--fin-line); border-radius:var(--fin-radius); background:var(--fin-surface); transition:transform .3s var(--fin-ease),border-color .3s,background-color .3s; }
+        .fin-card:before { content:""; position:absolute; inset:0; opacity:0; pointer-events:none; background:radial-gradient(circle at 80% 5%,rgba(168,217,106,.09),transparent 38%); transition:opacity .3s; }
+        .fin-card:hover { transform:translateY(-2px); border-color:#4b5b3d; }
+        .fin-card:hover:before { opacity:1; }
+        .fin-card>* { position:relative; }
+        .fin-exposure { grid-column:1/span 6; grid-row:1/span 2; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(1.3rem,2.4vw,2rem); color:var(--fin-accent-ink); border-color:transparent; background:var(--fin-accent); }
+        .fin-exposure:before { background:linear-gradient(115deg,transparent 45%,rgba(255,255,255,.2),transparent 55%); opacity:.2; transform:translateX(-120%); }
+        .fin-card-top,.fin-exposure footer,.fin-metric footer { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
+        .fin-label { margin:0; color:var(--fin-muted); font-size:.76rem; font-weight:550; }
+        .fin-exposure .fin-label { color:rgba(17,23,13,.68); }
+        .fin-hero-value,.fin-metric-value { display:grid; gap:.1rem; font-family:var(--fin-mono); font-variant-numeric:tabular-nums; letter-spacing:-.055em; line-height:1; }
+        .fin-hero-value { margin-top:1.25rem; font-size:clamp(2.4rem,5vw,4.35rem); font-weight:520; }
+        .fin-icon { width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:rgba(17,23,13,.1);font-size:1.25rem;font-weight:700; }
+        .fin-exposure footer { align-items:center; margin-top:2rem; padding-top:1rem; border-top:1px solid rgba(17,23,13,.18); font-size:.75rem; }
+        .fin-exposure footer strong { font:600 .9rem var(--fin-mono); }
+        .fin-metric { grid-column:span 3; display:flex; flex-direction:column; justify-content:space-between; padding:1.15rem 1.2rem; }
+        .fin-risk { grid-column:7/span 3; }
+        .fin-metric:nth-of-type(3) { grid-column:10/span 3; }
+        .fin-docs { grid-column:7/span 6; }
+        .fin-metric-value { margin:1.15rem 0; color:var(--fin-ink); font-size:clamp(1.8rem,3vw,2.6rem); font-weight:520; }
+        .fin-risk .fin-metric-value { color:var(--fin-danger); font-size:clamp(1.55rem,2.6vw,2.25rem); }
+        .fin-metric footer { color:var(--fin-muted); font-size:.72rem; }
+        .fin-metric footer strong { color:var(--fin-accent); font:520 .75rem var(--fin-mono); }
+
+        .fin-analytics { display:grid; grid-template-columns:5fr 3fr 4fr; gap:.75rem; margin-bottom:1.1rem; }
+        .fin-card>header { padding:1.2rem 1.25rem 0; }
+        .fin-card>header h2,.fin-section-head h2 { margin:0; color:var(--fin-ink); font-size:.98rem; font-weight:600; letter-spacing:-.015em; }
+        .fin-card>header p { margin:.28rem 0 0; color:var(--fin-muted); font-size:.73rem; }
+        .fin-chart,.fin-bands { display:grid; gap:.72rem; padding:1.2rem 1.25rem 1.3rem; }
+        .fin-chart-row>div,.fin-band>div,.fin-health-stats>div { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.34rem; color:var(--fin-muted); font-size:.72rem; }
+        .fin-chart-row strong,.fin-band strong,.fin-health-stats strong { color:var(--fin-ink); font:520 .75rem var(--fin-mono); }
+        .fin-chart-row>i,.fin-band>i { display:block; width:var(--value); height:4px; border-radius:2px; background:var(--fin-cool); transform-origin:left; }
+        .status-submitted>i,.status-under_review>i,.band-medium>i { background:var(--fin-warn); }
+        .status-needs_info>i,.status-rejected>i,.band-exact>i,.band-high>i { background:var(--fin-danger); }
+        .status-approved>i { background:var(--fin-accent); }
+        .band-low>i { background:var(--fin-muted); }
+        .fin-band>i { height:3px; }
+        .fin-health-body { display:grid; align-content:space-between; min-height:315px; padding:1.2rem 1.25rem 1.3rem; }
+        .fin-ring { width:min(144px,70%); aspect-ratio:1; display:grid; place-items:center; margin:.3rem auto 1.2rem; border-radius:50%; background:conic-gradient(var(--fin-accent) var(--score),#242a2f 0); }
+        .fin-ring>div { width:calc(100% - 12px); aspect-ratio:1; display:grid; place-content:center; text-align:center; border-radius:50%; background:var(--fin-surface); }
+        .fin-ring strong { color:var(--fin-ink); font:520 1.65rem var(--fin-mono); letter-spacing:-.05em; }
+        .fin-ring span { color:var(--fin-muted); font-size:.66rem; }
+        .fin-health-stats { display:grid; gap:.55rem; }
+        .fin-health-stats>div { margin:0; }
+        .fin-section-head { margin:1.4rem 0 .85rem; }
+        .fin-empty { padding:2rem .5rem; color:var(--fin-muted); text-align:center; font-size:.75rem; }
+        [data-testid="stDataFrame"] { overflow:hidden; }
+
+        @media (prefers-reduced-motion:no-preference) {
+          .fin-enter { animation:fin-enter .72s var(--fin-ease) both; animation-delay:calc(var(--order)*55ms); }
+          .fin-chart-row>i,.fin-band>i { animation:fin-bar .9s var(--fin-ease) both; animation-delay:.3s; }
+          .fin-exposure:before { animation:fin-sheen 1.1s var(--fin-ease) .4s both; }
+          @keyframes fin-enter { from{opacity:0;transform:translateY(18px) scale(.985)} to{opacity:1;transform:none} }
+          @keyframes fin-bar { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+          @keyframes fin-sheen { from{transform:translateX(-120%)} to{transform:translateX(120%)} }
+        }
+        @media (max-width:1000px) {
+          .fin-exposure { grid-column:1/span 7; }
+          .fin-risk { grid-column:8/span 5; }
+          .fin-metric:nth-of-type(3) { grid-column:8/span 2; }
+          .fin-docs { grid-column:10/span 3; }
+          .fin-analytics { grid-template-columns:1fr 1fr; }
+          .fin-signals { grid-column:1/-1; }
+          .fin-bands { grid-template-columns:repeat(4,minmax(0,1fr)); }
+        }
+        @media (max-width:700px) {
+          [data-testid="stMainBlockContainer"] { padding-left:1rem; padding-right:1rem; padding-top:1.2rem; }
+          .hero{font-size:3.5rem}.page-title{font-size:2.7rem}
+          .fin-head { align-items:flex-start; }
+          .fin-head time { display:none; }
+          .fin-kpis { grid-template-columns:minmax(0,1fr); grid-template-rows:auto; }
+          .fin-exposure,.fin-risk,.fin-metric:nth-of-type(3),.fin-docs { grid-column:1; grid-row:auto; }
+          .fin-exposure { min-height:260px; }
+          .fin-metric { min-height:145px; }
+          .fin-analytics { grid-template-columns:minmax(0,1fr); }
+          .fin-signals { grid-column:1; }
+          .fin-bands { grid-template-columns:repeat(2,minmax(0,1fr)); }
+        }
+        @media (max-width:450px) { .fin-bands{grid-template-columns:1fr}.fin-exposure footer{align-items:flex-start;flex-direction:column} }
+        @media (prefers-reduced-motion:reduce) { .fin-card:hover,.stButton>button:hover{transform:none} }
         </style>
         """,
         unsafe_allow_html=True,

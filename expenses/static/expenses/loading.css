@@ -36,16 +36,23 @@
    session, motion allowed). Repeat visits never render it. */
 .preloader {
   display: none; position: fixed; inset: 0; z-index: var(--z-preloader);
-  place-items: center; background: var(--page);
+  place-items: center; overflow: hidden; background: transparent;
 }
 html.has-preloader .preloader {
   display: grid;
   /* If loading.js never runs, get out of the way anyway. */
   animation: preloader-failsafe 0.01s 3s forwards;
 }
-.preloader-inner { display: grid; justify-items: center; gap: 1rem; animation: rise 0.5s var(--ease) both; }
-.preloader-brand { display: flex; align-items: center; gap: 0.75rem; }
-.preloader-bar { width: 120px; height: 2px; background: var(--track); border-radius: 1px; overflow: hidden; }
+.preloader-plane { position: absolute; inset-block: 0; width: 51%; background: var(--page); transition: transform 0.52s var(--ease); }
+.preloader-plane.is-left { left: 0; }
+.preloader-plane.is-right { right: 0; }
+.preloader-inner { position: relative; display: grid; justify-items: stretch; gap: 1.25rem; min-width: 190px; animation: rise 0.5s var(--ease) both; }
+.preloader-brand { display: flex; align-items: center; gap: 0.8rem; }
+.preloader-brand .brand-mark { width: 40px; height: 40px; }
+.preloader-brand .brand-name, .preloader-note { display: block; }
+.preloader-brand .brand-name { font-size: 1.25rem; letter-spacing: -0.035em; }
+.preloader-note { margin-top: 0.08rem; color: var(--muted); font-size: 0.68rem; }
+.preloader-bar { width: 100%; height: 2px; background: var(--track); border-radius: 1px; overflow: hidden; }
 .preloader-bar > span {
   display: block; height: 100%; background: var(--ink); transform-origin: left; transform: scaleX(0);
   transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -53,9 +60,11 @@ html.has-preloader .preloader {
 .preloader.is-running .preloader-bar > span { transform: scaleX(0.9); }
 .preloader.is-done .preloader-bar > span { transform: scaleX(1); transition-duration: 0.15s; }
 .preloader.is-leaving {
-  opacity: 0; transform: translateY(-8px); pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s var(--ease);
+  pointer-events: none;
 }
+.preloader.is-leaving .preloader-plane.is-left { transform: translateY(-100%); }
+.preloader.is-leaving .preloader-plane.is-right { transform: translateY(100%); }
+.preloader.is-leaving .preloader-inner { opacity: 0; transform: scale(0.94); transition: opacity 0.22s ease, transform 0.3s var(--ease); }
 
 /* ------------------------------------------------- 4. navigation progress */
 .nav-bar {

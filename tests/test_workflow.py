@@ -229,7 +229,25 @@ class TestViews:
     def test_dashboard_renders(self, vendor, employee, finance_user, client):
         make_claim("C1", employee)
         client.force_login(finance_user)
-        assert client.get(reverse("dashboard")).status_code == 200
+        response = client.get(reverse("dashboard"))
+        assert response.status_code == 200
+        html = response.content.decode()
+        assert 'class="finance-kpis"' in html
+        assert 'class="finance-workspace"' in html
+        assert "Financial control" in html
+        assert "Recent claims" in html and "C1" in html
+
+    def test_dashboard_chart_context_uses_real_counts(self, vendor, employee,
+                                                       finance_user, client):
+        make_claim("C1", employee)
+        make_claim("C2", employee, receipt_id="R2")
+        client.force_login(finance_user)
+        response = client.get(reverse("dashboard"))
+        submitted = next(row for row in response.context["status_rows"]
+                         if row["key"] == Claim.SUBMITTED)
+        assert submitted == {"key": "SUBMITTED", "label": "Submitted",
+                             "count": 2, "pct": 100}
+        assert list(response.context["recent_claims"])[0].claim_id == "C2"
 
     def test_submission_flow_end_to_end(self, vendor, employee, client):
         user = User.objects.create_user("asha", password="pw")

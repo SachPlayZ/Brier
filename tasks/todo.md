@@ -523,3 +523,47 @@ restyled but its gating untouched; a brand lockup above the H1; a real rendered
 - [ ] Open the app sidebar, login and signup and confirm the mark renders at
       32px without clipping. The lockup is shared; this is the blast radius.
 - [ ] `manage.py check` and the full test suite (387 tests).
+
+---
+
+# Dark finance dashboard redesign (2026-09-21)
+
+## Plan
+
+- [x] Audit current dashboard data, shell, loading states, and responsive behavior.
+- [x] Extend dashboard context with useful, real finance-review data only.
+- [x] Recompose the Django dashboard into an asymmetric, dense finance workspace.
+- [x] Port the same finance visual language and hierarchy to Streamlit.
+- [x] Add staged load-in, tactile hover, spotlight, and chart motion with reduced-motion fallbacks.
+- [x] Align the dashboard skeleton with the new final layout.
+
+## Verification
+
+- [x] Add dashboard rendering guards; run focused and full tests.
+- [x] Run Django checks and inspect the diff for unrelated changes.
+- [x] Verify Django and Streamlit dark desktop and mobile layouts in a real browser.
+- [x] Run the design pre-flight: contrast, content, motion, mobile, empty states.
+
+## Review
+
+### Changed
+
+- Dark, chartreuse-accent finance dashboard for Django and Streamlit.
+- Real status, risk, exposure, confidence, band, and recent-claim data.
+- Staged entrance, bar and ring reveals, hover feedback, reduced-motion mode.
+- Dark Streamlit theme and aligned auth/sidebar/control styling.
+
+### Verified
+
+- `manage.py check`: clean.
+- `pytest`: 393 passed, 7 skipped.
+- Desktop and 390x844 browser checks for both render paths; no console errors.
+- Key contrast ratios: body 17.27:1, muted 7.19:1, accent 11.11:1.
+
+### Risks
+
+- Streamlit styling targets documented DOM test IDs and may need adjustment after a major Streamlit upgrade.
+
+### Follow-ups
+
+- None for this redesign.

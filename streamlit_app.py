@@ -9,8 +9,8 @@ import streamlit as st
 from streamlit_ui.runtime import boot
 
 st.set_page_config(
-    page_title="Brier · Expense control",
-    page_icon="🧾",
+    page_title="Brier | Expense control",
+    page_icon=":material/receipt_long:",
     layout="wide",
     initial_sidebar_state="expanded",
 )
