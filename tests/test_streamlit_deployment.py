@@ -11,6 +11,7 @@ from django.core.exceptions import ValidationError
 from django.core.files.uploadedfile import SimpleUploadedFile
 from PIL import Image
 
+from core import object_storage
 from expenses import services, uploads
 from expenses.models import AuditEvent, Claim, Employee, ExtractedField, Receipt
 from streamlit_ui.runtime import (
@@ -56,6 +57,51 @@ def test_database_image_gets_a_temporary_local_path():
         assert path.read_bytes().startswith(b"\x89PNG")
         saved_path = Path(path)
     assert not saved_path.exists()
+
+
+@pytest.mark.django_db
+def test_s3_compatible_receipt_storage_round_trip(monkeypatch):
+    class Body:
+        def __init__(self, data):
+            self.data = data
+
+        def read(self):
+            return self.data
+
+        def close(self):
+            return None
+
+    class FakeClient:
+        def __init__(self):
+            self.objects = {}
+
+        def put_object(self, **kwargs):
+            self.objects[(kwargs["Bucket"], kwargs["Key"])] = kwargs["Body"]
+            return {"ETag": '"etag-1"'}
+
+        def get_object(self, **kwargs):
+            return {"Body": Body(self.objects[(kwargs["Bucket"], kwargs["Key"])])}
+
+        def delete_object(self, **kwargs):
+            self.objects.pop((kwargs["Bucket"], kwargs["Key"]), None)
+
+    monkeypatch.setenv("BRIER_OBJECT_STORAGE_BUCKET", "assets")
+    monkeypatch.setenv("BRIER_OBJECT_STORAGE_REGION", "auto")
+    monkeypatch.setenv("BRIER_OBJECT_STORAGE_PREFIX", "receipts")
+    client = FakeClient()
+    monkeypatch.setattr(object_storage, "_client", lambda _config: client)
+
+    receipt = Receipt.objects.create(receipt_id="R-S3")
+    services.store_receipt_blob(receipt, png_bytes(), "invoice.png", "image/png")
+    receipt.refresh_from_db()
+    assert receipt.image_blob is None
+    assert receipt.object_storage_bucket == "assets"
+    assert receipt.object_storage_key.startswith("receipts/R-S3/")
+    with services._receipt_file(receipt) as path:
+        assert path.read_bytes().startswith(b"\x89PNG")
+
+    services.delete_receipt_artifact(receipt)
+    assert client.objects == {}
 
 
 def test_copy_secrets_does_not_override_environment(monkeypatch):

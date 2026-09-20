@@ -118,7 +118,13 @@ DJANGO_ALLOWED_HOSTS = ".streamlit.app"
 BRIER_ADMIN_USERNAME = "finance"
 BRIER_ADMIN_PASSWORD = "a-strong-initial-password"
 BRIER_ADMIN_EMAIL = "finance@example.com"
-BRIER_ALLOW_SIGNUP = "0"
+BRIER_ALLOW_SIGNUP = "1"
+BRIER_OBJECT_STORAGE_BUCKET = "assets"
+BRIER_OBJECT_STORAGE_REGION = "auto"
+BRIER_OBJECT_STORAGE_ENDPOINT_URL = "https://your-s3-compatible-endpoint"
+BRIER_OBJECT_STORAGE_ACCESS_KEY_ID = "your-access-key"
+BRIER_OBJECT_STORAGE_SECRET_ACCESS_KEY = "your-secret-key"
+BRIER_OBJECT_STORAGE_PREFIX = "receipts"
 ```
 
 The app migrates the empty database on cold start and creates the initial
@@ -126,11 +132,15 @@ finance user once. It never resets that user's password on later restarts.
 Production startup fails closed when the secret key or PostgreSQL URL is
 missing, so it cannot accidentally expose the repository's demo SQLite data.
 
-New Streamlit uploads are stored with their PostgreSQL receipt row. This keeps
-invoice evidence durable across Streamlit's ephemeral filesystem without a
-public media bucket. For high-volume use, move the same private evidence to
-object storage; the OCR service already handles database-backed files through a
-temporary local path.
+New Streamlit uploads are stored in the configured private S3-compatible bucket,
+with only the object key and metadata in PostgreSQL. AWS S3, Cloudflare R2,
+Supabase Storage S3, and MinIO are supported. If the bucket is omitted during
+local development, the existing database blob fallback is used. OCR downloads
+object-backed evidence to a short-lived local file and removes it after use.
+
+Set `BRIER_ALLOW_SIGNUP=1` to show the employee registration tab. Every signup
+creates an employee-only account; finance access remains controlled by the
+bootstrap group and is never granted by self-registration.
 
 `packages.txt` installs Tesseract on the Debian host. `requirements.txt` pins
 Streamlit, and `.streamlit/config.toml` applies the 15 MB upload ceiling. Keep

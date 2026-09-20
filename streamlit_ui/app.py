@@ -15,6 +15,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db.models import Case, Count, IntegerField, Max, Q, Sum, When
 
+from core import object_storage
 from core.currency import format_amount
 from core.ocr import ocr_status
 from expenses import services
@@ -283,15 +284,17 @@ def _upload(user: User) -> None:
                 "receipt_id",
                 "U",
                 text=receipt_text.strip() or (exact_text or ""),
-                image_blob=blob,
                 image_filename=filename or "",
                 image_content_type=content_type or "",
             )
+            if blob:
+                services.store_receipt_blob(receipt, blob, filename or "receipt.png", content_type or "")
             result = services.extract_into_receipt(
                 receipt, line_model=services.load_line_model()
             )
             foreign = services.foreign_currency(result)
             if foreign:
+                services.delete_receipt_artifact(receipt)
                 receipt.delete()
                 progress.update(label="Invoice refused", state="error")
                 st.error(
@@ -320,6 +323,7 @@ def _upload(user: User) -> None:
             return
         except (RuntimeError, InvalidOperation) as exc:
             if receipt is not None and not receipt.claims.exists():
+                services.delete_receipt_artifact(receipt)
                 receipt.delete()
             progress.update(label="Could not submit", state="error")
             st.error(str(exc))
@@ -327,6 +331,7 @@ def _upload(user: User) -> None:
         except Exception:
             logger.exception("Unexpected invoice submission failure")
             if receipt is not None and not receipt.claims.exists():
+                services.delete_receipt_artifact(receipt)
                 receipt.delete()
             progress.update(label="Could not submit", state="error")
             if claim is not None and claim.pk:
@@ -592,6 +597,15 @@ def _claim_detail(user: User, finance: bool) -> None:
 
 
 def _receipt_bytes(receipt: Receipt) -> bytes | None:
+    if receipt.object_storage_key:
+        try:
+            return object_storage.get_bytes(
+                receipt.object_storage_key,
+                bucket=receipt.object_storage_bucket or None,
+            )
+        except Exception:  # noqa: BLE001 - preview failures should not break review
+            logger.exception("Could not download receipt object %s", receipt.object_storage_key)
+            return None
     if receipt.image_blob:
         return bytes(receipt.image_blob)
     if receipt.image:

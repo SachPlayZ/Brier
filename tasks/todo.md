@@ -317,6 +317,42 @@ Native CSS + vanilla JS on the Django template.
 
 ---
 
+# Object storage + employee access (2026-09-21)
+
+## Plan
+
+- [x] Add an S3-compatible receipt storage adapter with private-object uploads and downloads.
+- [x] Add receipt storage metadata/migration and use it for Streamlit uploads/previews/OCR.
+- [x] Preserve local/database fallback for development and legacy receipts.
+- [x] Enable employee self-signup in the Streamlit deployment configuration and verify login/signup.
+- [x] Add focused storage/auth tests and run the full verification suite.
+- [x] Commit the deployment update locally.
+- [ ] Push the deployment update and configure the hosted storage secrets.
+
+## Verification
+
+- [x] Storage adapter unit tests with a fake client.
+- [x] Django checks and migration drift check.
+- [x] Full pytest suite and Streamlit workflow smoke test.
+
+## Review
+
+### Changed
+
+- S3-compatible private receipt storage, durable object keys, cleanup, and OCR/preview downloads.
+- Streamlit employee self-registration remains employee-only and is enabled by `BRIER_ALLOW_SIGNUP=1`.
+
+### Verified
+
+- 392 tests pass; 7 real-OCR cases skipped.
+- AppTest startup, Ruff, Django checks, migration drift, and storage round-trip pass.
+
+### Risks
+
+### Follow-ups
+
+---
+
 # Rename to Brier (2026-09-19)
 
 - [x] Brand text "Expense Claims" -> "Brier": sidebar, breadcrumb root, page titles (`X | Brier`), login, preloader, landing (title, nav, footer, aria-labels, copyright), Django admin headers, README title + one-line origin (Brier score)
